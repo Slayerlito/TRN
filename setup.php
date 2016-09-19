@@ -6,7 +6,6 @@ require('libs/Smarty.class.php');
 // The setup.php file is a good place to load
 // required application library files, and you
 // can do that right here. An example:
-// require('guestbook/guestbook.lib.php');
 
 class Smarty_setup extends Smarty {
 
@@ -24,7 +23,6 @@ class Smarty_setup extends Smarty {
         $this->setCacheDir('cache/');
 
         $this->caching = Smarty::CACHING_LIFETIME_CURRENT;
-        $this->assign('app_name', 'Guest Book');
    }
 
 }
