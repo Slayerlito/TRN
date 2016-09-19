@@ -8,7 +8,7 @@
 	<meta name="author" content="TRN"> <!-- Autor -->
 	
 	<!-- Enlaces -->
-	<link rel="icon" type="image/ico" href="images/favicon.ico"> <!-- favicon -->
+	<link rel="icon" type="image/ico" href="favicon.ico"> <!-- favicon -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> <!-- CSS de Bootstrap -->
 	<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css"  <!-- Tema Bootstrap -->
 	<link rel="stylesheet" href="css/style.css"> <!-- CSS Principal -->
@@ -18,3 +18,7 @@
 
 </head>
 <body>
+<header>
+	<a href="login.php"><input type="button" value="Entrar"></input></a>
+	<a href="registro.php"><input type="button" value="Registro"></input></a>
+</header>
