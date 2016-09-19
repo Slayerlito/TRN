@@ -1,15 +1,18 @@
 <?php
 
-require_once('libs/Smarty.class.php');
+//Include de los parametros de smarty
+require_once('setup.php'); 
 
-$smarty = new Smarty();
+//Declaracion de la funcion de smarty
+$smarty = new Smarty_setup();
 
-$smarty->setTemplateDir('templates/');
-$smarty->setCompileDir('templates_c/');
-$smarty->setConfigDir('configs/');
-$smarty->setCacheDir('cache/');
+//Include del header
+require_once('header.php');
 
-$smarty->display('header.tpl');
+//Funcionalidad del index
+
 $smarty->display('index.tpl');
-$smarty->display('footer.tpl');
+
+//Include del footer
+require_once('footer.php');
 ?>
