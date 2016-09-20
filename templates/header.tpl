@@ -24,7 +24,7 @@
 	
 	<!-- DIV Inicio sesión -->
 	<div>
-		<form action="login.php" method="post">
+		<form action="index.php" method="post">
 			<div>
 				<h1>Inicia sesión en TRN</h1>
 			</div>
@@ -43,7 +43,7 @@
 		{IF $error == '1'}
 			<div class="alert alert-danger">
 				<p>El usuario o la contraseña no son correctos.</p>
-				<a href="" >¿Has olvidado la contraseña?</a>
+				<a href="#" >¿Has olvidado la contraseña?</a>
 			</div>
 		{/IF}
 		<!------------------------------------------------------->
@@ -51,7 +51,7 @@
 	<!-- CIERRO DIV Inicio sesión-->
 	<!-- DIV Registro -->
 	<div>
-		<form action="registro.php" method="post">
+		<form action="index.php" method="post">
 			<div>
 				<h1>Registrate en TRN</h1>
 			</div>
