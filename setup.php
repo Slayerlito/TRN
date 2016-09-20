@@ -22,7 +22,7 @@ class Smarty_setup extends Smarty {
         $this->setConfigDir('configs/');
         $this->setCacheDir('cache/');
 
-        $this->caching = Smarty::CACHING_LIFETIME_CURRENT;
+      //  $this->caching = Smarty::CACHING_LIFETIME_CURRENT;   
    }
 
 }

@@ -1,20 +1,25 @@
-<form action="" method="post">
+<form action="login.php" method="post">
 	<div>
-		<h1>Inicia sesi�n en TRN</h1>
+		<h1>Inicia sesión en TRN</h1>
 	</div>
 	<div>
-		<label for="user">Direcci�n E-mail</label>
-		<input type="text" id="user" name="user" tabindex="1" autofocus="autofocus">
+		<label for="email">Dirección E-mail</label>
+		<input type="text" id="email" name="email" tabindex="1" autofocus="autofocus">
 
-		<label for="password">Contrase�a</label>
+		<label for="password">Contraseña</label>
 		<input type="password" id="password" name="password" tabindex="2">
 
-		<a href="" >�Has olvidado la contrase�a?</a>
+		<a href="" >¿Has olvidado la contraseña?</a>
 
-		<input type="submit" name="commit" tabindex="3" value="Inicia sesi�n">
+		<input type="submit" name="commit" tabindex="3" value="Inicia sesión">
 	</div>
 </form>
 
+{IF $error == '1'}
+<div class="alert alert-danger">
+	<p>El usuario o la contraseña no son correctos.</p>
+</div>
+{/IF}
 <div>
-	<span>�Todav�a no tienes cuenta? <a href="registro.php">Crear una cuenta</a></span>
+	<span>¿Todavía no tienes cuenta? <a href="registro.php">Crear una cuenta</a></span>
 </div>
