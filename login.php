@@ -17,7 +17,6 @@ require_once('header.php');
 if(isset($_REQUEST['commit'])){
 	$email 	= $_REQUEST['email'];
 	$pass	= $_REQUEST['password'];
-	echo $email;
 	/*if($result = mysqli_query($con, 'SELECT email, password, nombre FROM usuario WHERE email ='$email' AND password = '$pass' ')){
 		session_start();
 		$_SESSION['usuario'] = 'nombre';
