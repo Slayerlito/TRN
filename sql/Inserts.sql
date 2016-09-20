@@ -13,3 +13,5 @@ Variable                Input       Campo               Formato         CONSTRAI
 @PERMISOS               INT         TINYINT             0-1             DEFAULT 0 (FALSE)
 */
 INSERT INTO TRN_PERFILES (DESC_PERFIL,PERMISOS[..])VALUES($Descriptor,$Permisos[..]);
+
+INSERT INT TRN_ACCESOS(EMAIL,SYSDATE,IP,)
