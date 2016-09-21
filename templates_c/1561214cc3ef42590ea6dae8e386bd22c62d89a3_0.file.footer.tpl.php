@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-09-20 14:31:30
+/* Smarty version 3.1.30, created on 2016-09-21 02:21:11
   from "C:\xampp\htdocs\TRN\templates\footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_57e12c226bfbf6_33525866',
+  'unifunc' => 'content_57e1d277c416a8_57751348',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_57e12c226bfbf6_33525866 (Smarty_Internal_Template $_smarty_tpl) {
+function content_57e1d277c416a8_57751348 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <h2>Footer</h2>
 
