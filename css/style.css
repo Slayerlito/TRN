@@ -1,1 +1,21 @@
 /*CSS*/
+header {
+	margin-top: 120px;
+}
+
+.navbar-brand {
+	 padding-left: 50px; /*padding izquierdo iniciales del nav TRN*/
+}
+
+.navbar-right{
+	padding-right: 70px; /*padding derecho login y el registro */
+}
+
+/* padding y margin para el dropdown del login y registro*/
+.dropdown-menu {
+	padding: 15px;
+}
+
+.dropdown-menu input {
+	margin: 10px;
+}
