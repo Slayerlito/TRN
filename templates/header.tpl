@@ -55,6 +55,10 @@
 				<!-- Login / Registro -->
 				<ul class="nav navbar-nav navbar-right">
 					<!-- Iniciar sesión -->
+					
+	<!-- SE muestra o oculta segun si esta o no logueado el usuario -->	
+				
+				{IF $usuario == '0'}	
 					<li class="dropdown">
 						<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="login"><span class="glyphicon glyphicon-user"></span> Identifícate</a>
 						<div class="dropdown-menu">
@@ -63,14 +67,14 @@
 									<input type="password" id="password" name="password" placeholder="Contraseña">
 									<input clasS="btn" type="submit" name="login" value="Iniciar sesión">
 							</form>
-							<!-- DAVID // MOSTRARLO CUANDO EL LOGIN NO ES CORRECTO -->
+	<!-- DAVID // MOSTRARLO CUANDO EL LOGIN NO ES CORRECTO -->
 							{IF $login == '1'}
 								<div class="alert alert-danger">
 									<p>El usuario o la contraseña no son correctos.</p>
 									<a href="" >¿Has olvidado la contraseña?</a>
 								</div>
 							{/IF}
-							<!------------------------------------------------------->
+	<!------------------------------------------------------->
 						</div>
 					</li>
 					<!-- /Iniciar sesión -->
@@ -87,7 +91,7 @@
 								<input type="text" id="birthdate" name="nacimiento"  placeholder="Fecha de Nacimiento">
 								<input class="btn" type="submit" name="registro" value="Registrarse">
 							</form>
-							<!-- DAVID // MOSTRARLO CUANDO EL LOGIN NO ES CORRECTO -->
+	<!-- DAVID // MOSTRARLO CUANDO EL REGISTRO NO ES CORRECTO -->
 							{IF $registro == '1'}
 								<div class="alert alert-danger">
 									<p>Ya existe un usuario con ese E-mail.</p>
@@ -98,6 +102,20 @@
 						</div>
 					</li>
 					<!-- /Registro -->
+				{ELSE}
+					<!-- Boton usuario/Boton desconectar -->
+					<li class="dropdown">
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="login"><span class="glyphicon glyphicon-user"></span> {$user}</a>
+					</li>
+					<li class="dropdown">
+						<a class="alert-danger" href="logout.php" id="logout"><span class="glyphicon glyphicon-off"></span> Desconectar</a>
+					</li>
+					<!-- Fin Boton usuario/Boton desconectar -->
+				{/IF}	
+	<!-- FIN  del IF Smarty -->
+					
+					
+					
 				</ul>
 				<!-- FIN Login / Registro -->
             </div>
