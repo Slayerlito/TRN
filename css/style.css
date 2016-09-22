@@ -1,7 +1,8 @@
 /*CSS*/
-
+/*CSS header.tpl*/
 .navbar-brand {
 	 padding-left: 50px; /*padding izquierdo iniciales del nav TRN*/
+	 padding-right: 200px;
 }
 
 .navbar-right{
@@ -16,3 +17,22 @@
 .dropdown-menu input {
 	margin: 10px;
 }
+/* CSS header.tpl*/
+/* ----------------------*/
+/* CSS index.tpl*/
+
+section {
+	margin: 10px;
+	padding: 100px 10px;
+	
+}
+
+p, h3, h4 {
+	padding: 10px;
+}
+
+.planes {
+	border: 1px double black;
+	box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+/* CSS index.tpl*/

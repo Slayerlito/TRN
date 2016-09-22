@@ -14,10 +14,14 @@
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	  <!-- Tema Bootstrap -->
 	<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
-	 <!-- CSS scrolling nav -->
+	<!-- CSS scrolling nav -->
 	<link href="bootstrap/css/scrolling-nav.css" rel="stylesheet">
 	<!-- CSS  slider -->
     <link href="bootstrap/css/full-slider.css" rel="stylesheet">
+	<!-- CSS Font Awesome -->
+	<link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
+	<!-- CSS Bootstrap social -->
+	<link rel="stylesheet" href="bootstrap/css/bootstrap-social.css">
 	 <!-- CSS Principal -->
 	<link rel="stylesheet" href="css/style.css">
 	
@@ -30,7 +34,7 @@
 </head>
 <body>
 <header>
-	 <!-- nav  -->
+	 <!-- NAV  -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header page-scroll col-md-6">
@@ -41,8 +45,16 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">TRN</a>
+				<!-- REDES SOCIALES -->
+				<div>
+					<a href="http://www.twitter.es" class="btn btn-social-icon btn-twitter"><span class="fa fa-twitter"></span></a>
+					<a href="http://www.facebook.es" class="btn btn-social-icon btn-facebook"><span class="fa fa-facebook"></span></a>
+					<a href="http://www.flickr.com" class="btn btn-social-icon btn-flickr"><span class="fa fa-flickr"></span></a>
+					<a href="https://plus.google.com/" class="btn btn-social-icon btn-google"><span class="fa fa-google"></span></a>
+					<a href="https://www.instagram.com/" class="btn btn-social-icon btn-instagram"><span class="fa fa-instagram"></span></a>
+				</div>
+				<!-- REDES SOCIALES -->
             </div>
-
             <!-- div donde se muestra el menú cuando el tamaño es de móvil -->
 			<!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -127,5 +139,5 @@
         </div>
         <!-- /.container -->
     </nav>
-	<!-- /nav -->
+	<!-- FIN NAV -->
 </header>
