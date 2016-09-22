@@ -1,7 +1,6 @@
 <main>
 	<!-- CAROUSEL IMAGENES -->
 	<div id="myCarousel" class="carousel slide">
-	
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -29,7 +28,6 @@
 				<img class="fill" src="slider4.jpg">
 			</div>
 		</div>
-
 		<!-- Controls -->
 		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
 			<span class="glyphicon glyphicon-chevron-left" href="#myCarousel"></span>
@@ -69,7 +67,7 @@
 	</section>
 	<!-- FIN ESPECIALIDADES -->
 	<!-- NOTICIAS-->
-	<section class="container">
+	<section id="noticias" class="container">
 	
 		<h3 class="text-center">ÚLTIMAS NOTICIAS</h3>
 		<div class="col-md-6">
@@ -107,7 +105,7 @@
 	</section>
 	<!-- FIN NOTICIAS -->
 	<!-- PLANES -->
-	<section  class="container-fluid text-center">
+	<section id="planes" class="container-fluid text-center">
 		<h3>NUESTRO PLANES PARA TI</h3>
 		<div class="container">
 			<div class="col-md-3">
