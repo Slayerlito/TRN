@@ -50,9 +50,9 @@
                     <!-- li oculto para el scroll del nav -->
 					<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden"><a class="page-scroll" href="#page-top"></a></li>
-                    <li><a class="page-scroll" href="#about">Inicio</a></li>
-                    <li><a class="page-scroll" href="#services">Noticias</a></li>
-                    <li><a class="page-scroll" href="#contact">Planes</a></li>
+                    <li><a class="page-scroll" href="index.php">Inicio</a></li>
+                    <li><a class="page-scroll" href="#noticias">Noticias</a></li>
+                    <li><a class="page-scroll" href="#planes">Planes</a></li>
                 </ul>
 				<!-- Login / Registro -->
 				<ul class="nav navbar-nav navbar-right">

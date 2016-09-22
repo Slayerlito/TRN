@@ -13,9 +13,7 @@
 
 <!-- Activate Carousel Javascript -->
 <script>
-$('.carousel').carousel({
-	interval: 2500 //changes the speed
-})
+$('.carousel').carousel();
 </script>
 
 </body>
