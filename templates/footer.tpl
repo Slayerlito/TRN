@@ -11,5 +11,12 @@
 <script src="bootstrap/js/jquery.easing.min.js"></script>
 <script src="bootstrap/js/scrolling-nav.js"></script>
 
+<!-- Activate Carousel Javascript -->
+<script>
+$('.carousel').carousel({
+	interval: 2500 //changes the speed
+})
+</script>
+
 </body>
 </html>

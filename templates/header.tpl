@@ -16,6 +16,8 @@
 	<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
 	 <!-- CSS scrolling nav -->
 	<link href="bootstrap/css/scrolling-nav.css" rel="stylesheet">
+	<!-- CSS  slider -->
+    <link href="bootstrap/css/full-slider.css" rel="stylesheet">
 	 <!-- CSS Principal -->
 	<link rel="stylesheet" href="css/style.css">
 	
@@ -91,7 +93,9 @@
 								<input type="text" id="birthdate" name="nacimiento"  placeholder="Fecha de Nacimiento">
 								<input class="btn" type="submit" name="registro" value="Registrarse">
 							</form>
-	<!-- DAVID // MOSTRARLO CUANDO EL REGISTRO NO ES CORRECTO -->
+							<!-- DAVID // MOSTRARLO CUANDO EL REGISTRO NO ES CORRECTO -->
+							
+<!-- SE ESTA MOSTRANDO DENTRO DEL DIV DEL LOGIN.. HAY QUE PONERLO FUERA PARA QUE SE VEA CUANDO FALLA -->
 							{IF $registro == '1'}
 								<div class="alert alert-danger">
 									<p>Ya existe un usuario con ese E-mail.</p>
