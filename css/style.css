@@ -1,7 +1,7 @@
 /*CSS*/
-
+/*CSS header.tpl*/
 .navbar-brand {
-	 padding-left: 50px; /*padding izquierdo iniciales del nav TRN*/
+	/* padding-left: 50px; /*padding izquierdo iniciales del nav TRN*/
 }
 
 .navbar-right{
@@ -16,3 +16,47 @@
 .dropdown-menu input {
 	margin: 10px;
 }
+
+/*BOTONES REDES SOCIALES DEL SLIDER*/
+.social {
+  position: absolute;
+  right: 15%;
+  bottom: 20px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+/* CSS header.tpl*/
+/* ----------------------*/
+/* CSS index.tpl*/
+
+section {
+	margin: 10px;
+	padding: 100px 10px;
+	
+}
+
+p, h3, h4 {
+	padding: 10px;
+}
+
+.planes {
+	border: 1px double black;
+	box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+/* CSS index.tpl*/
+
+
+/* CSS footer.tpl */
+footer {
+	background-color: black;
+	color: white;
+	padding: 50px;
+}
+
+/* CSS footer.tpl */
