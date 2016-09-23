@@ -34,19 +34,10 @@
 </head>
 <body id="inicio">
 <header>
-	<!-- REDES SOCIALES -->
-	<div class="social">
-		<a href="http://www.twitter.es" class="btn btn-lg btn-social-icon btn-twitter"><span class="fa fa-twitter"></span></a> &nbsp;
-		<a href="http://www.facebook.es" class="btn btn-lg btn-social-icon btn-facebook"><span class="fa fa-facebook"></span></a>  &nbsp;
-		<a href="http://www.flickr.com" class="btn btn-lg btn-social-icon btn-flickr"><span class="fa fa-flickr"></span></a>  &nbsp;
-		<a href="https://plus.google.com/" class="btn btn-lg btn-social-icon btn-google"><span class="fa fa-google"></span></a>  &nbsp;
-		<a href="https://www.instagram.com/" class="btn btn-lg btn-social-icon btn-instagram"><span class="fa fa-instagram"></span></a>
-	</div>
-	<!-- REDES SOCIALES -->
 	 <!-- NAV  -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-fixed-top" role="navigation">
         <div class="container-fluid">
-            <div class="navbar-header page-scroll col-md-6">
+            <div class="navbar-header page-scroll col-md-3	">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -55,6 +46,15 @@
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top"><span>TRN</span></a>
             </div>
+			<!-- REDES SOCIALES -->
+			<div class="social col-md-3">
+				<a href="http://www.twitter.es" class="btn btn-sm btn-social-icon btn-twitter"><span class="fa fa-twitter"></span></a>
+				<a href="http://www.facebook.es" class="btn btn-sm btn-social-icon btn-facebook"><span class="fa fa-facebook"></span></a>
+				<a href="http://www.flickr.com" class="btn btn-sm btn-social-icon btn-flickr"><span class="fa fa-flickr"></span></a>
+				<a href="https://plus.google.com/" class="btn btn-sm btn-social-icon btn-google"><span class="fa fa-google"></span></a> 
+				<a href="https://www.instagram.com/" class="btn btn-sm btn-social-icon btn-instagram"><span class="fa fa-instagram"></span></a>
+			</div>
+			<!-- REDES SOCIALES -->
 			<!-- div donde se muestra el menú cuando el tamaño es de móvil -->
 			<!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">

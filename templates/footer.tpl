@@ -1,7 +1,7 @@
 <footer>
 <div class="container">
 	<!-- REDES SOCIALES -->
-	<div class="col-md-6">
+	<div class="social col-md-6">
 		<a href="http://www.twitter.es" class="btn btn-sm btn-social-icon btn-twitter"><span class="fa fa-twitter"></span></a> &nbsp;
 		<a href="http://www.facebook.es" class="btn btn-sm btn-social-icon btn-facebook"><span class="fa fa-facebook"></span></a> &nbsp;
 		<a href="http://www.flickr.com" class="btn btn-sm btn-social-icon btn-flickr"><span class="fa fa-flickr"></span></a> &nbsp;
@@ -18,7 +18,6 @@
 				<li>Mapa del sitio</li>
 			</ul>
 		</div>
-		<hr>
 	</div>
 </div>
 </footer>
