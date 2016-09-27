@@ -37,17 +37,14 @@
 	 <!-- NAV  -->
     <nav class="navbar navbar-fixed-top" role="navigation">
         <div class="container-fluid">
-            <div class="navbar-header page-scroll col-md-3	">
+            <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+					<span class="glyphicon glyphicon-menu-hamburger"></span>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top"><span>TRN</span></a>
             </div>
 			<!-- REDES SOCIALES -->
-			<div class="social col-md-3">
+			<div class="social col-md-2">
 				<a href="http://www.twitter.es" class="btn btn-sm btn-social-icon btn-twitter"><span class="fa fa-twitter"></span></a>
 				<a href="http://www.facebook.es" class="btn btn-sm btn-social-icon btn-facebook"><span class="fa fa-facebook"></span></a>
 				<a href="http://www.flickr.com" class="btn btn-sm btn-social-icon btn-flickr"><span class="fa fa-flickr"></span></a>
@@ -58,6 +55,7 @@
 			<!-- div donde se muestra el menú cuando el tamaño es de móvil -->
 			<!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
+			<!-- MENU -->
                 <ul class="nav navbar-nav">
                     <!-- li oculto para el scroll del nav -->
 					<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
@@ -65,8 +63,10 @@
                     <li><a class="page-scroll" href="#inicio">Inicio</a></li>
                     <li><a class="page-scroll" href="#noticias">Noticias</a></li>
                     <li><a class="page-scroll" href="#planes">Planes</a></li>
+					<li><a class="page-scroll" href="">PRUEBAS</a></li>
                 </ul>
-				<!-- Login / Registro -->
+			<!-- MENU -->
+			<!-- Login / Registro -->
 				<ul class="nav navbar-nav navbar-right">
 					<!-- Iniciar sesión -->
 					
