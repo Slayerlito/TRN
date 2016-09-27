@@ -1,5 +1,5 @@
 <?php
-
+	session_start();
 //Include de clases php
 require_once('php/conexion.php');
 
@@ -12,7 +12,8 @@ $smarty = new Smarty_setup();
 // ------- Comprobacion de usuario registrado
 
 if(isset($_SESSION['usuario'])){
-	session_start();
+	
+	$smarty->assign('user', $_SESSION['usuario']);
 	$smarty->assign('login' , '0');
 	$smarty->assign('usuario' , '1');
 }else{
@@ -26,13 +27,11 @@ if(isset($_REQUEST['login'])){
 	$email 	= $_REQUEST['email'];
 	$pass	= $_REQUEST['password'];
 	
-	$result = mysqli_query($con, "SELECT IF(PASSWORD=MD5('$pass'),1,0) AS ACCESO FROM TRN_LKP_USUARIOS WHERE EMAIL='$email';" );
+	$result = mysqli_query($con, "SELECT nombre, IF(PASSWORD=MD5('$pass'),1,0) AS ACCESO FROM TRN_LKP_USUARIOS WHERE EMAIL='$email';" );
 	$row=mysqli_fetch_array($result);
 	if($row['ACCESO']=='1'){
 		session_start();
-		$row = mysqli_fetch_array($result);
 		$_SESSION['usuario'] = $row['nombre'];
-		
 		$smarty->assign('user', $_SESSION['usuario']);
 		$smarty->assign('login' , '0');
 		$smarty->assign('usuario' , '1');
