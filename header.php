@@ -1,7 +1,7 @@
 <?php
-	session_start();
+session_start();
 //Include de clases php
-require_once('php/conexion.php');
+require_once('php/class.php');
 
 //Include de los parametros de smarty
 require_once('setup.php'); 
@@ -9,6 +9,49 @@ require_once('setup.php');
 // ------- Declaracion de la funcion de smarty
 $smarty = new Smarty_setup();
 
+if(isset($_SESSION['usuario'])){
+	
+	$smarty->assign('user', $_SESSION['usuario']);
+	$smarty->assign('login' , '0');
+	$smarty->assign('usuario' , '1');
+}else{
+	$smarty->assign('usuario' , '0');
+	$smarty->assign('login' , '0');
+	session_destroy();
+}
+
+
+
+
+if(isset($_REQUEST['login'])){
+
+	$email 	= $_REQUEST['email'];
+	$password	= $_REQUEST['password'];
+
+	$usuario = new usuarios();
+	$login = $usuario->login_user($password, $email);
+	
+	if($login['ACCESO']=='1'){
+		session_start();
+		$_SESSION['usuario'] = $login['nombre'];
+		$smarty->assign('user', $_SESSION['usuario']);
+		$smarty->assign('login' , '0');
+		$smarty->assign('usuario' , '1');
+	}else{
+		$smarty->assign('login' , '1');	
+		$smarty->assign('usuario' , '0');
+	}
+
+}
+
+
+
+
+
+
+
+
+/*
 // ------- Comprobacion de usuario registrado
 
 if(isset($_SESSION['usuario'])){
@@ -64,7 +107,7 @@ if(isset($_REQUEST['registro'])){
 }else{
 	$smarty->assign('registro' , '0');	
 }
-
+*/
 
 
 
