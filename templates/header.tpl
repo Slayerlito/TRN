@@ -53,17 +53,7 @@
 			<!-- div donde se muestra el menú cuando el tamaño es de móvil -->
 			<!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
-			<!-- MENU -->
-                <ul class="nav navbar-nav">
-                    <!-- li oculto para el scroll del nav -->
-					<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden"><a class="page-scroll" href="index.php"></a></li>
-                    <li><a class="page-scroll" href="#inicio">Inicio</a></li>
-                    <li><a class="page-scroll" href="#noticias">Noticias</a></li>
-                    <li><a class="page-scroll" href="#planes">Planes</a></li>
-					<li><a class="page-scroll" href="prueba.php">PRUEBAS</a></li>
-                </ul>
-			<!-- MENU -->
+
 			<!-- Login / Registro -->
 				<ul class="nav navbar-nav navbar-right">
 					<!-- Iniciar sesión -->
@@ -128,6 +118,17 @@
 				{/IF}	
 	<!-- FIN  del IF Smarty -->
 				</ul>
+				<!-- MENU -->
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- li oculto para el scroll del nav -->
+					<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden"><a class="page-scroll" href="index.php"></a></li>
+                    <li><a class="page-scroll" href="#inicio">Inicio</a></li>
+                    <li><a class="page-scroll" href="#noticias">Noticias</a></li>
+                    <li><a class="page-scroll" href="#planes">Planes</a></li>
+					<li><a class="page-scroll" href="prueba.php">My TRN</a></li>
+                </ul>
+			<!-- MENU -->
 				<!-- FIN Login / Registro -->
             </div>
             <!-- /.navbar-collapse -->
