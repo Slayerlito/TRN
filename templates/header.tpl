@@ -37,16 +37,16 @@
 	 <!-- NAV  -->
     <nav class="navbar navbar-fixed-top" role="navigation">
         <div class="container-fluid">
-            <div class="navbar-header page-scroll">
+			<div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 					<span class="glyphicon glyphicon-menu-hamburger"></span>
                 </button>
                 <a class="navbar-brand page-scroll" href="index.php"><span>TRN</span></a>
 				<!-- REDES SOCIALES -->
 				<div class="social navbar-left">
-					<a href="http://www.twitter.es" class="btn btn-sm btn-social-icon btn-twitter"><span class="fa fa-twitter"></span></a>
-					<a href="http://www.facebook.es" class="btn btn-sm btn-social-icon btn-facebook"><span class="fa fa-facebook"></span></a>
-					<a href="https://www.instagram.com/" class="btn btn-sm btn-social-icon btn-instagram"><span class="fa fa-instagram"></span></a>
+					<a href="http://www.twitter.es" class="btn btn-sm btn-social-icon btn-twitter" target="_blank"><span class="fa fa-twitter"></span></a>
+					<a href="http://www.facebook.es" class="btn btn-sm btn-social-icon btn-facebook" target="_blank"><span class="fa fa-facebook"></span></a>
+					<a href="https://www.instagram.com/" class="btn btn-sm btn-social-icon btn-instagram" target="_blank"><span class="fa fa-instagram"></span></a>
 				</div>
 				<!-- REDES SOCIALES -->	
             </div>
@@ -127,13 +127,20 @@
                     <li><a class="page-scroll" href="#noticias">Noticias</a></li>
                     <li><a class="page-scroll" href="#planes">Planes</a></li>
 					<li><a class="page-scroll" href="prueba.php">My TRN</a></li>
+					<div id="mytrn">
+							<form class="form" action="index.php" method="post">
+								<input type="text" id="email_l" name="email" autofocus="autofocus" placeholder="E-mail">
+								<input type="password" id="password" name="password" placeholder="Contraseña">
+								<input clasS="btn" type="submit" name="login" value="Iniciar sesión">
+							</form>
+					</div>
                 </ul>
 			<!-- MENU -->
 				<!-- FIN Login / Registro -->
             </div>
             <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
+        <!-- /.container-fluid -->
 	</nav>
 	<!-- FIN NAV -->
 </header>
