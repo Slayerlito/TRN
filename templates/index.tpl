@@ -110,7 +110,7 @@
 		<div class="container">
 			<div class="col-md-3">
 				<div class="planes">
-					<h4>PLAN ZAFIRO</h4>
+					<h4>PLAN 1</h4>
 					<ul class="list-unstyled">
 						<li> Opción 1</li>
 						<li> Opción 2</li>
@@ -121,7 +121,7 @@
 			</div>
 			<div class="col-md-3">
 				<div class="planes">
-					<h4>PLAN RUBÍ</h4>
+					<h4>PLAN 2</h4>
 					<ul class="list-unstyled">
 						<li> Opción 1</li>
 						<li> Opción 2</li>
@@ -132,7 +132,7 @@
 			</div>
 			<div class="col-md-3">
 				<div class="planes">
-					<h4>PLAN ESMERALDA</h4>
+					<h4>PLAN 3</h4>
 					<ul class="list-unstyled">
 						<li> Opción 1</li>
 						<li> Opción 2</li>
@@ -143,7 +143,7 @@
 			</div>
 			<div class="col-md-3">
 				<div class="planes">
-					<h4>PLAN DIAMANTE</h4>
+					<h4>PLAN 4</h4>
 					<ul class="list-unstyled">
 						<li> Opción 1</li>
 						<li> Opción 2</li>

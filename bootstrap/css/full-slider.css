@@ -16,6 +16,7 @@ body {
 }
 
 .carousel-inner {
+	margin-top: 40px;
     height: auto;
 }
 
@@ -29,8 +30,4 @@ body {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-}
-
-footer {
-    margin: 50px 0;
 }

@@ -20,10 +20,7 @@
 /*BOTONES REDES SOCIALES*/
 .social {
 padding: 10px;
-width: auto;
 }
-
-
 
 /* CSS header.tpl*/
 /* ----------------------*/
@@ -68,8 +65,4 @@ footer {
 .navbar-toggle {
 	background-color: white;
 	color: black;
-}
-
-.icon-bar {
-	color: red;
 }

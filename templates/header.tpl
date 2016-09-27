@@ -41,17 +41,15 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 					<span class="glyphicon glyphicon-menu-hamburger"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top"><span>TRN</span></a>
+                <a class="navbar-brand page-scroll" href="index.php"><span>TRN</span></a>
+				<!-- REDES SOCIALES -->
+				<div class="social navbar-left">
+					<a href="http://www.twitter.es" class="btn btn-sm btn-social-icon btn-twitter"><span class="fa fa-twitter"></span></a>
+					<a href="http://www.facebook.es" class="btn btn-sm btn-social-icon btn-facebook"><span class="fa fa-facebook"></span></a>
+					<a href="https://www.instagram.com/" class="btn btn-sm btn-social-icon btn-instagram"><span class="fa fa-instagram"></span></a>
+				</div>
+				<!-- REDES SOCIALES -->	
             </div>
-			<!-- REDES SOCIALES -->
-			<div class="social col-md-2">
-				<a href="http://www.twitter.es" class="btn btn-sm btn-social-icon btn-twitter"><span class="fa fa-twitter"></span></a>
-				<a href="http://www.facebook.es" class="btn btn-sm btn-social-icon btn-facebook"><span class="fa fa-facebook"></span></a>
-				<a href="http://www.flickr.com" class="btn btn-sm btn-social-icon btn-flickr"><span class="fa fa-flickr"></span></a>
-				<a href="https://plus.google.com/" class="btn btn-sm btn-social-icon btn-google"><span class="fa fa-google"></span></a> 
-				<a href="https://www.instagram.com/" class="btn btn-sm btn-social-icon btn-instagram"><span class="fa fa-instagram"></span></a>
-			</div>
-			<!-- REDES SOCIALES -->
 			<!-- div donde se muestra el menú cuando el tamaño es de móvil -->
 			<!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -59,7 +57,7 @@
                 <ul class="nav navbar-nav">
                     <!-- li oculto para el scroll del nav -->
 					<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden"><a class="page-scroll" href="#page-top"></a></li>
+                    <li class="hidden"><a class="page-scroll" href="index.php"></a></li>
                     <li><a class="page-scroll" href="#inicio">Inicio</a></li>
                     <li><a class="page-scroll" href="#noticias">Noticias</a></li>
                     <li><a class="page-scroll" href="#planes">Planes</a></li>
