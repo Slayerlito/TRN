@@ -1,4 +1,4 @@
-/*INSERT TRN_USUARIOS
+/*TRN_LKP_USUARIOS
 Variable                Input       Campo               Formato         CONSTRAINT
 @NOMBRE                 STRING      (VARCHAR(50))
 @APELLIDOS              STRING      (VARCHAR(50))
@@ -6,7 +6,7 @@ Variable                Input       Campo               Formato         CONSTRAI
 @EMAIL                  STRING      (VARCHAR(50))                       UNIQUE (NOT PK)
 @PASSWORD				STRING		(VARCHAR(50))						Codificación en MD5
 */
-INSERT INTO TRN_USUARIOS (NOMBRE,APELLIDOS,FECHA_DE_NACIMIENTO,EMAIL)VALUES($NOMBRE,$APELLIDOS,STR_TO_DATE($FECHA_DE_NACIMIENTO,'%d/%m/%Y'),$EMAIL,MD5($PASSWORD));
+/*REGISTRO*/INSERT INTO TRN_LKP_USUARIOS (NOMBRE,APELLIDOS,FECHA_DE_NACIMIENTO,EMAIL)VALUES($NOMBRE,$APELLIDOS,STR_TO_DATE($FECHA_DE_NACIMIENTO,'%d/%m/%Y'),$EMAIL,MD5($PASSWORD));
 
 
 SELECT IF(PW=MD5($PASSWORD),1,0) AS ACCESO FROM TRN_USUARIO WHERE EMAIL="$EMAIL";
@@ -15,5 +15,8 @@ SELECT IF(PW=MD5($PASSWORD),1,0) AS ACCESO FROM TRN_USUARIO WHERE EMAIL="$EMAIL"
 Variable                Input       Campo               Formato         CONSTRAINT
 @DESCRIPTOR             STRING      (VARCHAR(20))                           
 @PERMISOS               INT         TINYINT             0-1             DEFAULT 0 (FALSE)
+
+INSERT INTO TRN_PERFILES (DESC_PERFIL,PERMISOS[..])VALUES($Descriptor,$Permisos[..]);*/
+
+/*
 */
-INSERT INTO TRN_PERFILES (DESC_PERFIL,PERMISOS[..])VALUES($Descriptor,$Permisos[..]);

@@ -22,8 +22,6 @@
 padding: 10px;
 }
 
-
-
 /* CSS header.tpl*/
 /* ----------------------*/
 /* CSS index.tpl*/
@@ -62,4 +60,9 @@ footer {
 
 .navbar a {
 	color: white;
+}
+
+.navbar-toggle {
+	background-color: white;
+	color: black;
 }
