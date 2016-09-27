@@ -37,7 +37,7 @@
 	 <!-- NAV  -->
     <nav class="navbar navbar-fixed-top" role="navigation">
         <div class="container-fluid">
-            <div class="navbar-header page-scroll col-md-3	">
+            <div class="navbar-header page-scroll col-md-2">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -47,7 +47,7 @@
                 <a class="navbar-brand page-scroll" href="#page-top"><span>TRN</span></a>
             </div>
 			<!-- REDES SOCIALES -->
-			<div class="social col-md-3">
+			<div class="social col-md-4">
 				<a href="http://www.twitter.es" class="btn btn-sm btn-social-icon btn-twitter"><span class="fa fa-twitter"></span></a>
 				<a href="http://www.facebook.es" class="btn btn-sm btn-social-icon btn-facebook"><span class="fa fa-facebook"></span></a>
 				<a href="http://www.flickr.com" class="btn btn-sm btn-social-icon btn-flickr"><span class="fa fa-flickr"></span></a>
