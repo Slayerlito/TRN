@@ -61,7 +61,7 @@
                     <li><a class="page-scroll" href="#inicio">Inicio</a></li>
                     <li><a class="page-scroll" href="#noticias">Noticias</a></li>
                     <li><a class="page-scroll" href="#planes">Planes</a></li>
-					<li><a class="page-scroll" href="">PRUEBAS</a></li>
+					<li><a class="page-scroll" href="prueba.php">PRUEBAS</a></li>
                 </ul>
 			<!-- MENU -->
 			<!-- Login / Registro -->
