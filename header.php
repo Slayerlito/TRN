@@ -12,7 +12,7 @@ $smarty = new Smarty_setup();
 // ------- Comprobacion de usuario registrado
 
 if(isset($_SESSION['usuario'])){
-	
+	session_start();
 	$smarty->assign('login' , '0');
 	$smarty->assign('usuario' , '1');
 }else{
@@ -26,8 +26,9 @@ if(isset($_REQUEST['login'])){
 	$email 	= $_REQUEST['email'];
 	$pass	= $_REQUEST['password'];
 	
-	$result = mysqli_query($con, "SELECT email, password, nombre FROM trn_usuarios WHERE email = '$email' AND password = '$pass'" );
-	if(mysqli_affected_rows($con)){
+	$result = mysqli_query($con, "SELECT IF(PASSWORD=MD5('$pass'),1,0) AS ACCESO FROM TRN_LKP_USUARIOS WHERE EMAIL='$email';" );
+	$row=mysqli_fetch_array($result);
+	if($row['ACCESO']=='1'){
 		session_start();
 		$row = mysqli_fetch_array($result);
 		$_SESSION['usuario'] = $row['nombre'];
@@ -54,7 +55,7 @@ if(isset($_REQUEST['registro'])){
 	$apellidos 	= $_REQUEST['apellidos'];
 	$nacimiento = $_REQUEST['nacimiento'];
 	
-	$result = mysqli_query($con, "INSERT INTO trn_usuarios (NOMBRE,APELLIDOS,FECHA_DE_NACIMIENTO,EMAIL,PASSWORD)VALUES('$nombre','$apellidos','$nacimiento','$email','$password')" );
+	$result = mysqli_query($con, "INSERT INTO TRN_LKP_USUARIOS (NOMBRE,APELLIDOS,FECHA_DE_NACIMIENTO,EMAIL)VALUES($NOMBRE,$APELLIDOS,STR_TO_DATE($FECHA_DE_NACIMIENTO,'%d/%m/%Y'),$EMAIL,MD5($PASSWORD))" );
 	if(mysqli_affected_rows($con) != -1){
 		
 		$smarty->assign('registro' , '0');	
