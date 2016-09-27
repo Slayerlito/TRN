@@ -4,32 +4,29 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
-<<<<<<< HEAD
-html, body {
-    height: auto;
-=======
 html,
 body {
-    height: 100%;
->>>>>>> cea12e6193b2d363d9a385a382d7bdf951035962
+    height: auto;
 }
 
 .carousel,
 .item,
 .active {
-    height: 100%;
+    height: auto;
 }
 
 .carousel-inner {
-    height: 100%;
+    height: auto;
 }
 
-<<<<<<< HEAD
-=======
 /* Background images are set within the HTML using inline CSS, not here */
 
->>>>>>> cea12e6193b2d363d9a385a382d7bdf951035962
 .fill {
     width: 100%;
     height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
