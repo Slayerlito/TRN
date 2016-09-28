@@ -11,6 +11,14 @@ require_once('header.php');
 
 //Pruebas
 
+
+
+
+
+
+
+
+
 $smarty->display('prueba.tpl');
 
 //Include del footer
