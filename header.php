@@ -63,7 +63,6 @@ if(isset($_REQUEST['registro'])){
 		];
 		$cliente 	= new usuarios();
 		$registro 	= $cliente->add_user($datos);
-		var_dump ($registro);
 		
 		
 		if($registro == true){
@@ -77,65 +76,9 @@ if(isset($_REQUEST['registro'])){
 	}ELSE{
 		$smarty->assign('registro' , 'pass');	
 	}
-/*	
-	$result = mysqli_query($con, "INSERT INTO TRN_LKP_USUARIOS (NOMBRE,APELLIDOS,FECHA_DE_NACIMIENTO,EMAIL)VALUES($NOMBRE,$APELLIDOS,STR_TO_DATE($FECHA_DE_NACIMIENTO,'%d/%m/%Y'),$EMAIL,MD5($PASSWORD))" );
-	if(mysqli_affected_rows($con) != -1){
-		
-		$smarty->assign('registro' , '0');	
-	}else{
-		$smarty->assign('registro' , '1');	
-	}	*/
 }else{
 	$smarty->assign('registro' , '0');	
 }
-
-
-
-
-
-
-/*
-
-
-if(isset($_SESSION['usuario'])){
-	
-	$smarty->assign('user', $_SESSION['usuario']);
-	$smarty->assign('login' , '0');
-	$smarty->assign('usuario' , '1');
-}else{
-	$smarty->assign('usuario' , '0');
-}
-
-// ------- Funcionalidad del login
-
-if(isset($_REQUEST['login'])){
-	
-	$email 	= $_REQUEST['email'];
-	$pass	= $_REQUEST['password'];
-	
-	$result = mysqli_query($con, "SELECT nombre, IF(PASSWORD=MD5('$pass'),1,0) AS ACCESO FROM TRN_LKP_USUARIOS WHERE EMAIL='$email';" );
-	$row=mysqli_fetch_array($result);
-	if($row['ACCESO']=='1'){
-		session_start();
-		$_SESSION['usuario'] = $row['nombre'];
-		$smarty->assign('user', $_SESSION['usuario']);
-		$smarty->assign('login' , '0');
-		$smarty->assign('usuario' , '1');
-	}else{
-		$smarty->assign('login' , '1');	
-		$smarty->assign('usuario' , '0');
-	}
-}else{
-
-	$smarty->assign('login' , '0');
-}
-
-// ------- Funcionalidad del Registro
-
-
-*/
-
-
 
 
 
