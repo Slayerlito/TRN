@@ -1,11 +1,40 @@
 /*CSS*/
 /*CSS header.tpl*/
+
+/*NAVBAR*/
+
+#mytrn {
+	display: none;
+}
+
+#mytrn:focus {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+.navbar {
+	background-color: black;
+}
+
+.navbar a {
+	color: white;
+}
+
+.navbar-toggle {
+	background-color: white;
+	color: black;
+}
+
 .navbar-brand {
-	/* padding-left: 50px; /*padding izquierdo iniciales del nav TRN*/
+	padding-left: 50px; /*padding izquierdo iniciales del nav TRN*/
+	margin-top: 5px;
 }
 
 .navbar-right{
-	padding-right: 70px; /*padding derecho login y el registro */
+	padding-right: 20px;
 }
 
 /* padding y margin para el dropdown del login y registro*/
@@ -19,7 +48,7 @@
 
 /*BOTONES REDES SOCIALES*/
 .social {
-padding: 10px;
+padding: 15px;
 }
 
 /* CSS header.tpl*/
@@ -51,18 +80,3 @@ footer {
 }
 
 /* CSS footer.tpl */
-
-
-/*NAVBAR*/
-.navbar {
-	background-color: black;
-}
-
-.navbar a {
-	color: white;
-}
-
-.navbar-toggle {
-	background-color: white;
-	color: black;
-}
