@@ -138,7 +138,7 @@
                     <li><a class="page-scroll" href="#inicio">Inicio</a></li>
                     <li><a class="page-scroll" href="#noticias">Noticias</a></li>
                     <li><a class="page-scroll" href="#planes">Planes</a></li>
-					<li><a class="page-scroll" href="#">My TRN</a></li>
+					<li><a class="page-scroll" href="mytrn.php">My TRN</a></li>
 					<li><a class="page-scroll" href="prueba.php">PRUEBAS</a></li>
 					<div id="mytrn">
 						<form class="form" action="index.php" method="post">
@@ -149,7 +149,7 @@
 						</form>
 					</div>
                 </ul>
-			<!-- MENU -->
+				<!-- MENU -->
 				<!-- FIN Login / Registro -->
             </div>
             <!-- /.navbar-collapse -->
