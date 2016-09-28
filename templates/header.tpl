@@ -59,7 +59,7 @@
 					<!-- Iniciar sesión -->
 	<!-- SE muestra o oculta segun si esta o no logueado el usuario -->	
 				
-				{IF $usuario == '0'}	
+				{IF $usuario == 'false'}	
 					<li class="dropdown">
 						<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="login"><span class="glyphicon glyphicon-user"></span> Identifícate</a>
 						<div class="dropdown-menu">
@@ -70,7 +70,7 @@
 								<input clasS="btn" type="submit" name="login" value="Iniciar sesión">
 						</form>
 	<!-- DAVID // MOSTRARLO CUANDO EL LOGIN NO ES CORRECTO -->
-							{IF $login == '1'}
+							{IF $login == 'false'}
 								<div class="alert alert-danger">
 									<p>El usuario o la contraseña no son correctos.</p>
 								</div>
@@ -95,9 +95,23 @@
 <!-- DAVID // MOSTRARLO CUANDO EL REGISTRO NO ES CORRECTO -->
 							
 <!-- SE ESTA MOSTRANDO DENTRO DEL DIV DEL LOGIN.. HAY QUE PONERLO FUERA PARA QUE SE VEA CUANDO FALLA -->
-							{IF $registro == '1'}
+							{IF $registro == 'pass'}
+								<div class="alert alert-danger">
+									<p>Las contraseñas no son iguales.</p>
+									<a href="" >¿Has olvidado la contraseña?</a>
+								</div>
+							{ELSEIF $registro == 'email'}
 								<div class="alert alert-danger">
 									<p>Ya existe un usuario con ese E-mail.</p>
+								</div>
+							{ELSEIF $registro == 'null'}
+								<div class="alert alert-danger">
+									<p>No se ha podido registrar.</p>
+									<a href="" >¿Has olvidado la contraseña?</a>
+								</div>
+							{ELSEIF $registro == 'true'}
+								<div class="alert alert-success">
+									<p>Usuario registrado con exito.</p>
 								</div>
 							{/IF}
 							<!-- --------------------------------------------------- -->
