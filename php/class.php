@@ -6,13 +6,22 @@
 
 require_once "conexion.php"; 
 
-class conexion 
-{ 
-    protected $_db; 
+class ControladorSQL{ 
+    private static $controladorSQL;
+	private $_db; 
 
-    public function __construct() 
-    { 
-        $this->_db = new mysqli(DB_SERVER, DB_USER, DB_PASS, DB_NAME); 
+    private function __construct(){ 
+        return $this;
+    } 
+
+	public static function getControlador(){
+		if (ControladorSQL::$controladorSQL == null){
+			ControladorSQL::$controladorSQL = new ControladorSQL();
+		}
+		return ControladorSQL::$controladorSQL;
+	}
+	private function conectar(){
+		$this->_db = new mysqli(DB_SERVER, DB_USER, DB_PASS, DB_NAME); 
         if ( $this->_db->connect_errno) 
         { 
             echo "Fallo al conectar a MySQL: ". $this->_db->connect_error; 
@@ -20,7 +29,22 @@ class conexion
         } 
 
         $this->_db->set_charset(DB_CHARSET); 
-    } 
+	}
+	private function desconectar(){
+		MYSQLI_CLOSE($this->_db);
+	}
+	public function ejecutarSQL($query){
+		$this->conectar();
+		$result = $this->_db->query($query);
+		$this->desconectar();
+		return $result;
+	}
+	
+	public function registrarUsuario($nombre,$apellidos,$email,$password,$nacimiento){
+		$result = $this->ejecutarSQL("INSERT INTO TRN_LKP_USUARIOS (NOMBRE,APELLIDOS,FECHA_DE_NACIMIENTO,EMAIL,PASSWORD)VALUES('$nombre','$apellidos',STR_TO_DATE('$nacimiento','%d/%m/%Y'),'$email',MD5('$password'))"); 
+
+	}
+	
 } 
 
 	/*======================usuarios()======================================
@@ -29,27 +53,41 @@ class conexion
 	 Es una extension de la clase conexion
 	****************************************************************************************** */
 
-class usuarios extends conexion 
-{     
-    public function __construct() 
-    { 
-        parent::__construct(); 
-    } 
-
-	public function login_user($password, $email){
-		$result = $this->_db->query("SELECT nombre, IF(PASSWORD=MD5('$password'),1,0) AS ACCESO FROM TRN_LKP_USUARIOS WHERE EMAIL='$email'");
-		$login 	= $result->fetch_array(MYSQLI_ASSOC);
-		return $login;
+class Usuario {
+	private $id_user;
+	private $nombre;
+	private $apellidos;
+	private $fecha_nacimiento;
+	private $email;
+	private $deportista;
+	private $peso;
+	private $altura;
+	private $perfil;
+	
+    public function __construct($email,$password){ 
+		$resultado = ControladorSQL::getControlador()->ejecutarSQL("SELECT IF(PASSWORD=MD5('$password'),1,0) AS ACCESO FROM TRN_LKP_USUARIOS WHERE EMAIL='$email'");
+		$login = $resultado->fetch_array(MYSQLI_ASSOC);
+		if ($login['ACCESO'] == '0'){
+			return -1;
+		}
+		$resultado = ControladorSQL::getControlador()->ejecutarSQL("SELECT ID_USER,NOMBRE,APELLIDOS,FECHA_DE_NACIMIENTO,EMAIL,DEPORTISTA,PESO,ALTURA,PERFIL FROM TRN_LKP_USUARIOS WHERE EMAIL='$email'");
+		$result = $resultado->fetch_array(MYSQLI_ASSOC);
+		$this->id_user = $result['ID_USER'];
+		$this->nombre = $result['NOMBRE'];
+		$this->apellidos = $result['APELLIDOS'];
+		$this->fecha_nacimiento = $result['FECHA_DE_NACIMIENTO'];
+		$this->email = $result['EMAIL'];
+		$this->deportista = $result['DEPORTISTA'];
+		$this->peso = $result['PESO'];
+		$this->altura = $result['ALTURA'];
+		$this->perfil = $result['PERFIL'];
+		return $this;		
+	} 
+	public function getNombre(){
+		return $this->nombre;
 	}
 	
-    public function user() 
-    { 
-        $result = $this->_db->query('SELECT email FROM TRN_LKP_USUARIOS WHERE '); 
-         
-        $users = $result->fetch_all(MYSQLI_ASSOC); 
-         
-        return $users; 
-    } 
+	
 	
 	public function add_user($datos){
 		$email 		= $datos['email'];

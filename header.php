@@ -1,11 +1,11 @@
 <?php
-session_start();
+
 //Include de clases php
 require_once('php/class.php');
 
 //Include de los parametros de smarty
 require_once('setup.php'); 
-
+session_start();
 // ------- Declaracion de la funcion de smarty
 $smarty = new Smarty_setup();
 
@@ -15,7 +15,7 @@ $smarty = new Smarty_setup();
 	
 if(isset($_SESSION['usuario'])){
 	
-	$smarty->assign('user', $_SESSION['usuario']);
+	$smarty->assign('user', $_SESSION['usuario']->getNombre());
 	$smarty->assign('login' , 'true');
 	$smarty->assign('usuario' , 'true');
 }else{
@@ -30,18 +30,16 @@ if(isset($_SESSION['usuario'])){
 
 if(isset($_REQUEST['login'])){
 
-	$usuario 	= new usuarios();
-	$login 		= $usuario->login_user($_REQUEST['password'], $_REQUEST['email']);
-	
-	if($login['ACCESO']=='1'){
-		session_start();
-		$_SESSION['usuario'] = $login['nombre'];
-		$smarty->assign('user', $_SESSION['usuario']);
-		$smarty->assign('login' , 'true');
-		$smarty->assign('usuario' , 'true');
-	}else{
+	$usuario = new Usuario($_REQUEST['email'],$_REQUEST['password']);
+	if($usuario == '-1'){
 		$smarty->assign('login' , 'false');	
 		$smarty->assign('usuario' , 'false');
+	}else{
+		session_start();
+		$_SESSION['usuario'] = $usuario;
+		$smarty->assign('user', $_SESSION['usuario']->getNombre());
+		$smarty->assign('login' , 'true');
+		$smarty->assign('usuario' , 'true');
 	}
 }
 
@@ -61,9 +59,7 @@ if(isset($_REQUEST['registro'])){
 		"password"	=> $_REQUEST['password'],
 		"nacimiento"=> $_REQUEST['nacimiento'],
 		];
-		$cliente 	= new usuarios();
-		$registro 	= $cliente->add_user($datos);
-		
+		$registro = ControladorSQL::getControlador()->registrarUsuario($datos['nombre'],$datos['apellidos'],$datos['email'],$datos['password'],$datos['nacimiento']);
 		
 		if($registro == true){
 			$smarty->assign('registro' , 'true');
