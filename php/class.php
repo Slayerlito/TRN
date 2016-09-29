@@ -41,8 +41,18 @@ class ControladorSQL{
 	}
 	
 	public function registrarUsuario($nombre,$apellidos,$email,$password,$nacimiento){
-		$result = $this->ejecutarSQL("INSERT INTO TRN_LKP_USUARIOS (NOMBRE,APELLIDOS,FECHA_DE_NACIMIENTO,EMAIL,PASSWORD)VALUES('$nombre','$apellidos',STR_TO_DATE('$nacimiento','%d/%m/%Y'),'$email',MD5('$password'))"); 
-
+		
+		$comprobar = $this->ejecutarSQL("SELECT EMAIL FROM TRN_LKP_USUARIOS WHERE EMAIL = '$email' ");
+		$existe = mysqli_num_rows($comprobar);
+		IF($existe == '0'){
+			$result = $this->ejecutarSQL("INSERT INTO TRN_LKP_USUARIOS (NOMBRE,APELLIDOS,FECHA_DE_NACIMIENTO,EMAIL,PASSWORD)VALUES('$nombre','$apellidos',STR_TO_DATE('$nacimiento','%d/%m/%Y'),'$email',MD5('$password'))"); 
+			return true;
+		}ELSEIF($existe == '1'){
+			return false;
+		}ELSE{
+			return null;
+		}
+		
 	}
 	
 } 
@@ -88,23 +98,14 @@ class Usuario {
 	}
 	
 	
-	
-	public function add_user($datos){
-		$email 		= $datos['email'];
-		$password	= $datos['password'];
-		$nombre 	= $datos['nombre'];
-		$apellidos 	= $datos['apellidos'];
-		$nacimiento = $datos['nacimiento'];
-	
-		$result = $this->_db->query("INSERT INTO TRN_LKP_USUARIOS (NOMBRE,APELLIDOS,FECHA_DE_NACIMIENTO,EMAIL,PASSWORD)VALUES('$nombre','$apellidos',STR_TO_DATE('$nacimiento','%d/%m/%Y'),'$email',MD5('$password'))"); 
-
-         
-        return $result; 
-		
-	}
-	
-	public function delete_user(){
-		
+	public function delete_user($id_user){
+		$del = ControladorSQL::ejecutarSQL("DELETE FROM TRN_LKP_USUARIOS WHERE ID_USER = '$id_user'");
+		$estado = mysqli_affected_rows($del);
+		IF($estado > 0){
+			return true;
+		}ELSE{
+			return null;
+		}
 	}
 	
 	public function modificar_user(){

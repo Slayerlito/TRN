@@ -60,13 +60,12 @@ if(isset($_REQUEST['registro'])){
 		"nacimiento"=> $_REQUEST['nacimiento'],
 		];
 		$registro = ControladorSQL::getControlador()->registrarUsuario($datos['nombre'],$datos['apellidos'],$datos['email'],$datos['password'],$datos['nacimiento']);
-		
-		if($registro == true){
+		if($registro === true){
 			$smarty->assign('registro' , 'true');
-		}elseif($registro == false){
+		}elseif($registro === false){
 			$smarty->assign('registro' , 'email');
 		}elseif($registro == null){
-			$smarty->assign('registro' , 'null');
+			$smarty->assign('registro' , '-1');
 		}
 		
 	}ELSE{

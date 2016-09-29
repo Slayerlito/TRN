@@ -104,7 +104,7 @@
 								<div class="alert alert-danger">
 									<p>Ya existe un usuario con ese E-mail.</p>
 								</div>
-							{ELSEIF $registro == 'null'}
+							{ELSEIF $registro == '-1'}
 								<div class="alert alert-danger">
 									<p>No se ha podido registrar.</p>
 									<a href="" >¿Has olvidado la contraseña?</a>
