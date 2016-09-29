@@ -1,7 +1,8 @@
 <?php
 
 //Include de clases php
-require_once('php/class.php');
+require_once('php/controladores/ControladorSQL.php');
+require_once('php/modelo/Usuario.php');
 
 //Include de los parametros de smarty
 require_once('setup.php'); 
