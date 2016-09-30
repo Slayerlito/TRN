@@ -13,19 +13,19 @@
 		<div class="carousel-inner">
 			<div class="item active">
 				<!-- Set the first background image using inline CSS below. -->
-				<img class="fill" src="slider1.jpg">
+				<img class="fill" src="images/slider/slider1.jpg">
 			</div>
 			<div class="item">
 				<!-- Set the second background image using inline CSS below. -->
-				<img class="fill" src="slider2.jpg">
+				<img class="fill" src="images/slider/slider2.jpg">
 			</div>
 			<div class="item">
 				<!-- Set the third background image using inline CSS below. -->
-				<img class="fill" src="slider3.jpg">
+				<img class="fill" src="images/slider/slider3.jpg">
 			</div>
 			<div class="item">
 				<!-- Set the third background image using inline CSS below. -->
-				<img class="fill" src="slider4.jpg">
+				<img class="fill" src="images/slider/slider4.jpg">
 			</div>
 		</div>
 		<!-- Controls -->

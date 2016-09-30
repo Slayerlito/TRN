@@ -14,6 +14,8 @@
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	  <!-- Tema Bootstrap -->
 	<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+	<!-- CSS Simple sidebar mytrn -->
+	<link href="bootstrap/css/simple-sidebar.css" rel="stylesheet">
 	<!-- CSS scrolling nav -->
 	<link href="bootstrap/css/scrolling-nav.css" rel="stylesheet">
 	<!-- CSS  slider -->
