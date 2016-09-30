@@ -1,7 +1,8 @@
 <?php
 
 //Include de clases php
-require_once('php/class.php');
+require_once('php/controladores/ControladorSQL.php');
+require_once('php/modelo/Usuario.php');
 
 //Include de los parametros de smarty
 require_once('setup.php'); 
@@ -60,13 +61,12 @@ if(isset($_REQUEST['registro'])){
 		"nacimiento"=> $_REQUEST['nacimiento'],
 		];
 		$registro = ControladorSQL::getControlador()->registrarUsuario($datos['nombre'],$datos['apellidos'],$datos['email'],$datos['password'],$datos['nacimiento']);
-		
-		if($registro == true){
+		if($registro === true){
 			$smarty->assign('registro' , 'true');
-		}elseif($registro == false){
+		}elseif($registro === false){
 			$smarty->assign('registro' , 'email');
 		}elseif($registro == null){
-			$smarty->assign('registro' , 'null');
+			$smarty->assign('registro' , '-1');
 		}
 		
 	}ELSE{

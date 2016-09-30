@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>378</x>
+      <y>126</y>
+      <w>378</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>ControladorSQL
+--
+_- controladorSQL_
+- _db
+--
+- ControladorSQL()
+_+ getControlador()_
+- conectar()
+- desconectar()
++ registrarUsuario(nombre,apellidos,email,password,nacimiento)
++ borrarUsuario(id_user)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>135</x>
+      <y>387</y>
+      <w>252</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>Usuario
+--
+-id_user		       -nombre
+-apellidos     -fecha_nacimiento
+-email          -deportista
+-peso           -altura
+-perfil           -activo
+--
++ Usuario(email,password)
++ desactivarUsuario()
++ solicitarBorrar()
++ activarUsuario()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>729</x>
+      <y>369</y>
+      <w>216</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>_Objetivo_
+--
+- id_objetivo           - id_user
+- fecha_inicio         - progreso
+- peso_objetivo      - peso_inicio
+- peso_actual         - dias_entreno
+- patologias            - alimentos_nd
+- objetivo
+--
++ Objetivo()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
