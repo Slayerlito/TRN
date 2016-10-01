@@ -1,5 +1,5 @@
 <main>
-	<!-- CAROUSEL IMAGENES -->
+	<!-- Carousel Imagenes-->
 	<div id="myCarousel" class="carousel slide">
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
@@ -8,7 +8,6 @@
 			<li data-target="#myCarousel" data-slide-to="2"></li>
 			<li data-target="#myCarousel" data-slide-to="3"></li>
 		</ol>
-
 		<!-- Wrapper for Slides -->
 		<div class="carousel-inner">
 			<div class="item active">
@@ -36,10 +35,12 @@
 			<span class="glyphicon glyphicon-chevron-right" href="#myCarousel"></span>
 		</a>
 	</div>
-	<!-- FIN CAROUSEL IMAGENES-->
+	<!-- /Carousel Imagenes-->
+	
 	<!-- ESPECIALIDADES -->
 
-  <!-- class="container"-->	<section class="container">
+  <!-- class="container"-->	
+	<section class="container">
 		<div class="col-md-4">
 			<div>
 				<h3 class="text-center">Entrenamiento</h3>
@@ -103,7 +104,7 @@
 			</div>
 		</div>
 	</section>
-	<!-- FIN NOTICIAS -->
+	<!-- /NOTICIAS -->
 	<!-- PLANES -->
 	<section id="planes" class="container-fluid text-center">
 		<h3>NUESTRO PLANES PARA TI</h3>
@@ -154,5 +155,5 @@
 			</div>
 		</div>
 	</section>
-	<!-- FIN PLANES -->
+	<!-- /PLANES -->
 </main>

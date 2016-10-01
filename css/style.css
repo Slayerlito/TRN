@@ -68,7 +68,9 @@ p, h3, h4 {
 footer {
 	background-color: black;
 	color: white;
-	padding: 50px;
+    width: 100%;
+    position: absolute;
+    padding: 15px;
 }
 
 /* CSS footer.tpl */
