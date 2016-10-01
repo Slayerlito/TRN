@@ -46,6 +46,25 @@ $("#menu-toggle").click(function(e) {
 });
 </script>
 
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "400px";
+    document.getElementById("main").style.marginLeft = "410px";
+	
+	document.getElementById("btn-ocultar").style.display = "inline";
+	document.getElementById("btn-mostrar").style.display = "none";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+	
+	document.getElementById("btn-mostrar").style.display = "inline";
+	document.getElementById("btn-ocultar").style.display = "none";
+	
+}
+</script>
+
 
 </body>
 </html>
