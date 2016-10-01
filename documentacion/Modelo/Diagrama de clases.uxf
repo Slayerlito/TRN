@@ -5,7 +5,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>30</x>
-      <y>170</y>
+      <y>110</y>
       <w>420</w>
       <h>170</h>
     </coordinates>
@@ -28,7 +28,7 @@ _+ getControlador()_
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>630</y>
+      <y>570</y>
       <w>280</w>
       <h>190</h>
     </coordinates>
@@ -50,7 +50,7 @@ _+ getControlador()_
     <id>UMLClass</id>
     <coordinates>
       <x>510</x>
-      <y>720</y>
+      <y>660</y>
       <w>240</w>
       <h>150</h>
     </coordinates>
@@ -71,7 +71,7 @@ _+ getControlador()_
     <id>UMLClass</id>
     <coordinates>
       <x>520</x>
-      <y>450</y>
+      <y>390</y>
       <w>240</w>
       <h>110</h>
     </coordinates>
@@ -91,7 +91,7 @@ _+ getObjetivos(id_user,entrenador)_
     <id>UMLClass</id>
     <coordinates>
       <x>1290</x>
-      <y>160</y>
+      <y>100</y>
       <w>420</w>
       <h>170</h>
     </coordinates>
@@ -115,7 +115,7 @@ _+ getControlador()_
     <id>UMLClass</id>
     <coordinates>
       <x>710</x>
-      <y>190</y>
+      <y>130</y>
       <w>240</w>
       <h>140</h>
     </coordinates>
@@ -136,7 +136,7 @@ _+ getControlador()_
     <id>Relation</id>
     <coordinates>
       <x>620</x>
-      <y>320</y>
+      <y>260</y>
       <w>220</w>
       <h>150</h>
     </coordinates>
@@ -147,7 +147,7 @@ _+ getControlador()_
     <id>Relation</id>
     <coordinates>
       <x>610</x>
-      <y>550</y>
+      <y>490</y>
       <w>50</w>
       <h>190</h>
     </coordinates>
@@ -160,7 +160,7 @@ m2=0..n</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>30</x>
-      <y>410</y>
+      <y>350</y>
       <w>210</w>
       <h>70</h>
     </coordinates>
@@ -173,7 +173,7 @@ ControladorWEB</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>960</x>
-      <y>450</y>
+      <y>390</y>
       <w>240</w>
       <h>90</h>
     </coordinates>
@@ -192,7 +192,7 @@ _+ getPlanes(id_user,entrenador)_
     <id>Relation</id>
     <coordinates>
       <x>810</x>
-      <y>320</y>
+      <y>260</y>
       <w>290</w>
       <h>150</h>
     </coordinates>
@@ -203,9 +203,9 @@ _+ getPlanes(id_user,entrenador)_
     <id>UMLClass</id>
     <coordinates>
       <x>950</x>
-      <y>700</y>
+      <y>640</y>
       <w>260</w>
-      <h>120</h>
+      <h>150</h>
     </coordinates>
     <panel_attributes>_Plan_
 --
@@ -214,7 +214,9 @@ _+ getPlanes(id_user,entrenador)_
 - chat                         - entrenamiento
 - nutricion                  - precio
 --
-+ Plan(all#datos)
+- Plan(all#datos)
+_+ NewPlanID($id_user)_
+_+ NewPlanDatos(all#datos)_
 		
 </panel_attributes>
     <additional_attributes/>
@@ -223,7 +225,7 @@ _+ getPlanes(id_user,entrenador)_
     <id>Relation</id>
     <coordinates>
       <x>1060</x>
-      <y>530</y>
+      <y>470</y>
       <w>50</w>
       <h>190</h>
     </coordinates>
