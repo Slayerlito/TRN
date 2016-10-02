@@ -4,7 +4,7 @@
  * @brief Planes contratables.
  * @details Representa los objetos de Planes Contratables con todos los atributos disponibles en base de datos.
  * @date 01/10/2016
- * @version
+ * @version 1.0
  */
 class Plan {
 	private $id_plan;				/*!< ID Primary Key del Plan Contratable */
@@ -49,7 +49,7 @@ class Plan {
 	/**
 	 *  
 	 */
-	public function getDesc(){
+	public function getNombre(){
 		return $this->nombre;
 	}
 	/**
