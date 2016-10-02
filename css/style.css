@@ -1,4 +1,9 @@
 /*CSS*/
+body {
+	background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 70%, rgba(255,255,255,1) 100%);
+}
+
+
 /*CSS header.tpl*/
 
 /*NAVBAR*/
@@ -68,6 +73,8 @@ p, h3, h4 {
 footer {
 	background-color: black;
 	color: white;
+	width: 70%;
+	float: right;
 }
 
 /* CSS footer.tpl */
@@ -75,26 +82,26 @@ footer {
 /* CSS mytrn.tpl */
 main {
 	margin-top: 60px;
+	padding-top: 1px;
 }
 
 
-.btn-sidenav {
-	padding: 10px;
+/*#mytrn {
+	margin-left: 0;
 }
+*/
 
-#btn-mostrar {
-	display: inline;
-	font-size: 15px;
+
+#sidenav {
+	background-color: grey;
+	left:0;
+	padding-top: 20px;
+	height: 100%;
 }
-
-#btn-ocultar {
-	display: none;
-}
-
 
 
 /* SIDENAV MYTRN */
-.sidenav {
+/*.sidenav {
     height: 100%;
     width: 0;
     position: fixed;
@@ -127,7 +134,7 @@ main {
     margin-left: 500px;
 }
 
-#main{
+#objetivos{
     transition: margin-left .5s;
     padding: 16px;
 }
@@ -151,5 +158,5 @@ main {
 	width: 100%;
 	display: block;
 }
-
+*/
 /* CSS mytrn.tpl */

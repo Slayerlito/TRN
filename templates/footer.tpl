@@ -1,5 +1,5 @@
 <footer>
-<div class="container-fluid ">
+<div class="container-fluid" >
 	<!-- REDES SOCIALES -->
 	<div class="social text-center col-md-6">
 		<a href="http://www.twitter.es" class="btn btn-sm btn-social-icon btn-twitter" target="_blank"><span class="fa fa-twitter"></span></a> &nbsp;
@@ -37,34 +37,5 @@
 <script>
 $('.carousel').carousel();
 </script>
-
-<!-- Simple sidebar Javascript -->
-<script>
-$("#menu-toggle").click(function(e) {
-	e.preventDefault();
-	$("#wrapper").toggleClass("toggled");
-});
-</script>
-
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "400px";
-    document.getElementById("main").style.marginLeft = "410px";
-	
-	document.getElementById("btn-ocultar").style.display = "inline";
-	document.getElementById("btn-mostrar").style.display = "none";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-	
-	document.getElementById("btn-mostrar").style.display = "inline";
-	document.getElementById("btn-ocultar").style.display = "none";
-	
-}
-</script>
-
-
 </body>
 </html>

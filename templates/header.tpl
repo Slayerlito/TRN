@@ -142,14 +142,6 @@
                     <li><a class="page-scroll" href="#planes">Planes</a></li>
 					<li><a class="page-scroll" href="mytrn.php">My TRN</a></li>
 					<li><a class="page-scroll" href="prueba.php">PRUEBAS</a></li>
-					<div id="mytrn">
-						<form class="form" action="index.php" method="post">
-								<span class="glyphicons glyphicons-envelope"></span><input type="text" id="email_l" name="email" autofocus="autofocus" placeholder="E-mail">
-								<input type="password" id="password" name="password" placeholder="Contraseña">
-								<a href="#caca" class="btn-link" >¿Has olvidado la contraseña?</a>
-								<input clasS="btn" type="submit" name="login" value="Iniciar sesión">
-						</form>
-					</div>
                 </ul>
 				<!-- MENU -->
 				<!-- FIN Login / Registro -->
