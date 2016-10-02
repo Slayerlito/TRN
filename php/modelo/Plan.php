@@ -30,15 +30,15 @@ class Plan {
 	 *  
 	 */
 	public static function newPlanID($id_plan){
-		$resultado::ControladorSQL::getControladorSQL().ejecutarSQL("SELECT ID_PLAN,NOMBRE,SEGUIMIENTO_SEM,CHAT,ENTRENAMIENTO,NUTRICION,PRECIO FROM TRN_LKP_PLANES_CONTRATABLES WHERE ID_PLAN='$id_plan'");
+		$resultado = ControladorSQL::getControladorSQL().ejecutarSQL("SELECT ID_PLAN,NOMBRE,SEGUIMIENTO_SEM,CHAT,ENTRENAMIENTO,NUTRICION,PRECIO FROM TRN_LKP_PLANES_CONTRATABLES WHERE ID_PLAN='$id_plan'");
 		$result = $resultado->fetch_array(MYSQLI_ASSOC);
-		return new Plan($result['ID_PLAN'],$result['NOMBRE'],$result['SEGUIMIENTO_SEM']$result['CHAT']$result['ENTRENAMIENTO']$result['NUTRICION']$result['PRECIO']);
+		return new Plan($result['ID_PLAN'],$result['NOMBRE'],$result['SEGUIMIENTO_SEM'],$result['CHAT'],$result['ENTRENAMIENTO'],$result['NUTRICION'],$result['PRECIO']);
 	}
 	/**
 	 *  
 	 */
 	public static function newPlanDatos($id_plan,$nombre,$seguimiento_sem,$chat,$entrenamiento,$nutricion,$precio){
-		return new Plan($id_plan,$nombre,$seguimiento_sem,$progreso,$chat,$entrenamiento,$nutricion,$precio);		
+		return new Plan($id_plan,$nombre,$seguimiento_sem,$chat,$entrenamiento,$nutricion,$precio);		
 	}
 	/**
 	 *  
@@ -81,9 +81,6 @@ class Plan {
 	 */
 	public function getPrecio(){
 		return $this->precio;
-	}
-	
-	
-	
+	}	
 }
->
+?>

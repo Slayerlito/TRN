@@ -10,6 +10,7 @@ $smarty = new Smarty_setup();
 require_once('header.php');
 
 //Funcionalidad del index
+$smarty->assign('listaPlanes', ControladorWeb::getListaPlanes());
 
 $smarty->display('index.tpl');
 

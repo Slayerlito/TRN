@@ -2,7 +2,7 @@
 /*======================conectar()======================================
      conecta con la base de datos
 	****************************************************************************************** */
-
+	
 class ControladorSQL{ 
     private static $controladorSQL;
 	private $_db; 

@@ -6,10 +6,13 @@
  *  @date
  *  @version 1.0
  */
-abstract class ListaObejtos {
-	private listaObjetos;
+class ListaObjetos {
+	private $listaObjetos;
 	private function __construct($listaObjetos){
-		$this->listaObjetos = lista_objetos;
+		$this->listaObjetos = $listaObjetos;
+	}
+	public static function newLista($listaObjetos){
+		return new ListaObjetos($listaObjetos);
 	}
 	public function getLista(){
 		return $this->listaObjetos;
@@ -24,4 +27,4 @@ abstract class ListaObejtos {
 		$this->listaObjetos = listaObjetos;
 	}
 }
->
+?>
