@@ -1,9 +1,4 @@
 <?php
-session_start();
-IF(!ISSET($_SESSION['usuario']))	{
-	header('Location: login.php');
-}
-session_write_close();
 
 //Include de los parametros de smarty
 require_once('setup.php'); 
@@ -14,17 +9,10 @@ $smarty = new Smarty_setup();
 //Include del header
 require_once('header.php');
 
+//Funcionalidad del login
 
-//Funcionalidad del index
-
-$smarty->assign('usuario', $_SESSION['usuario']);
-
-
-$smarty->display('mytrn.tpl');
+$smarty->display('login.tpl');
 
 //Include del footer
 require_once('footer.php');
-
-
-
 ?>
