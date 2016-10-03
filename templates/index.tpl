@@ -109,10 +109,10 @@
 	<section id="planes" class="container-fluid text-center">
 		<h3>NUESTRO PLANES PARA TI</h3>
 		<div class="container">
-			{for $x=1 to ($listaPlanes->getNum()%3)}
+			{for $x=1 to ((int)$listaPlanes->getNum() / 3)-1}
 			<div class="container">
 				{for $y=$x*3 to ($x*3)+2 }
-					<div class="col-md-3">
+					<div class="col-md-4">
 						<div class="planes">
 							<h4>{$listaPlanes->getPos($y-3)->getNombre()}</h4>
 							<ul class="list-unstyled">
@@ -127,10 +127,10 @@
 				{/for}
 			</div>
 			{/for}
-			{$modulo = ($listaPlanes->getNum() - (($listaPlanes->getNum()%3)*3))}
-			{for $x=(($listaPlanes->getNum()%3)*3) to $listaPlanes->getNum()-1 }
+			{$modulo = ($listaPlanes->getNum() - (((int)($listaPlanes->getNum() / 3))*3))}
+			{for $x=(((int)($listaPlanes->getNum() / 3))*3) to ($listaPlanes->getNum())-1 }
 				{if $modulo == 1 }
-					<div class="col-md-3">
+					<div class="col-md-12">
 						<div class="planes">
 							<h4>{$listaPlanes->getPos($x)->getNombre()}</h4>
 							<ul class="list-unstyled">
@@ -143,7 +143,7 @@
 					</div>
 				{/if}
 				{if $modulo == 2 }
-					<div class="col-md-3">
+					<div class="col-md-6" >
 						<div class="planes">
 							<h4>{$listaPlanes->getPos($x)->getNombre()}</h4>
 							<ul class="list-unstyled">
