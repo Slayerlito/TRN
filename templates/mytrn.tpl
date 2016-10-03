@@ -14,6 +14,7 @@
 		<div id="ficha-tecnica" class="text-center center-block">
 			<img class="img-circle img-responsive center-block" src="https://pbs.twimg.com/profile_images/493891049438203905/Lbtt9YLC_400x400.png">
 			<h3>{$usuario->getNombre()}</h3>
+			<h4>{$usuario->getApellidos()}</h4>
 			<div>{$usuario->getPeso()}</div>
 			<div>{$usuario->getAltura()}</div>
 			
