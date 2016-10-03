@@ -1,4 +1,4 @@
-<footer id="footer" class="container-fluid" style="background-color: black;" data-spy="affix-bottom">
+<footer>
 <div>
 	<!-- REDES SOCIALES -->
 	<div class="social text-center col-md-6">
@@ -16,8 +16,8 @@
 		</ul>
 	</div>
 </div>
+<hr>
 <div class="container">
-	<hr>
 	<p class="text-center">Copyright &copy; TRN 2016 &#8482; </p>
 </div>
 </footer>

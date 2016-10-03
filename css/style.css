@@ -62,7 +62,11 @@ p, h3, h4 {
 
 
 /* CSS footer.tpl */
-
+footer {
+	padding: 10px;
+	background-color: black;
+	color: white;
+}
 /* CSS footer.tpl */
 
 /* CSS mytrn.tpl */
@@ -70,12 +74,16 @@ p, h3, h4 {
 
 main {
 	margin-top: 60px;
+		width:100%;
+}
+
+#ficha-tecnica {
+	width: 35%;
 }
 
 
 #menuizq {
 	padding-top: 50px;
-	position: fixed;
 	background-color: cyan;
 	height: 100%;
 	z-index: -1;
@@ -95,6 +103,15 @@ main {
 			width;100%;
 		}
 	}
+}
+
+
+#submenu {
+	left: 25%;
+	position: fixed;
+	background-color: greenlight;
+	z-index:1;
+	padding: 10px;
 }
 
 /* CSS mytrn.tpl */
