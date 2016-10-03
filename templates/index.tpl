@@ -127,7 +127,7 @@
 				{/for}
 			</div>
 			{/for}
-			{$modulo = ($listaPlanes->getNum()- (($listaPlanes->getNum()%3)*3))}
+			{$modulo = ($listaPlanes->getNum() - (($listaPlanes->getNum()%3)*3))}
 			{for $x=(($listaPlanes->getNum()%3)*3) to $listaPlanes->getNum()-1 }
 				{if $modulo == 1 }
 					<div class="col-md-3">

@@ -9,7 +9,7 @@ class Usuario {
 	private $id_user;
 	private $nombre;
 	private $apellidos;
-	private $fecha_nacimiento;
+	private $fechaNacimiento;
 	private $email;
 	private $deportista;
 	private $peso;
@@ -27,7 +27,7 @@ class Usuario {
 		$this->id_user = $result['ID_USER'];
 		$this->nombre = $result['NOMBRE'];
 		$this->apellidos = $result['APELLIDOS'];
-		$this->fecha_nacimiento = $result['FECHA_DE_NACIMIENTO'];
+		$this->fechaNacimiento = $result['FECHA_DE_NACIMIENTO'];
 		$this->email = $result['EMAIL'];
 		$this->deportista = $result['DEPORTISTA'];
 		$this->peso = $result['PESO'];
@@ -35,8 +35,32 @@ class Usuario {
 		$this->perfil = $result['PERFIL'];
 		return $this;		
 	} 
+	public function getId(){
+		return $this->id_user;
+	}
 	public function getNombre(){
 		return $this->nombre;
+	}
+	public function getApellidos(){
+		return $this->apellidos;
+	}
+	public function getFechaNacimiento(){
+		return $this->fechaNacimiento;
+	}
+	public function getEmail(){
+		return $this->email;
+	}
+	public function getDeportista(){
+		return $this->deportista;
+	}
+	public function getPeso(){
+		return $this->peso;
+	}
+	public function getAltura(){
+		return $this->altura;
+	}
+	public function getPerfil(){
+		return $this->perfil;
 	}
 	
 	

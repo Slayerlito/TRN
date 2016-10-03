@@ -13,9 +13,9 @@
 		<!-- FICHA TECNICA -->
 		<div id="ficha-tecnica" class="text-center center-block">
 			<img class="img-circle img-responsive center-block" src="https://pbs.twimg.com/profile_images/493891049438203905/Lbtt9YLC_400x400.png">
-			<h3>NOMBRE</h3>
-			<div>PESO</div>
-			<div>ALTURA</div>
+			<h3>{$usuario->getNombre()}</h3>
+			<div>{$usuario->getPeso()}</div>
+			<div>{$usuario->getAltura()}</div>
 			
 		</div>
 		<!-- /FICHA TECNICA -->
