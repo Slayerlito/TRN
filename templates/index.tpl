@@ -106,7 +106,6 @@
 	</section>
 	<!-- /NOTICIAS -->
 	<!-- PLANES -->
-	{var_dump($listaPlanes)}
 	<section id="planes" class="container-fluid text-center">
 		<h3>NUESTRO PLANES PARA TI</h3>
 		<div class="container">
