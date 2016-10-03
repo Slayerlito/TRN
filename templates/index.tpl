@@ -110,50 +110,53 @@
 	<section id="planes" class="container-fluid text-center">
 		<h3>NUESTRO PLANES PARA TI</h3>
 		<div class="container">
-			<div class="col-md-3">
-				<div class="planes">
-					<h4>PLAN 1</h4>
-					<ul class="list-unstyled">
-						<li> Opción 1</li>
-						<li> Opción 2</li>
-						<li> Opción 3</li>
-						<li> Opción 4</li>
-					</ul>
-				</div>
+			{for $x=1 to ($listaPlanes->getNum()%3)}
+			<div class="container">
+				{for $y=$x*3 to ($x*3)+2 }
+					<div class="col-md-3">
+						<div class="planes">
+							<h4>{$listaPlanes->getPos($y-3)->getNombre()}</h4>
+							<ul class="list-unstyled">
+							<li> {$listaPlanes->getPos($y-3)->getChat()} Chat</li>
+							<li> {$listaPlanes->getPos($y-3)->getEntrenamiento()} Entrenamiento</li>
+							<li> {$listaPlanes->getPos($y-3)->getNutricion()} Nutrición</li>
+							<li> {$listaPlanes->getPos($y-3)->getSeguimiento()} Sesiones seguimiento</li>
+							</ul>
+						</div>
+					</div>
+				
+				{/for}
 			</div>
-			<div class="col-md-3">
-				<div class="planes">
-					<h4>PLAN 2</h4>
-					<ul class="list-unstyled">
-						<li> Opción 1</li>
-						<li> Opción 2</li>
-						<li> Opción 3</li>
-						<li> Opción 4</li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="planes">
-					<h4>PLAN 3</h4>
-					<ul class="list-unstyled">
-						<li> Opción 1</li>
-						<li> Opción 2</li>
-						<li> Opción 3</li>
-						<li> Opción 4</li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="planes">
-					<h4>PLAN 4</h4>
-					<ul class="list-unstyled">
-						<li> Opción 1</li>
-						<li> Opción 2</li>
-						<li> Opción 3</li>
-						<li> Opción 4</li>
-					</ul>
-				</div>
-			</div>
+			{/for}
+			{$modulo = ($listaPlanes->getNum()- (($listaPlanes->getNum()%3)*3))}
+			{for $x=(($listaPlanes->getNum()%3)*3) to $listaPlanes->getNum()-1 }
+				{if $modulo == 1 }
+					<div class="col-md-3">
+						<div class="planes">
+							<h4>{$listaPlanes->getPos($x)->getNombre()}</h4>
+							<ul class="list-unstyled">
+							<li> {$listaPlanes->getPos($x)->getChat()} Chat</li>
+							<li> {$listaPlanes->getPos($x)->getEntrenamiento()} Entrenamiento</li>
+							<li> {$listaPlanes->getPos($x)->getNutricion()} Nutrición</li>
+							<li> {$listaPlanes->getPos($x)->getSeguimiento()} Sesiones seguimiento</li>
+							</ul>
+						</div>
+					</div>
+				{/if}
+				{if $modulo == 2 }
+					<div class="col-md-3">
+						<div class="planes">
+							<h4>{$listaPlanes->getPos($x)->getNombre()}</h4>
+							<ul class="list-unstyled">
+							<li> {$listaPlanes->getPos($x)->getChat()} Chat</li>
+							<li> {$listaPlanes->getPos($x)->getEntrenamiento()} Entrenamiento</li>
+							<li> {$listaPlanes->getPos($x)->getNutricion()} Nutrición</li>
+							<li> {$listaPlanes->getPos($x)->getSeguimiento()} Sesiones seguimiento</li>
+							</ul>
+						</div>
+					</div>
+				{/if}
+			{/for}
 		</div>
 	</section>
 	<!-- /PLANES -->

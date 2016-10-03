@@ -18,7 +18,7 @@ class ListaObjetos {
 		return $this->listaObjetos;
 	}
 	public function getNum(){
-		return count(listaObjetos);
+		return count($this->listaObjetos);
 	}
 	public function getPos($numero){
 		return $this->listaObjetos[$numero];

@@ -11,7 +11,7 @@ abstract class ControladorWeb{
 	 *  
 	 */
 	public static function getListaPlanes(){
-		return ListaPlanes::getPlanes()->getLista();
+		return ListaPlanes::getPlanes();
 	}
 
 	

@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>30</x>
-      <y>50</y>
+      <x>210</x>
+      <y>60</y>
       <w>420</w>
       <h>170</h>
     </coordinates>
@@ -27,8 +27,8 @@ _+ getControlador()_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>510</y>
+      <x>180</x>
+      <y>520</y>
       <w>280</w>
       <h>190</h>
     </coordinates>
@@ -49,8 +49,8 @@ _+ getControlador()_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>510</x>
-      <y>600</y>
+      <x>710</x>
+      <y>630</y>
       <w>240</w>
       <h>150</h>
     </coordinates>
@@ -70,8 +70,8 @@ _+ getControlador()_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>520</x>
-      <y>330</y>
+      <x>720</x>
+      <y>360</y>
       <w>240</w>
       <h>110</h>
     </coordinates>
@@ -90,8 +90,8 @@ _+ getObjetivos(id_user,entrenador)_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1290</x>
-      <y>40</y>
+      <x>1470</x>
+      <y>50</y>
       <w>420</w>
       <h>170</h>
     </coordinates>
@@ -101,7 +101,7 @@ _- controladorWEB_
 - listaObjetivos:ListaObjetivos
 
 --
-- ControladorSQL()
+- ControladorWEB()
 _+ getControlador()_
 + getListaObjetivos(user,entrenador)
 + getNumObjetivos()
@@ -114,12 +114,12 @@ _+ getControlador()_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>710</x>
-      <y>70</y>
+      <x>910</x>
+      <y>100</y>
       <w>240</w>
       <h>140</h>
     </coordinates>
-    <panel_attributes>/ABS#ListaObjetos/
+    <panel_attributes>ListaObjetos
 --
 - listaObjetos
 - numero
@@ -135,8 +135,8 @@ _+ getControlador()_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>620</x>
-      <y>200</y>
+      <x>820</x>
+      <y>230</y>
       <w>220</w>
       <h>150</h>
     </coordinates>
@@ -146,8 +146,8 @@ _+ getControlador()_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>610</x>
-      <y>430</y>
+      <x>810</x>
+      <y>460</y>
       <w>50</w>
       <h>190</h>
     </coordinates>
@@ -159,21 +159,8 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>30</x>
-      <y>290</y>
-      <w>210</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>header.php
---
-ControladorWEB</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>960</x>
-      <y>330</y>
+      <x>1160</x>
+      <y>360</y>
       <w>240</w>
       <h>90</h>
     </coordinates>
@@ -191,8 +178,8 @@ _+ getPlanes()_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>810</x>
-      <y>200</y>
+      <x>1010</x>
+      <y>230</y>
       <w>290</w>
       <h>150</h>
     </coordinates>
@@ -202,14 +189,14 @@ _+ getPlanes()_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>950</x>
-      <y>580</y>
+      <x>1150</x>
+      <y>610</y>
       <w>260</w>
       <h>150</h>
     </coordinates>
     <panel_attributes>_Plan_
 --
-- id_plan                     - desc_plan
+- id_plan                     - nombre
 - seguimiento_sem    - progreso
 - chat                         - entrenamiento
 - nutricion                  - precio
@@ -224,8 +211,8 @@ _+ NewPlanDatos(all#datos)_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1060</x>
-      <y>410</y>
+      <x>1260</x>
+      <y>440</y>
       <w>50</w>
       <h>190</h>
     </coordinates>
