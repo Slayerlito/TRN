@@ -1,61 +1,47 @@
-<!-- MENU IZQUIERDO -->
-<div class="col-lg-3" id="sidenav">
-	<div class="sidenav">
-		<div id="ficha-usuario" >
-			<!-- Imagen del usuario -->
-			<div class="container-fluid">
-				<!-- Nombre de usuario -->
-
-				<!-- /Nombre de usuario -->
-				<img class="img-circle img-responsive center-block" src="https://pbs.twimg.com/profile_images/493891049438203905/Lbtt9YLC_400x400.png">
-
-				<div class="text-center">
-	<!-- DAVID AQUÍ DEBERÍA APARECER EL NOMBRE DEL USUARIO --><h1>USUARIO<!--{$user}--></h1>
-					<div>PESO</div>
-					<div>ALTURA</div>
-				</div>
-			</div>
-			<!-- /Imagen del usuario -->
+<main class="row">
+	<!-- MENU IZQUIERDO -->
+	<div id="menuizq" class="container col-md-3">
+		<!-- FICHA TECNICA -->
+		<div class="text-center">
+			<img class="img-circle img-responsive center-block" src="https://pbs.twimg.com/profile_images/493891049438203905/Lbtt9YLC_400x400.png">
+			<h3>NOMBRE</h3>
+			<div>PESO</div>
+			<div>ALTURA</div>
 		</div>
+		<!-- /FICHA TECNICA -->
 		<hr>
+		<!-- LISTA DE OBJETIVOS -->
 		<div>
-		<h3 class="text-center">Objetivos</h3>
-			<ul class="list-unstyled">
-				<li><a href="#">Objetivo 1</a></li>
-				<li><a href="#">Objetivo 2</a></li>
-				<li><a href="#">Objetivo 3</a></li>
-				<li><a href="#">Objetivo 4</a></li>
+			<h4 class="text-center">MIS OBJETIVOS</h4>
+			<ul class="unstyled">
+				<li>NOMBRE OBJETIVO</li>
+				<li>NOMBRE OBJETIVO</li>
+				<li>NOMBRE OBJETIVO</li>
+				<li>NOMBRE OBJETIVO</li>
+				<li>NOMBRE OBJETIVO</li>
+				
 			</ul>
 		</div>
+		<!-- /LISTA DE OBJETIVOS -->
 	</div>
-</div>
-<!-- /MENU IZQUIERDO -->
-
-
-
-<main>
-<!-- MAIN MYTRN -->
-<div class="col-lg-9">
-	<!-- Objetivos MyTRN -->
-	<div id="objetivos" >
-		<!-- Tabs Submenu -->
-		<div>
-			<ul class="nav nav-tabs">
-				<li class="active"><a href="#">Objetivos</a></li>
-	<!-- QUIZAS AQUÍ PONDRÍA EL PROCESO DEL OBJETIVO ACTUAL -->
-				<li><a href="#">Nuevo Objetivo</a></li>
-				<li><a href="#">Editar Objetivo</a></li>
+	<!-- /MENU IZQUIERDO -->
+	<!-- OBJETIVOS -->
+	<div id="objetivos" class="container col-md-9 pull-right">
+		<!-- SUBMENU -->
+		<div id="submenu">
+			<ul class="nav nav-tabs text-center">
+				<li class="col-md-4"><a>OBJETIVO ACTUAL</a></li>
+				<li class="col-md-4"><a>NUEVO OBJETIVO</a></li>
+				<li class="col-md-4"><a>EDITAR OBJETIVO</a></li>
 			</ul>
 		</div>
-		<!-- /Tabs Submenu -->
-		<!-- GRAFICOS OBJETIVOS -->
+		<!-- /SUBMENU -->
+		<!-- GRAFICOS -->
 		<div>
-			<hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
-		
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 		</div>
-		<!-- /GRAFICOS OBJETIVOS -->
+		<!-- /GRAFICOS -->
 	</div>
-	<!-- /Objetivos MyTRN -->
-</div>
-<!-- /MAIN MYTRN -->
+	<!-- OBJETIVOS -->
 </main>

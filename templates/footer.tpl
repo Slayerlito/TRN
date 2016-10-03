@@ -1,5 +1,5 @@
-<footer>
-<div class="container-fluid" >
+<footer id="footer" class="container-fluid" style="background-color: black;" data-spy="affix-bottom">
+<div>
 	<!-- REDES SOCIALES -->
 	<div class="social text-center col-md-6">
 		<a href="http://www.twitter.es" class="btn btn-sm btn-social-icon btn-twitter" target="_blank"><span class="fa fa-twitter"></span></a> &nbsp;

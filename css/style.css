@@ -1,16 +1,8 @@
 /*CSS*/
-body {
-	background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 70%, rgba(255,255,255,1) 100%);
-}
-
 
 /*CSS header.tpl*/
 
 /*NAVBAR*/
-
-#mytrn {
-	display: none;
-}
 
 .navbar {
 	background-color: black;
@@ -70,93 +62,39 @@ p, h3, h4 {
 
 
 /* CSS footer.tpl */
-footer {
-	background-color: black;
-	color: white;
-	width: 70%;
-	float: right;
-}
 
 /* CSS footer.tpl */
 
 /* CSS mytrn.tpl */
+
+
 main {
 	margin-top: 60px;
-	padding-top: 1px;
 }
 
 
-/*#mytrn {
-	margin-left: 0;
-}
-*/
-
-
-#sidenav {
-	background-color: grey;
-	left:0;
-	padding-top: 20px;
+#menuizq {
+	padding-top: 50px;
+	position: fixed;
+	background-color: cyan;
 	height: 100%;
+	z-index: -1;
 }
 
 
-/* SIDENAV MYTRN */
-/*.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: white;
-    overflow-x: hidden;
-    transition: width 0.5s;
-    padding-top: 50px;
-}
+@media only screen and (max-width: 780px) {
 
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    color: #818181;
-    display: block;
-    transition: 0.3s
-}
-
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 50PX;
-    font-size: 36px;
-    margin-left: 500px;
-}
-
-#objetivos{
-    transition: margin-left .5s;
-    padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-
-#ficha-usuario {
-	padding: 50px 0;
-	background-color: purple;
-}
-
-.affix {
 	
-	background-color: white;
-	margin-top: 10px;
-	top: 50px;
-	width: 100%;
-	display: block;
+	#menuizq {
+		display: none;
+	}
+	
+		@media only screen and (max-width: 425px) {
+		#menuizq {
+			display: inline;
+			width;100%;
+		}
+	}
 }
-*/
+
 /* CSS mytrn.tpl */
