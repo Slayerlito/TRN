@@ -1,7 +1,7 @@
 <?php
 session_start();
 IF(!ISSET($_SESSION['usuario']))	{
-	header('Location: login.php');
+	header('Location: login.php?url=mytrn');
 }
 session_write_close();
 

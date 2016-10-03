@@ -19,7 +19,8 @@ class Usuario {
     public function __construct($email,$password){ 
 		$resultado = ControladorSQL::getControlador()->ejecutarSQL("SELECT IF(PASSWORD=MD5('$password'),1,0) AS ACCESO FROM TRN_LKP_USUARIOS WHERE EMAIL='$email'");
 		$login = $resultado->fetch_array(MYSQLI_ASSOC);
-		if ($login['ACCESO'] == '0'){
+		$columnas = mysqli_num_rows($resultado);
+		if ($columnas == 0 || $login['ACCESO'] == 0){
 			return -1;
 		}
 		$resultado = ControladorSQL::getControlador()->ejecutarSQL("SELECT ID_USER,NOMBRE,APELLIDOS,FECHA_DE_NACIMIENTO,EMAIL,DEPORTISTA,PESO,ALTURA,PERFIL FROM TRN_LKP_USUARIOS WHERE EMAIL='$email'");
@@ -33,7 +34,8 @@ class Usuario {
 		$this->peso = $result['PESO'];
 		$this->altura = $result['ALTURA'];
 		$this->perfil = $result['PERFIL'];
-		return $this;		
+		return $this;	
+		
 	} 
 	public function getId(){
 		return $this->id_user;

@@ -18,6 +18,7 @@ if(isset($_SESSION['usuario'])){
 	$smarty->assign('user', $_SESSION['usuario']->getNombre());
 	$smarty->assign('login' , 'true');
 	$smarty->assign('usuario' , 'true');
+	session_write_close();
 }else{
 	$smarty->assign('usuario' , 'false');
 	$smarty->assign('login' , 'true');
@@ -31,10 +32,15 @@ if(isset($_SESSION['usuario'])){
 if(isset($_REQUEST['login'])){
 
 	$usuario = new Usuario($_REQUEST['email'],$_REQUEST['password']);
+	$id = $usuario->getID();
 	if($usuario == '-1'){
 		$smarty->assign('login' , 'false');	
 		$smarty->assign('usuario' , 'false');
-	}else{
+	}elseif ($id == NULL){
+		$smarty->assign('login' , 'false');	
+		$smarty->assign('usuario' , 'false');
+	}
+	else{
 		session_start();
 		$_SESSION['usuario'] = $usuario;
 		$smarty->assign('user', $_SESSION['usuario']->getNombre());
