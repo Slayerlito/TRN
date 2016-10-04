@@ -31,16 +31,23 @@ if(isset($_SESSION['usuario'])){
 
 if(isset($_REQUEST['login'])){
 
-	$usuario = new Usuario($_REQUEST['email'],$_REQUEST['password']);
-	$id = $usuario->getID();
-	if($usuario == '-1'){
-		$smarty->assign('login' , 'false');	
-		$smarty->assign('usuario' , 'false');
-	}elseif ($id == NULL){
-		$smarty->assign('login' , 'false');	
-		$smarty->assign('usuario' , 'false');
-	}
-	else{
+	//$usuario = new Usuario($_REQUEST['email'],$_REQUEST['password']);
+	$usuario = ControladorWEB::loginUsuario($_REQUEST['email'],$_REQUEST['password']);
+	//Login erróneo si devuelve un entero
+	if(gettype($usuario) == 'integer'){	
+		if($usuario == -1){
+			$smarty->assign('login' , 'false');	
+			$smarty->assign('usuario' , 'false');
+		}elseif ($usuario == -2){
+			$smarty->assign('login' , 'false');	
+			$smarty->assign('usuario' , 'false');
+		}elseif ($usuario == -3){
+			$smarty->assign('login' , 'false');	
+			$smarty->assign('usuario' , 'false');
+			$smarty->assign('inactivo' ,'true');
+		}
+	//Login correcto.
+	}else{
 		session_start();
 		$_SESSION['usuario'] = $usuario;
 		$smarty->assign('user', $_SESSION['usuario']->getNombre());

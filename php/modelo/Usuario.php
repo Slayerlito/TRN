@@ -15,15 +15,10 @@ class Usuario {
 	private $peso;
 	private $altura;
 	private $perfil;
+	private $activo;
 	
-    public function __construct($email,$password){ 
-		$resultado = ControladorSQL::getControlador()->ejecutarSQL("SELECT IF(PASSWORD=MD5('$password'),1,0) AS ACCESO FROM TRN_LKP_USUARIOS WHERE EMAIL='$email'");
-		$login = $resultado->fetch_array(MYSQLI_ASSOC);
-		$columnas = mysqli_num_rows($resultado);
-		if ($columnas == 0 || $login['ACCESO'] == 0){
-			return -1;
-		}
-		$resultado = ControladorSQL::getControlador()->ejecutarSQL("SELECT ID_USER,NOMBRE,APELLIDOS,FECHA_DE_NACIMIENTO,EMAIL,DEPORTISTA,PESO,ALTURA,PERFIL FROM TRN_LKP_USUARIOS WHERE EMAIL='$email'");
+    public function __construct($email){ 
+		$resultado = ControladorSQL::getControlador()->ejecutarSQL("SELECT ID_USER,NOMBRE,APELLIDOS,FECHA_DE_NACIMIENTO,EMAIL,DEPORTISTA,PESO,ALTURA,PERFIL,ACTIVO FROM TRN_LKP_USUARIOS WHERE EMAIL='$email'");
 		$result = $resultado->fetch_array(MYSQLI_ASSOC);
 		$this->id_user = $result['ID_USER'];
 		$this->nombre = $result['NOMBRE'];
@@ -34,6 +29,7 @@ class Usuario {
 		$this->peso = $result['PESO'];
 		$this->altura = $result['ALTURA'];
 		$this->perfil = $result['PERFIL'];
+		$this->activo = $result['ACTIVO'];
 		return $this;	
 		
 	} 
@@ -63,6 +59,9 @@ class Usuario {
 	}
 	public function getPerfil(){
 		return $this->perfil;
+	}
+	public function isActivo(){
+		return $this->activo;
 	}
 	
 	

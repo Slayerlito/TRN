@@ -50,7 +50,16 @@ class ControladorSQL{
 		$this->desconectar();
 		return $result;
 	}
-	
+	/**
+	 *  
+	 */
+	public function loginUsuario($email,$password){
+		$resultado = ControladorSQL::getControlador()->ejecutarSQL("SELECT IF(PASSWORD=MD5('$password'),1,0) AS ACCESO FROM TRN_LKP_USUARIOS WHERE EMAIL='$email'");
+		return $resultado;
+	}
+	/**
+	 *  
+	 */
 	public function registrarUsuario($nombre,$apellidos,$email,$password,$nacimiento){
 		
 		$comprobar = $this->ejecutarSQL("SELECT EMAIL FROM TRN_LKP_USUARIOS WHERE EMAIL = '$email' ");
