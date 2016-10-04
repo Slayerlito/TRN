@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="14.2">
-  <zoom_level>10</zoom_level>
+<diagram program="umlet" version="13.3">
+  <zoom_level>7</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>30</x>
-      <y>10</y>
-      <w>420</w>
-      <h>170</h>
+      <x>392</x>
+      <y>238</y>
+      <w>294</w>
+      <h>119</h>
     </coordinates>
     <panel_attributes>ControladorSQL
 --
@@ -27,15 +27,15 @@ _+ getControlador()_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>470</y>
-      <w>280</w>
-      <h>190</h>
+      <x>119</x>
+      <y>420</y>
+      <w>196</w>
+      <h>133</h>
     </coordinates>
     <panel_attributes>Usuario
 --
--id_user		       -nombre
--apellidos     -fecha_nacimiento
+-idUser		       -nombre
+-apellidos     -fechaNacimiento
 -email          -deportista
 -peso           -altura
 -perfil           -activo
@@ -49,19 +49,19 @@ _+ getControlador()_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>530</x>
-      <y>580</y>
-      <w>240</w>
-      <h>150</h>
+      <x>742</x>
+      <y>637</y>
+      <w>259</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>Objetivo
 --
-- id_objetivo           - id_user
-- fecha_inicio         - progreso
-- peso_objetivo      - peso_inicio
-- peso_actual         - dias_entreno
-- patologias            - alimentos_nd
-- objetivo
+- idObjetivo           - idUser
+- fechaInicio         - progreso
+- peso_objetivo      - pesoInicio
+- pesoActual         - diasEntreno
+- patologias            - alimentosND
+- objetivo                - ListaSeguimientos[1]:Seguimiento[*]
 --
 + Objetivo(all#datos)
 </panel_attributes>
@@ -70,18 +70,19 @@ _+ getControlador()_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>540</x>
-      <y>310</y>
-      <w>240</w>
-      <h>110</h>
+      <x>798</x>
+      <y>448</y>
+      <w>168</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>_ListaObjetivos_
 --
 _- listaObjetivos_
-- id_user                               - gestor
+- gestor
 --
-- ListaObjetivos(id_user,entrenador)
-_+ getObjetivos(id_user,entrenador)_
+- ListaObjetivos(idUser,entrenador)
+_+ getObjetivos(idUser,entrenador)_
++ getIdUsuario()
 
 
 </panel_attributes>
@@ -90,10 +91,10 @@ _+ getObjetivos(id_user,entrenador)_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1290</x>
-      <y>0</y>
-      <w>420</w>
-      <h>170</h>
+      <x>49</x>
+      <y>224</y>
+      <w>294</w>
+      <h>154</h>
     </coordinates>
     <panel_attributes>ControladorWEB
 --
@@ -103,10 +104,12 @@ _- controladorWEB_
 --
 - ControladorWEB()
 _+ getControlador()_
-+ getListaObjetivos(user,entrenador)
++ getPlanesFilaCompleta()
++ getPlanesUltimaFila()
++ getListaObjetivos(idUser,entrenador)
 + getNumObjetivos()
 + getObjetivo(numero)
-
++ registrarAcceso(all#datos)
 
 </panel_attributes>
     <additional_attributes/>
@@ -114,10 +117,10 @@ _+ getControlador()_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>730</x>
-      <y>50</y>
-      <w>240</w>
-      <h>140</h>
+      <x>882</x>
+      <y>266</y>
+      <w>168</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>ListaObjetos
 --
@@ -135,34 +138,34 @@ _+ getControlador()_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>640</x>
-      <y>180</y>
-      <w>220</w>
-      <h>150</h>
+      <x>868</x>
+      <y>357</y>
+      <w>105</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>200.0;10.0;200.0;80.0;10.0;80.0;10.0;130.0</additional_attributes>
+    <additional_attributes>130.0;10.0;130.0;80.0;10.0;80.0;10.0;130.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
-      <y>410</y>
-      <w>50</w>
-      <h>190</h>
+      <x>861</x>
+      <y>525</y>
+      <w>35</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
 m2=0..n</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>980</x>
-      <y>310</y>
-      <w>240</w>
-      <h>90</h>
+      <x>1057</x>
+      <y>448</y>
+      <w>168</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>_ListaPlanes_
 --
@@ -178,10 +181,10 @@ _+ getPlanes()_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>830</x>
-      <y>180</y>
-      <w>290</w>
-      <h>150</h>
+      <x>952</x>
+      <y>357</y>
+      <w>203</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0;270.0;80.0;270.0;130.0</additional_attributes>
@@ -189,21 +192,21 @@ _+ getPlanes()_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>970</x>
-      <y>560</y>
-      <w>260</w>
-      <h>170</h>
+      <x>1050</x>
+      <y>623</y>
+      <w>182</w>
+      <h>119</h>
     </coordinates>
     <panel_attributes>Plan
 --
-- id_plan                     - nombre
-- seguimiento_sem    - progreso
+- idPlan                     - nombre
+- seguimientoSem    - progreso
 - chat                         - entrenamiento
 - nutricion                  - precio
 - visible
 --
 - Plan(all#datos)
-_+ NewPlanID($id_user)_
+_+ NewPlanID(idUser)_
 _+ NewPlanDatos(all#datos)_
 		
 </panel_attributes>
@@ -212,10 +215,10 @@ _+ NewPlanDatos(all#datos)_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1080</x>
-      <y>390</y>
-      <w>50</w>
-      <h>190</h>
+      <x>1127</x>
+      <y>504</y>
+      <w>35</w>
+      <h>133</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
@@ -225,16 +228,16 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1410</x>
-      <y>570</y>
-      <w>260</w>
-      <h>150</h>
+      <x>1358</x>
+      <y>630</y>
+      <w>182</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>Noticia
 --
-- id_noticia                 - titulo
+- idNoticia                 - titulo
 - descripcion              - cuerpo
-- publicador               - fecha_noticia
+- publicador               - fechaNoticia
 --
 + Noticia(all#datos)
 + getId()                     + getTitulo()
@@ -247,10 +250,10 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1420</x>
-      <y>320</y>
-      <w>240</w>
-      <h>140</h>
+      <x>1365</x>
+      <y>455</y>
+      <w>168</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>_ListaNoticias_
 --
@@ -270,10 +273,10 @@ _+ getTotNoticias()_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1530</x>
-      <y>450</y>
-      <w>50</w>
-      <h>140</h>
+      <x>1442</x>
+      <y>546</y>
+      <w>35</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
@@ -283,12 +286,76 @@ m2=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>830</x>
-      <y>180</y>
-      <w>720</w>
-      <h>160</h>
+      <x>952</x>
+      <y>357</y>
+      <w>504</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0;700.0;80.0;700.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>525</x>
+      <y>455</y>
+      <w>182</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>ListaSeguimientos
+--
+_- listaSeguimientos_
+- idObjetivo
+--
++ ListaSeguimientos(idObjetivo)
++ getObjetivo()
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>602</x>
+      <y>357</y>
+      <w>371</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>510.0;10.0;510.0;80.0;10.0;80.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>525</x>
+      <y>623</y>
+      <w>182</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>Seguimiento
+--
+- idSeguimiento     - idObjetivo
+- peso                    - fotoFrontal
+- fotoEspalda         - fotoPerfil
+- comenariosUsu   - comentariosCoach
+- progreso              - fechaSeguimiento
+--
++ Seguimiento(all#datos)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>602</x>
+      <y>525</y>
+      <w>35</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
   </element>
 </diagram>
