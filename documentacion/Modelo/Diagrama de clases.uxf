@@ -1,13 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="13.3">
-  <zoom_level>7</zoom_level>
+  <help_text>// Uncomment the following line to change the fontsize and font:
+fontsize=14
+// fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome to UMLet!
+//
+// Double-click on elements to add them to the diagram, or to copy them
+// Edit elements by modifying the text in this panel
+// Hold Ctrl to select multiple elements
+// Use Ctrl+mouse to select via lasso
+//
+// Use +/- or Ctrl+mouse wheel to zoom
+// Drag a whole relation at its central square icon
+//
+// Press Ctrl+C to copy the whole diagram to the system clipboard (then just paste it to, eg, Word)
+// Edit the files in the "palettes" directory to create your own element palettes
+//
+// Select "Custom Elements &gt; New..." to create new element types
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// This text will be stored with each diagram;  use it for notes.</help_text>
+  <zoom_level>9</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>392</x>
-      <y>238</y>
-      <w>294</w>
-      <h>119</h>
+      <x>1044</x>
+      <y>54</y>
+      <w>378</w>
+      <h>153</h>
     </coordinates>
     <panel_attributes>ControladorSQL
 --
@@ -27,10 +51,10 @@ _+ getControlador()_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>119</x>
-      <y>420</y>
-      <w>196</w>
-      <h>133</h>
+      <x>9</x>
+      <y>360</y>
+      <w>198</w>
+      <h>171</h>
     </coordinates>
     <panel_attributes>Usuario
 --
@@ -49,10 +73,10 @@ _+ getControlador()_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>742</x>
-      <y>637</y>
-      <w>259</w>
-      <h>105</h>
+      <x>531</x>
+      <y>657</y>
+      <w>333</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>Objetivo
 --
@@ -70,10 +94,10 @@ _+ getControlador()_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>798</x>
-      <y>448</y>
-      <w>168</w>
-      <h>84</h>
+      <x>603</x>
+      <y>414</y>
+      <w>216</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>_ListaObjetivos_
 --
@@ -91,10 +115,10 @@ _+ getObjetivos(idUser,entrenador)_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>49</x>
-      <y>224</y>
-      <w>294</w>
-      <h>154</h>
+      <x>243</x>
+      <y>72</y>
+      <w>378</w>
+      <h>198</h>
     </coordinates>
     <panel_attributes>ControladorWEB
 --
@@ -117,10 +141,10 @@ _+ getControlador()_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>882</x>
-      <y>266</y>
-      <w>168</w>
-      <h>98</h>
+      <x>711</x>
+      <y>180</y>
+      <w>216</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>ListaObjetos
 --
@@ -138,10 +162,10 @@ _+ getControlador()_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>868</x>
-      <y>357</y>
-      <w>105</w>
-      <h>105</h>
+      <x>693</x>
+      <y>297</y>
+      <w>135</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>130.0;10.0;130.0;80.0;10.0;80.0;10.0;130.0</additional_attributes>
@@ -149,10 +173,10 @@ _+ getControlador()_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>861</x>
-      <y>525</y>
-      <w>35</w>
-      <h>126</h>
+      <x>684</x>
+      <y>513</y>
+      <w>45</w>
+      <h>162</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
@@ -162,10 +186,10 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1057</x>
-      <y>448</y>
-      <w>168</w>
-      <h>63</h>
+      <x>981</x>
+      <y>414</y>
+      <w>135</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>_ListaPlanes_
 --
@@ -181,10 +205,10 @@ _+ getPlanes()_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>952</x>
-      <y>357</y>
-      <w>203</w>
-      <h>105</h>
+      <x>801</x>
+      <y>297</y>
+      <w>261</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0;270.0;80.0;270.0;130.0</additional_attributes>
@@ -192,10 +216,10 @@ _+ getPlanes()_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1050</x>
-      <y>623</y>
-      <w>182</w>
-      <h>119</h>
+      <x>936</x>
+      <y>639</y>
+      <w>234</w>
+      <h>153</h>
     </coordinates>
     <panel_attributes>Plan
 --
@@ -215,10 +239,10 @@ _+ NewPlanDatos(all#datos)_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1127</x>
-      <y>504</y>
-      <w>35</w>
-      <h>133</h>
+      <x>1035</x>
+      <y>486</y>
+      <w>45</w>
+      <h>171</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
@@ -228,10 +252,10 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1358</x>
-      <y>630</y>
-      <w>182</w>
-      <h>105</h>
+      <x>1332</x>
+      <y>648</y>
+      <w>207</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>Noticia
 --
@@ -250,10 +274,10 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1365</x>
-      <y>455</y>
-      <w>168</w>
-      <h>98</h>
+      <x>1377</x>
+      <y>423</y>
+      <w>126</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>_ListaNoticias_
 --
@@ -273,10 +297,10 @@ _+ getTotNoticias()_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1442</x>
-      <y>546</y>
-      <w>35</w>
-      <h>98</h>
+      <x>1431</x>
+      <y>540</y>
+      <w>45</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
@@ -286,10 +310,10 @@ m2=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>952</x>
-      <y>357</y>
-      <w>504</w>
-      <h>112</h>
+      <x>801</x>
+      <y>297</y>
+      <w>648</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0;700.0;80.0;700.0;140.0</additional_attributes>
@@ -297,10 +321,10 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>525</x>
-      <y>455</y>
-      <w>182</w>
-      <h>77</h>
+      <x>252</x>
+      <y>423</y>
+      <w>234</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>ListaSeguimientos
 --
@@ -317,10 +341,10 @@ _- listaSeguimientos_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>602</x>
-      <y>357</y>
-      <w>371</w>
-      <h>112</h>
+      <x>351</x>
+      <y>297</y>
+      <w>477</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>510.0;10.0;510.0;80.0;10.0;80.0;10.0;140.0</additional_attributes>
@@ -328,10 +352,10 @@ _- listaSeguimientos_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>525</x>
-      <y>623</y>
-      <w>182</w>
-      <h>105</h>
+      <x>252</x>
+      <y>639</y>
+      <w>234</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>Seguimiento
 --
@@ -348,10 +372,10 @@ _- listaSeguimientos_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>602</x>
-      <y>525</y>
-      <w>35</w>
-      <h>112</h>
+      <x>351</x>
+      <y>513</y>
+      <w>45</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
