@@ -13,6 +13,30 @@ abstract class ControladorWeb{
 	public static function getListaPlanes(){
 		return ListaPlanes::getPlanes();
 	}
+	/**
+	 *  
+	 */
+	public static function getPlanesFilaCompleta(){
+		$listaPlanes = ListaPlanes::getPlanes()->getLista();
+	}
+	/**
+	 *  
+	 */
+	public static function getPlanesUltimaFila(){
+		$listaPlanes = ListaPlanes::getPlanes()->getLista();
+	}
+	/**
+	 *  
+	 */
+	public static function getListaObjetivos($idUsuario){
+		
+	}
+	/**
+	 *  
+	 */
+	public static function registrarAcceso(){
+		
+	}
 
 	
 }
