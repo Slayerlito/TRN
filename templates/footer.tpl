@@ -37,5 +37,21 @@
 <script>
 $('.carousel').carousel();
 </script>
+
+<!-- script mostrar ocultar -->
+<script type="text/javascript">
+function ocultar(){
+	document.getElementById('menuizq').style.display = 'none';
+	document.getElementById('btn-cerrar').style.display = 'inline';
+	document.getElementById('btn-abrir').style.display = 'none';
+}
+
+function mostrar(){
+	document.getElementById('menuizq').style.display = 'block';
+	document.getElementById('btn-abrir').style.display = 'inline';
+	document.getElementById('btn-cerrar').style.display = 'none';
+}
+</script>
+
 </body>
 </html>
