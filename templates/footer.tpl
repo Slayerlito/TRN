@@ -1,5 +1,5 @@
-<footer>
-<div>
+<footer class="container-fluid">
+<div class="container">
 	<!-- REDES SOCIALES -->
 	<div class="social text-center col-md-6">
 		<a href="http://www.twitter.es" class="btn btn-sm btn-social-icon btn-twitter" target="_blank"><span class="fa fa-twitter"></span></a> &nbsp;
@@ -16,8 +16,8 @@
 		</ul>
 	</div>
 </div>
-<hr>
 <div class="container">
+	<hr>
 	<p class="text-center">Copyright &copy; TRN 2016 &#8482; </p>
 </div>
 </footer>

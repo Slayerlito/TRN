@@ -41,6 +41,7 @@
 
   <!-- class="container"-->	
 	<section class="container">
+	<div class="container-fluid">
 		<div class="col-md-4">
 			<div>
 				<h3 class="text-center">Entrenamiento</h3>
@@ -65,11 +66,12 @@
 				<p class="text-justify">In hac habitasse platea dictumst. Ut malesuada urna a venenatis gravida. Nulla facilisi. Nullam eu lacus ex. Aenean non eros id ligula convallis maximus vitae eget arcu. Vestibulum at dapibus nisl, vel malesuada nisi. Aliquam mattis aliquam nisi eget posuere. Donec convallis sem arcu, vel dapibus lorem commodo eu. Nullam nec odio id felis lacinia bibendum in ut arcu. Aenean malesuada enim tortor. Mauris ac lectus metus. Duis ac euismod sapien.</p>
 			</div>
 		</div>
+	</div>
 	</section>
 	<!-- FIN ESPECIALIDADES -->
 	<!-- NOTICIAS-->
 	<section id="noticias" class="container">
-	
+	<div class="container-fluid">
 		<h3 class="text-center">ÚLTIMAS NOTICIAS</h3>
 		<div class="col-md-6 noticias">
 			<div>
@@ -103,12 +105,13 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam congue magna a varius malesuada. Aenean augue metus, lacinia eget facilisis eget, tincidunt a nunc. Cras euismod ex vel est lacinia, in suscipit nibh sagittis. Cras molestie cursus lacus quis vestibulum. Sed egestas nisi quis ligula suscipit, at sagittis sapien elementum. Proin sit amet vestibulum neque. Sed luctus sollicitudin tincidunt. Duis nisl nunc, bibendum nec commodo a, tempus et magna. Sed eu posuere mi, a lacinia dolor.</p>
 			</div>
 		</div>
+		</div>
 	</section>
 	<!-- /NOTICIAS -->
 	<!-- PLANES -->
 	<section id="planes" class="container text-center">
 		<h3>NUESTRO PLANES PARA TI</h3>
-			<div class="container">
+			<div class="container-fluid">
 			{for $x=1 to ((int)$listaPlanes->getNum() / 3)-1}
 			
 				{for $y=$x*3 to ($x*3)+2 }
@@ -125,7 +128,7 @@
 					</div>
 				{/for}
 			</div>
-			<div class="container">
+			<div class="container-fluid">
 			{/for}
 			{$modulo = ($listaPlanes->getNum() - (((int)($listaPlanes->getNum() / 3))*3))}
 			{for $x=(((int)($listaPlanes->getNum() / 3))*3) to ($listaPlanes->getNum())-1 }
@@ -146,7 +149,7 @@
 				{/if}
 				{if $modulo == 2 }
 				
-					<div class="col-md-4" style=" margin-left: 120px; ">
+					<div class="col-md-4">
 						<div class="planes">
 							<h4>{$listaPlanes->getPos($x)->getNombre()}</h4>
 							<ul class="list-unstyled">
