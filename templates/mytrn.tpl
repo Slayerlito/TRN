@@ -1,6 +1,6 @@
 <main class="container-fluid" >
 	<!-- MENU IZQUIERDO -->
-	<div id="menuizq" class="col-md-3 col-sm-3 center-block">
+	<div id="menuizq" class=" container-fluid col-md-3 col-sm-3 center-block">
 		<!-- FICHA TECNICA -->
 		<div id="ficha-tecnica" class="text-center">
 			<img id="imgmytrn" class="img-circle img-responsive center-block" src="https://pbs.twimg.com/profile_images/493891049438203905/Lbtt9YLC_400x400.png">
@@ -36,7 +36,7 @@
 	</div>
 	<!-- /MENU IZQUIERDO -->
 	<!-- OBJETIVOS -->
-	<div id="objetivos" class="col-md-9 col-sm-9">
+	<div id="objetivos" class="col-md-9 col-sm-9 center-block">
 		<!-- SUBMENU -->
 		<div id="submenu" class="text-center col-md-9 col-sm-9">
 			<ul class="list-unstyled">
@@ -54,7 +54,7 @@
 		<!-- /SUBMENU -->
 		<!-- GRAFICOS -->
 		<div class="container-fluid">
-			<canvas class="col-md-4" id="linea" width="400" height="400"></canvas>
+			<canvas class="col-md-4" id="linea"></canvas>
 			<script>
 				var ctx = document.getElementById("linea");
 				var linea = new Chart(ctx, {
@@ -84,7 +84,8 @@
 				}
 			});
 			</script>
-			<canvas class="col-md-4" id="barras" width="400" height="400"></canvas>
+			
+		<canvas class="col-md-4" id="barras" width="400" height="400"></canvas>
 			<script>
 			var ctx = document.getElementById("barras");
 			var barras = new Chart(ctx, {
@@ -114,6 +115,7 @@
 					}]
 				},
 				options: { responsive: false,
+							
 					scales: {
 						yAxes: [{
 							ticks: {

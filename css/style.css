@@ -93,6 +93,13 @@ footer {
 /* CSS mytrn.tpl */
 
 
+linea {
+	width: 500px;
+	height: 500px;
+	margin: 20px;
+	padding: 30px;
+}
+
 main {
 	margin-top: 60px;
 	width:100%;
@@ -138,6 +145,10 @@ main {
 		margin-right: -15px;
 	}
 	
+	canvas {
+	margin: 20px;
+	padding: 30px;
+	}
 }
 
 /* -----------------------------MOBILE----------------------------- */
