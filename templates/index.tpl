@@ -74,9 +74,7 @@
 	<div class="container-fluid">
 		<h3 class="text-center">ÚLTIMAS NOTICIAS</h3>
 		<div class="col-md-6 noticias">
-			<div>
 				<h4 class="text-center">NOTICIA 1</h4>
-			</div>
 			<div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam congue magna a varius malesuada. Aenean augue metus, lacinia eget facilisis eget, tincidunt a nunc. Cras euismod ex vel est lacinia, in suscipit nibh sagittis. Cras molestie cursus lacus quis vestibulum. Sed egestas nisi quis ligula suscipit, at sagittis sapien elementum. Proin sit amet vestibulum neque. Sed luctus sollicitudin tincidunt. Duis nisl nunc, bibendum nec commodo a, tempus et magna. Sed eu posuere mi, a lacinia dolor.</p>
 			</div>

@@ -1,4 +1,4 @@
-<main><br><br><br><br><br><br>
+<main>
 <form class="form" action="login.php{$url}" method="post">
 		<input type="text" id="email_l" name="email" autofocus="autofocus" placeholder="E-mail">
 		<input type="password" id="password" name="password" placeholder="Contraseña">
