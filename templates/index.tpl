@@ -42,7 +42,7 @@
   <!-- class="container"-->	
 	<section class="container">
 	<div class="container-fluid">
-		<div class="col-md-4">
+		<div class="col-md-4 especialidades">
 			<div>
 				<h3 class="text-center">Entrenamiento</h3>
 			</div>
@@ -50,7 +50,7 @@
 				<p class="text-justify">Aliquam vel gravida sem. Sed ut blandit risus, pellentesque finibus ante. Nunc tristique tempor quam nec pretium. Proin sagittis diam vitae augue auctor semper. Ut a accumsan mi. Vestibulum sit amet nisl nec justo convallis molestie quis ut ante. Nam nec massa consequat, tempor ipsum id, fringilla nibh. Proin placerat augue quis dolor pellentesque dignissim. Aliquam ac hendrerit enim. Vivamus ac gravida nunc, sit amet congue sapien. Cras eleifend ipsum ut iaculis placerat.</p>
 			</div>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-4 especialidades">
 			<div>
 				<h3 class="text-center">Alimentación</h3>
 			</div>

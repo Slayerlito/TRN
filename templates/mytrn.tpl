@@ -54,7 +54,7 @@
 		<!-- /SUBMENU -->
 		<!-- GRAFICOS -->
 		<div class="container-fluid">
-			asdfjlañsjdñflkjasñldkfjasdfjklñ
+		 <hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
 		</div>
 		<!-- /GRAFICOS -->
 	</div>

@@ -24,6 +24,7 @@
 	<link rel="stylesheet" href="bootstrap/css/bootstrap-social.css">
 	 <!-- CSS Principal -->
 	<link rel="stylesheet" href="css/style.css">
+
 	
 	<!-- Título de la Web -->
 	<title>TRN</title>
