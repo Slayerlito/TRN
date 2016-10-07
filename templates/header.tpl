@@ -14,29 +14,32 @@
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	  <!-- Tema Bootstrap -->
 	<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
-	<!-- CSS scrolling nav -->
-	<link href="bootstrap/css/scrolling-nav.css" rel="stylesheet">
-	<!-- CSS  slider -->
-    <link href="bootstrap/css/full-slider.css" rel="stylesheet">
 	<!-- CSS Font Awesome -->
 	<link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
 	<!-- CSS Bootstrap social -->
 	<link rel="stylesheet" href="bootstrap/css/bootstrap-social.css">
-	 <!-- CSS Principal -->
+	<!-- CSS scrolling nav -->
+	<link href="css/scrolling-nav.css" rel="stylesheet">
+	<!-- CSS  slider -->
+    <link href="css/full-slider.css" rel="stylesheet">
+	<!-- CSS Principal -->
 	<link rel="stylesheet" href="css/style.css">
 
-	
 	<!-- Título de la Web -->
 	<title>TRN</title>
-	
+
 	<!-- JS principal-->
 	<script src="js/scripts.js"></script>
-	<!-- JS charts/graficos -->
-	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js" ></script> 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.min.js" ></script> -->
+	<!-- JQuery -->
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<!-- JS charts/graficos cahrt.js-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js" ></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.min.js" ></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js" ></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js" ></script>
-	
+	<!-- JS Liquid Bubble chart -->
+	<!--<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>-->
+	<script src="js/waterbubble.js"></script>
 </head>
 <body id="inicio">
 <header>
