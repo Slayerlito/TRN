@@ -39,25 +39,34 @@ abstract class ControladorWeb{
 	/**
 	 *  
 	 */
-	public static function getListaPlanes(){
-		return ListaPlanes::getPlanes();
-	}
-	/**
-	 *  
-	 */
 	public static function getPlanesFilaCompleta(){
-		$listaPlanes = ListaPlanes::getPlanes()->getLista();
+		$listaPlanes = ListaPlanes::getPlanes();
+		$listaRet = array();
+		for($x=1 ; $x<=floor($listaPlanes->getNum()/3);$x++){
+			$fila = array();
+			for($y=$x*3 ;$y<= ($x*3)+2;$y++){
+				array_push($fila,$listaPlanes->getPos($y-3));
+			}
+			array_push($listaRet,ListaObjetos::newLista($fila));
+		}
+		return $listaRet;
 	}
 	/**
 	 *  
 	 */
 	public static function getPlanesUltimaFila(){
-		$listaPlanes = ListaPlanes::getPlanes()->getLista();
+		$listaPlanes = ListaPlanes::getPlanes();
+		$listaRet = array();
+		for($x=(floor($listaPlanes->getNum()/3)*3) ; $x<$listaPlanes->getNum();$x++){
+			array_push($listaRet,$listaPlanes->getPos($x));
+		}
+		return $listaRet;
 	}
 	/**
 	 *  
 	 */
 	public static function getListaObjetivos($idUsuario){
+		
 		
 	}
 	/**

@@ -110,57 +110,40 @@
 	<section id="planes" class="container text-center">
 		<h3>NUESTRO PLANES PARA TI</h3>
 			<div class="container-fluid">
-			{for $x=1 to ((int)$listaPlanes->getNum() / 3)-1}
-			
-				{for $y=$x*3 to ($x*3)+2 }
+			{foreach from=$planesFilaCompleta item=$fila}			
+				{foreach from=$fila->getLista() item=$plan}
 					<div class="col-md-4">
 						<div class="planes">
-							<h4>{$listaPlanes->getPos($y-3)->getNombre()}</h4>
+							<h4>{$plan->getNombre()}</h4>
 							<ul class="list-unstyled">
-							<li> {$listaPlanes->getPos($y-3)->getChat()} Chat</li>
-							<li> {$listaPlanes->getPos($y-3)->getEntrenamiento()} Entrenamiento</li>
-							<li> {$listaPlanes->getPos($y-3)->getNutricion()} Nutrición</li>
-							<li> {$listaPlanes->getPos($y-3)->getSeguimiento()} Sesiones seguimiento</li>
+							<li> {$plan->getChat()} Chat</li>
+							<li> {$plan->getEntrenamiento()} Entrenamiento</li>
+							<li> {$plan->getNutricion()} Nutrición</li>
+							<li> {$plan->getSeguimiento()} Sesiones seguimiento</li>
 							</ul>
 						</div>
 					</div>
-				{/for}
+				{/foreach}
 			</div>
 			<div class="container-fluid">
-			{/for}
-			{$modulo = ($listaPlanes->getNum() - (((int)($listaPlanes->getNum() / 3))*3))}
-			{for $x=(((int)($listaPlanes->getNum() / 3))*3) to ($listaPlanes->getNum())-1 }
+			{/foreach}
+			{foreach from=$planesUltimaFila item=$planUF}
 				{if $modulo == 1 }
-				
-					<div class="col-md-4">
+					<div class= "col-md-12">
+				{else}
+					<div class= "col-md-6">
+				{/if}
 						<div class="planes">
-							<h4>{$listaPlanes->getPos($x)->getNombre()}</h4>
+							<h4>{$planUF->getNombre()}</h4>
 							<ul class="list-unstyled">
-							<li> {$listaPlanes->getPos($x)->getChat()} Chat</li>
-							<li> {$listaPlanes->getPos($x)->getEntrenamiento()} Entrenamiento</li>
-							<li> {$listaPlanes->getPos($x)->getNutricion()} Nutrición</li>
-							<li> {$listaPlanes->getPos($x)->getSeguimiento()} Sesiones seguimiento</li>
+							<li> {$planUF->getChat()} Chat</li>
+							<li> {$planUF->getEntrenamiento()} Entrenamiento</li>
+							<li> {$planUF->getNutricion()} Nutrición</li>
+							<li> {$planUF->getSeguimiento()} Sesiones seguimiento</li>
 							</ul>
 						</div>
 					</div>
-				
-				{/if}
-				{if $modulo == 2 }
-				
-					<div class="col-md-4">
-						<div class="planes">
-							<h4>{$listaPlanes->getPos($x)->getNombre()}</h4>
-							<ul class="list-unstyled">
-							<li> {$listaPlanes->getPos($x)->getChat()} Chat</li>
-							<li> {$listaPlanes->getPos($x)->getEntrenamiento()} Entrenamiento</li>
-							<li> {$listaPlanes->getPos($x)->getNutricion()} Nutrición</li>
-							<li> {$listaPlanes->getPos($x)->getSeguimiento()} Sesiones seguimiento</li>
-							</ul>
-						</div>
-					</div>
-				
-				{/if}
-			{/for}
+			{/foreach}
 			</div>
 	</section>
 	<!-- /PLANES -->
