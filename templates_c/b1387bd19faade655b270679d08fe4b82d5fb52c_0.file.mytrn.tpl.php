@@ -1,13 +1,41 @@
+<?php
+/* Smarty version 3.1.30, created on 2016-10-08 04:47:23
+  from "C:\wamp64\www\TRN\templates\mytrn.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_57f87a5b9552f0_76437329',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'b1387bd19faade655b270679d08fe4b82d5fb52c' => 
+    array (
+      0 => 'C:\\wamp64\\www\\TRN\\templates\\mytrn.tpl',
+      1 => 1475878271,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_57f87a5b9552f0_76437329 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <main class="container-fluid" >
 	<!-- MENU IZQUIERDO -->
 	<div id="menuizq" class=" container-fluid col-md-3 col-sm-3 center-block">
 		<!-- FICHA TECNICA -->
 		<div id="ficha-tecnica" class="text-center">
 			<img id="imgmytrn" class="img-circle img-responsive center-block" src="images/team.jpg">
-			<h3>{$usuario->getNombre()}</h3>
-			<h4>{$usuario->getApellidos()}</h4>
-			<div>{$usuario->getPeso()} Kg</div>
-			<div>{$usuario->getAltura()} cm</div>
+			<h3><?php echo $_smarty_tpl->tpl_vars['usuario']->value->getNombre();?>
+</h3>
+			<h4><?php echo $_smarty_tpl->tpl_vars['usuario']->value->getApellidos();?>
+</h4>
+			<div><?php echo $_smarty_tpl->tpl_vars['usuario']->value->getPeso();?>
+ Kg</div>
+			<div><?php echo $_smarty_tpl->tpl_vars['usuario']->value->getAltura();?>
+ cm</div>
 			
 		</div>
 		<!-- /FICHA TECNICA -->
@@ -58,7 +86,8 @@
 			<div class="col-md-6">
 				<canvas id="bubble" class="center-block"></canvas>
 			</div>
-			<script>			
+			<?php echo '<script'; ?>
+>			
 			$('#bubble').waterbubble({
 			// bubble size
 			radius: 150,
@@ -82,11 +111,13 @@
 			animation: true
 			});
 
-			</script>
+			<?php echo '</script'; ?>
+>
 			<div class="col-md-6">
 				<canvas id="linea1" class="center-block"></canvas>
 			</div>
-			<script>
+			<?php echo '<script'; ?>
+>
 				var ctx = document.getElementById("linea1");
 				var linea1 = new Chart(ctx, {
 				type: 'line',
@@ -115,14 +146,16 @@
 				}
 			});
 			
-			</script>
+			<?php echo '</script'; ?>
+>
 		</div>
 		<hr>
 		<div class="container-fluid">
 			<div class="col-md-6">
 				<canvas id="linea2" class="center-block"></canvas>
 			</div>
-			<script>
+			<?php echo '<script'; ?>
+>
 				var ctx = document.getElementById("linea2");
 				var linea2 = new Chart(ctx, {
 				type: 'line',
@@ -151,10 +184,12 @@
 				}
 			});
 			
-			</script>
+			<?php echo '</script'; ?>
+>
 		</div>
 	</div>
 		<!-- /GRAFICOS -->
 	</div>
 	<!-- OBJETIVOS -->
-</main>
+</main><?php }
+}

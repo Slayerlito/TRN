@@ -12,13 +12,15 @@ class Usuario {
 	private $fechaNacimiento;
 	private $email;
 	private $deportista;
+	private $coach;
 	private $peso;
 	private $altura;
+	private $foto;
 	private $perfil;
 	private $activo;
 	
     public function __construct($email){ 
-		$resultado = ControladorSQL::getControlador()->ejecutarSQL("SELECT ID_USER,NOMBRE,APELLIDOS,FECHA_DE_NACIMIENTO,EMAIL,DEPORTISTA,PESO,ALTURA,PERFIL,ACTIVO FROM TRN_LKP_USUARIOS WHERE EMAIL='$email'");
+		$resultado = ControladorSQL::getControlador()->ejecutarSQL("SELECT ID_USER,NOMBRE,APELLIDOS,FECHA_DE_NACIMIENTO,EMAIL,DEPORTISTA,COACH,PESO,ALTURA,PERFIL,ACTIVO FROM TRN_LKP_USUARIOS WHERE EMAIL='$email'");
 		$result = $resultado->fetch_array(MYSQLI_ASSOC);
 		$this->id_user = $result['ID_USER'];
 		$this->nombre = $result['NOMBRE'];
@@ -26,6 +28,7 @@ class Usuario {
 		$this->fechaNacimiento = $result['FECHA_DE_NACIMIENTO'];
 		$this->email = $result['EMAIL'];
 		$this->deportista = $result['DEPORTISTA'];
+		$this->coach = $result['COACH'];
 		$this->peso = $result['PESO'];
 		$this->altura = $result['ALTURA'];
 		$this->perfil = $result['PERFIL'];
@@ -48,14 +51,20 @@ class Usuario {
 	public function getEmail(){
 		return $this->email;
 	}
-	public function getDeportista(){
+	public function isDeportista(){
 		return $this->deportista;
+	}
+	public function isCoach(){
+		return $this->coach;
 	}
 	public function getPeso(){
 		return $this->peso;
 	}
 	public function getAltura(){
 		return $this->altura;
+	}
+	public function getFoto(){
+		return $this->foto;
 	}
 	public function getPerfil(){
 		return $this->perfil;

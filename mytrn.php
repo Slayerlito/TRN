@@ -18,6 +18,9 @@ require_once('header.php');
 //Funcionalidad del index
 
 $smarty->assign('usuario', $_SESSION['usuario']);
+//var_dump($_SESSION['usuario']);
+$smarty->assign('listaObjetivos', ControladorWeb::getListaObjetivos($_SESSION['usuario']->getId(),$_SESSION['usuario']->isCoach()));
+var_dump(ControladorWeb::getListaObjetivos($_SESSION['usuario']->getId(),$_SESSION['usuario']->isCoach()));
 
 
 $smarty->display('mytrn.tpl');
