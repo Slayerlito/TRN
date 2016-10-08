@@ -36,7 +36,7 @@ class Objetivo {
 	        $this->alimentosND = $alimentosND;	
 			$this->idCoach = $idCoach;
 	        $this->objetivo = $objetivo;
-			//$this->listaSeguimientos = ListaSeguimientos::newListaSeguimientos($this->id_objetivo);
+			$this->listaSeguimientos = ListaSeguimientos::newListaSeguimientos($this->idObjetivo);
 	}   
 	/**
 	 *  

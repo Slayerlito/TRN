@@ -3,9 +3,6 @@ require_once('php/modelo/ListaObjetos.php');
 require_once('php/modelo/Seguimiento.php');
 
 class ListaSeguimientos extends ListaObjetos{
-	private function __construct($idObjetivo){
-		
-	}
 	public static function newListaSeguimientos($idObjetivo){
 			$arraySeguimientos = array();
 			$resultado = ControladorSQL::getControlador()->ejecutarSQL("SELECT * FROM TRN_B_SEGUIMIENTOS WHERE ID_OBJETIVO='$idObjetivo'");
