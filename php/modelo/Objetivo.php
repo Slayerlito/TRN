@@ -20,6 +20,7 @@ class Objetivo {
 	private $idCoach;					/*!< Detailed description after the member */
 	private $objetivo;					/*!< Detailed description after the member */
 	private $listaSeguimientos;			/*!< Detailed description after the member */
+	private $descObj;					/*!< Detailed description after the member */
 	/**
 	 *  Constructor privado de Planes Contratables al cual se le deben pasar todos los argumentos.
 	 */

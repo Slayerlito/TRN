@@ -16,20 +16,9 @@
 		<div class="text-center">
 			<h4 >MIS OBJETIVOS</h4>
 			<ul class="list-unstyled">
-				<li>NOMBRE OBJETIVO</li>
-				<li>NOMBRE OBJETIVO</li>
-				<li>NOMBRE OBJETIVO</li>
-				<li>NOMBRE OBJETIVO</li>
-				<li>NOMBRE OBJETIVO</li>				
-				<li>NOMBRE OBJETIVO</li>
-				<li>NOMBRE OBJETIVO</li>
-				<li>NOMBRE OBJETIVO</li>
-				<li>NOMBRE OBJETIVO</li>	
-				<li>NOMBRE OBJETIVO</li>
-				<li>NOMBRE OBJETIVO</li>
-				<li>NOMBRE OBJETIVO</li>	
-				<li>NOMBRE OBJETIVO</li>
-				<li>NOMBRE OBJETIVO</li>
+				{foreach from=$listaObjetivos item=$objetivo}
+				<li>{$objetivo->getObjetivo()}</li>
+				{/foreach}
 			</ul>
 		</div>
 		<!-- /LISTA DE OBJETIVOS -->
