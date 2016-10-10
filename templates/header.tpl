@@ -43,7 +43,11 @@
 	<!-- JS Graficos -->
 	<script src="js/graficos.js"></script>
 </head>
+
+
 <body id="inicio">
+
+
 <header>
 	 <!-- NAV  -->
     <nav class="navbar navbar-fixed-top" role="navigation">
@@ -61,15 +65,12 @@
 				</div>
 				<!-- REDES SOCIALES -->	
             </div>
-			<!-- div donde se muestra el menú cuando el tamaño es de móvil -->
 			<!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
 
 			<!-- Login / Registro -->
 				<ul class="nav navbar-nav navbar-right">
-					<!-- Iniciar sesión -->
-	<!-- SE muestra o oculta segun si esta o no logueado el usuario -->	
-				
+				<!-- Iniciar sesión -->		
 				{IF $usuario == 'false'}	
 					<li class="dropdown">
 						<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="login"><span class="glyphicon glyphicon-user"></span> Identifícate</a>
@@ -80,17 +81,18 @@
 								<a href="#caca" class="btn-link" >¿Has olvidado la contraseña?</a>
 								<input clasS="btn" type="submit" name="login" value="Iniciar sesión">
 						</form>
-	<!-- DAVID // MOSTRARLO CUANDO EL LOGIN NO ES CORRECTO -->
+<!-- DAVID // MOSTRARLO CUANDO EL LOGIN NO ES CORRECTO -->
 							{IF $login == 'false'}
 								<div class="alert alert-danger">
 									<p>El usuario o la contraseña no son correctos.</p>
 								</div>
 							{/IF}
-	<!------------------------------------------------------->
+<!------------------------------------------------------->
 						</div>
 					</li>
-					<!-- /Iniciar sesión -->
-					<!-- Registro -->
+				<!-- /Iniciar sesión -->
+					
+				<!-- Registro -->
 					<li class="dropdown">
 						<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="registro"><span class="glyphicon glyphicon-log-in"></span> Registro</a>
 						<div class="dropdown-menu">
@@ -128,7 +130,7 @@
 							<!-- --------------------------------------------------- -->
 						</div>
 					</li>
-					<!-- /Registro -->
+				<!-- /Registro -->
 				{ELSE}
 					<!-- Boton usuario/Boton desconectar -->
 					<li class="dropdown">
