@@ -108,7 +108,7 @@
 	<!-- /NOTICIAS -->
 	<!-- PLANES -->
 	<section id="planes" class="container text-center">
-		<h3>NUESTRO PLANES PARA TI</h3>
+		<h3>NUESTROS PLANES PARA TI</h3>
 			<div class="container-fluid">
 			{foreach from=$planesFilaCompleta item=$fila}			
 				{foreach from=$fila->getLista() item=$plan}

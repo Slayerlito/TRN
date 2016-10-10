@@ -31,12 +31,7 @@
 <script src="bootstrap/js/jquery.easing.min.js"></script>
 <script src="bootstrap/js/scrolling-nav.js"></script>
 
-<!-- Activate Carousel Javascript -->
-<script>
-$('.carousel').carousel();
-</script>
-
-<!-- script mostrar ocultar -->
+<!-- script mostrar ocultar sidenav mytrn -->
 <script type="text/javascript">
 function ocultar(){
 	document.getElementById('menuizq').style.display = 'none';
@@ -50,7 +45,10 @@ function mostrar(){
 	document.getElementById('btn-cerrar').style.display = 'none';
 }
 </script>
-
+	<!-- JS carousel -->
+	<script>
+	$('.carousel').carousel();
+	</script>
 
 
 

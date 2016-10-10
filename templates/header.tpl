@@ -28,8 +28,7 @@
 	<!-- Título de la Web -->
 	<title>TRN</title>
 
-	<!-- JS principal-->
-	<script src="js/scripts.js"></script>
+
 	<!-- JQuery -->
 	<script src="js/jquery-3.1.0.min.js"></script>
 	<!-- JS charts/graficos cahrt.js-->
@@ -38,8 +37,11 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js" ></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js" ></script>
 	<!-- JS Liquid Bubble chart -->
-	<!--<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>-->
 	<script src="js/waterbubble.js"></script>
+	<!-- JS principal-->
+	<script src="js/scripts.js"></script>
+	<!-- JS Graficos -->
+	<script src="js/graficos.js"></script>
 </head>
 <body id="inicio">
 <header>
