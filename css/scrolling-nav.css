@@ -5,8 +5,8 @@
  */
 
 body {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 html {
@@ -14,49 +14,121 @@ html {
     height: 100%;
 }
 
+/* NAV PERSONALIZADO * Waxabi */
+#nav-top {
+	margin: 0;
+}
 
-@media(min-width:767px) {
+.my-navbar-collapse {
+	padding-top: 5px;
+}
+
+.my-navbar-collapse ul {
+	padding-right: 20px;
+}
+
+.navbar {
+	background-color: black;
+}
+
+.navbar a {
+	color: white;
+	padding-left: 20px;
+}
+
+.glyphicon-menu-hamburger {
+	color: white;
+}
+
+.navbar-brand {
+	padding: 20px;
+}
+
+.navbar-right{
+	padding-right: 50px;
+}
+
+.my-dropdown {
+	padding: 13px;
+	padding-top: 30px;
+	background-color: rgba(0,0,0,0.9);
+	box-shadow: 0 0 25px rgba(0,0,0,0.8);
+	border-radius: 15px;
+}
+
+.my-dropdown input {
+	color: white;
+	margin: 10px;
+	padding: 0;
+	background-color: rgba(255,255,255,0.5);
+	border: 1px solid white;
+}
+
+
+.my-dropdown a {
+	padding: 0;
+	display: block;
+}
+
+.my-dropdown button {
+	box-sizing: border-box;
+}
+
+/* NAV PERSONALIZADO * Waxabi */
+
+/* SCROLLING NAV */
+@media(min-width: 991px) {
     .navbar {
-		margin:0;
-        padding: 5px;
-        -webkit-transition: padding .5s ease-in-out;
-        -moz-transition: padding .5s ease-in-out;
-        transition: padding .5s ease-in-out;
+        padding: 5px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .3s ease-in-out;
     }
 
     .top-nav-collapse {
+		background:  #00aa77;
         padding: 0;
     }
+	
 }
+/* SCROLLING NAV */
 
-/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
-The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
-of those sections to manage the look and feel of the site. */
-
-.intro-section {
-    height: 100%;
-    padding-top: 150px;
-    text-align: center;
-    background: #fff;
+/* COLLAPSE PERSONALIZADO DEL NAV */
+@media (max-width: 991px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
 }
-
-.about-section {
-    height: 100%;
-    padding-top: 150px;
-    text-align: center;
-    background: #eee;
-}
-
-.services-section {
-    height: 100%;
-    padding-top: 150px;
-    text-align: center;
-    background: #fff;
-}
-
-.contact-section {
-    height: 100%;
-    padding-top: 150px;
-    text-align: center;
-    background: #eee;
-}
+/* COLLAPSE PERSONALIZADO DEL NAV */

@@ -42,21 +42,20 @@
 	<script src="js/scripts.js"></script>
 	<!-- JS Graficos -->
 	<script src="js/graficos.js"></script>
+	
 </head>
 
 
 <body id="inicio">
 
-
 <header>
 	 <!-- NAV  -->
-    <nav class="navbar navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
-			<div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+    <nav id="nav-top" class="navbar navbar-fixed-top" role="navigation">
+			<div class="navbar-header">
+                <button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target=".my-navbar-collapse">
 					<span class="glyphicon glyphicon-menu-hamburger"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.php"><span>TRN</span></a>
+                <a class="navbar-brand" href="index.php"><span>TRN</span></a>
 				<!-- REDES SOCIALES -->
 				<div class="social navbar-left">
 					<a href="http://www.twitter.es" class="btn btn-sm btn-social-icon btn-twitter" target="_blank"><span class="fa fa-twitter"></span></a>
@@ -66,7 +65,7 @@
 				<!-- REDES SOCIALES -->	
             </div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <div class="collapse navbar-collapse my-navbar-collapse">
 
 			<!-- Login / Registro -->
 				<ul class="nav navbar-nav navbar-right">
@@ -74,12 +73,12 @@
 				{IF $usuario == 'false'}	
 					<li class="dropdown">
 						<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="login"><span class="glyphicon glyphicon-user"></span> Identifícate</a>
-						<div class="dropdown-menu">
-						<form class="form" action="index.php" method="post">
+						<div class="dropdown-menu dropdown-menu-left my-dropdown">
+						<form class="form text-center" action="index.php" method="post">
 								<input type="text" id="email_l" name="email" autofocus="autofocus" placeholder="E-mail">
 								<input type="password" id="password" name="password" placeholder="Contraseña">
-								<a href="#caca" class="btn-link" >¿Has olvidado la contraseña?</a>
-								<input clasS="btn" type="submit" name="login" value="Iniciar sesión">
+								<a href="http://es.ccm.net/faq/6599-como-recuperar-tu-contrasena-de-gmail">¿Has olvidado la contraseña?</a>
+								<button class="center-center" type="submit" name="login" value="Iniciar sesión">Iniciar Sesión</button>
 						</form>
 <!-- DAVID // MOSTRARLO CUANDO EL LOGIN NO ES CORRECTO -->
 							{IF $login == 'false'}
@@ -95,15 +94,15 @@
 				<!-- Registro -->
 					<li class="dropdown">
 						<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="registro"><span class="glyphicon glyphicon-log-in"></span> Registro</a>
-						<div class="dropdown-menu">
-							<form class="form" action="index.php" method="post">
+						<div class="dropdown-menu dropdown-menu-right my-dropdown">
+							<form class="form text-center" action="index.php" method="post">
 								<input type="text" id="email_r" name="email" autofocus="autofocus" placeholder="E-mail">
 								<input type="password" id="password_r" name="password" placeholder="Contraseña">
 								<input type="password" id="password2" name="password2"  placeholder="Repita Contraseña">
 								<input type="text" id="first_name" name="nombre"  placeholder="Nombre">
 								<input type="text" id="last_name" name="apellidos"  placeholder="Apellidos">
 								<input type="text" id="birthdate" name="nacimiento"  placeholder="Fecha de Nacimiento">
-								<input class="btn" type="submit" name="registro" value="Registrarse">
+								<button type="submit" name="registro">Registrarse</button>
 							</form>
 <!-- DAVID // MOSTRARLO CUANDO EL REGISTRO NO ES CORRECTO -->
 							
@@ -133,33 +132,31 @@
 				<!-- /Registro -->
 				{ELSE}
 					<!-- Boton usuario/Boton desconectar -->
-					<li class="dropdown">
-						<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="login"><span class="glyphicon glyphicon-user"></span> {$user}</a>
+					<li>
+						<a href="#" id="login"><span class="glyphicon glyphicon-user"></span> {$user}</a>
 					</li>
-					<li class="dropdown">
+					<li>
 						<a class="alert-danger" href="logout.php" id="logout"><span class="glyphicon glyphicon-off"></span> Desconectar</a>
 					</li>
 					<!-- Fin Boton usuario/Boton desconectar -->
 				{/IF}	
-	<!-- FIN  del IF Smarty -->
+				<!-- FIN  del IF Smarty -->
 				</ul>
 				<!-- MENU -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- li oculto para el scroll del nav -->
 					<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden"><a class="page-scroll" href="index.php"></a></li>
-                    <li><a class="page-scroll" href="#inicio">Inicio</a></li>
-                    <li><a class="page-scroll" href="#noticias">Noticias</a></li>
-                    <li><a class="page-scroll" href="#planes">Planes</a></li>
-					<li><a class="page-scroll" href="mytrn.php">My TRN</a></li>
-					<li><a class="page-scroll" href="prueba.php">PRUEBAS</a></li>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li class="hidden"><a href="index.php"></a></li>
+                    <li><a href="#noticias">Noticias</a></li>
+                    <li><a href="#planes">Planes</a></li>
+					<li><a href="mytrn.php">My TRN</a></li>
+					<li><a href="prueba.php">PRUEBAS</a></li>
                 </ul>
 				<!-- MENU -->
 				<!-- FIN Login / Registro -->
             </div>
             <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
 	</nav>
 	<!-- FIN NAV -->
 </header>
