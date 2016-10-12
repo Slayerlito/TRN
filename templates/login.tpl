@@ -11,7 +11,7 @@
 					<input class="col-md-3" type="text" id="email_l" name="email" autofocus="autofocus" placeholder="E-mail">
 					<input class="col-md-3"type="password" id="password" name="password" placeholder="Contraseña">
 					<a href="#caca" class="btn-link col-md-3">¿Has olvidado la contraseña?</a>
-					<input clasS="btn" type="submit" name="login" value="Iniciar sesión">
+					<input class="btn" type="submit" name="login" value="Iniciar sesión">
 				</form>
 			</div>
 		</div>

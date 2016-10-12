@@ -75,10 +75,10 @@
 						<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="login"><span class="glyphicon glyphicon-user"></span> Identifícate</a>
 						<div class="dropdown-menu dropdown-menu-left my-dropdown">
 						<form class="form text-center" action="index.php" method="post">
-								<input type="text" id="email_l" name="email" autofocus="autofocus" placeholder="E-mail">
+								<input type="text" id="email_l" name="email" autofocus placeholder="E-mail">
 								<input type="password" id="password" name="password" placeholder="Contraseña">
 								<a href="http://es.ccm.net/faq/6599-como-recuperar-tu-contrasena-de-gmail">¿Has olvidado la contraseña?</a>
-								<button class="center-center" type="submit" name="login" value="Iniciar sesión">Iniciar Sesión</button>
+								<input type="submit" name="login" value="Iniciar sesión">
 						</form>
 <!-- DAVID // MOSTRARLO CUANDO EL LOGIN NO ES CORRECTO -->
 							{IF $login == 'false'}
@@ -102,7 +102,7 @@
 								<input type="text" id="first_name" name="nombre"  placeholder="Nombre">
 								<input type="text" id="last_name" name="apellidos"  placeholder="Apellidos">
 								<input type="text" id="birthdate" name="nacimiento"  placeholder="Fecha de Nacimiento">
-								<button type="submit" name="registro">Registrarse</button>
+								<input type="submit" name="registro" value="Registrarse">
 							</form>
 <!-- DAVID // MOSTRARLO CUANDO EL REGISTRO NO ES CORRECTO -->
 							
@@ -143,7 +143,7 @@
 				<!-- FIN  del IF Smarty -->
 				</ul>
 				<!-- MENU -->
-                <ul class="nav navbar-nav navbar-right">
+                <ul id="menu" class="nav navbar-nav navbar-right">
                     <!-- li oculto para el scroll del nav -->
 					<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li><a href="#inicio">Inicio</a></li>
