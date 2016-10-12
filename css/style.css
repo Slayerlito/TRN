@@ -126,9 +126,10 @@ main {
 		width; 100%;
 	}
 	
-	html {font-size: 28px;}
+	html {
+		font-size: 28px;
+	}
 	
-
 }
 /* CSS mytrn.tpl */
 

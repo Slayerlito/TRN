@@ -24,13 +24,16 @@
 #menu li a, #login, #registro {
 	color: white;
 	text-shadow: 2px 2px 10px #000;
+	padding: 5px;
+	margin: 5px;
+	/*text-align: center;*/
 }
 
-#menu li a:hover, #login:hover, #registro:hover {
-	color: lightblue;
+#menu li a:hover, #login:hover, #registro:hover, #login.open:hover {
+	color: transparent;
 	background-color: transparent;
-	text-shadow: 1px 1px 15px #fff;
-	font-weight: bold;
+	text-shadow: 1px 1px 1px #fff;
+	box-sizing: border-box;
 }
 
 #menu li a:active, #login:active, #registro:active {
@@ -64,31 +67,6 @@
 	margin: 0 5px;
 }
 
-.my-dropdown {
-	background-color: black;
-	padding: 11px;
-	padding-top: 30px;
-	border-radius: 25px;
-}
-
-.my-dropdown input {
-	margin: 10px;
-	padding: 0;
-	border-radius: 2px;
-	height: 30px;
-}
-
-.my-dropdown a {
-	padding: 0;
-	display: block;
-}
-
-
-.my-dropdown input[type="submit"]{
-	padding: 10px;
-	background-color: white;
-	height: auto;
-}
 /* NAV PERSONALIZADO * Waxabi */
 
 /* SCROLLING NAV */
@@ -104,14 +82,16 @@
 		background: rgba(0,0,0,0.5);
         padding: 0;
     }
-	
 }
 /* SCROLLING NAV */
 
 /* COLLAPSE PERSONALIZADO DEL NAV */
 @media (max-width: 991px) {
 	
-	.navbar
+	.navbar{
+		background-color: black;
+		height: auto;
+	}
 	
 	.navbar-header {
         float: none;
@@ -147,5 +127,8 @@
     .collapsing {
         overflow: hidden!important;
     }
+	main {
+		padding-top: 60px;
+	}
 }
 /* COLLAPSE PERSONALIZADO DEL NAV */
