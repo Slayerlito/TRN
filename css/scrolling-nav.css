@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
-/* NAV PERSONALIZADO * Waxabi */
+/* PERSONALIZADO * Waxabi */
 #nav-top {
 	margin: 0;
 }
@@ -26,7 +26,7 @@
 	text-shadow: 2px 2px 10px #000;
 	padding: 5px;
 	margin: 5px;
-	/*text-align: center;*/
+	font-weight: bold;
 }
 
 #menu li a:hover, #login:hover, #registro:hover, #login.open:hover {
@@ -38,6 +38,24 @@
 
 #menu li a:active, #login:active, #registro:active {
 	background-color: rgba(255,255,255,0.2);
+	
+}
+
+.dropdown-toggle:active, .open .dropdown-toggle {
+	background: rgba(100,100,100, 0.5) !important; 
+	color: #fff !important;
+	border-radius: 5px;
+}
+
+.dropdown-menu {
+	padding: 10px 0;
+	margin: 0;
+}
+
+.page-scroll:visited {
+	background: rgba(100,100,100, 0.5) !important; 
+	color: #fff !important;
+	border-radius: 5px ;
 }
 
 .navbar {
@@ -64,10 +82,43 @@
 }
 
 .social a {
-	margin: 0 5px;
+	margin: 0 3px;
 }
 
-/* NAV PERSONALIZADO * Waxabi */
+#registro span {
+	
+}
+
+/* PERSONALIZADO * Waxabi */
+
+/* DROPDOWN */
+/* Fixed navbar */
+body {
+  /*  padding-top: 90px;*/
+}
+/* General sizing */
+ul.dropdown-lr {
+	width: 220px;
+	background-color: rgba(255,255,255,0.5);
+	padding-bottom: 0;
+}
+
+ul.dropdown-lr .form-control{
+	
+}
+
+
+/* mobile fix */
+@media (max-width: 768px) {
+	.dropdown-lr h3 {
+		color: #eee;
+	}
+	.dropdown-lr label {
+		color: #eee;
+	}
+}
+
+/* DROPDOWN */
 
 /* SCROLLING NAV */
 @media(min-width: 991px) {
@@ -130,5 +181,24 @@
 	main {
 		padding-top: 60px;
 	}
+	
+	.my-navbar-collapse ul {
+		padding-right: none;
+		background-color: black;
+	}
+	
+	/* PRUEBA DEL LOGIN EN VERSION TABLET */
+
+	.navbar-nav .open .dropdown-menu {
+		position: static;
+		float: none;
+		width: auto;
+		margin-top: 0;
+		background-color: transparent;
+		border: 0;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+	
 }
 /* COLLAPSE PERSONALIZADO DEL NAV */

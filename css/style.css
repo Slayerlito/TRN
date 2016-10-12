@@ -1,9 +1,11 @@
 /*CSS*/
+@import 'https://fonts.googleapis.com/css?family=Play';
 
 body {
 	width: 100%;
 	height: 100%;
 	background-image: url("bg-texture.png");
+	font-family: 'Play', sans-serif;
 }
 
 html {
@@ -11,10 +13,6 @@ html {
     height: 100%;
 }
 
-/*BOTONES REDES SOCIALES*/
-
-
-/* CSS header.tpl*/
 /* ----------------------*/
 /* CSS index.tpl*/
 
