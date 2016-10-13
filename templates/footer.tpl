@@ -1,4 +1,4 @@
-<footer class="container-fluid">
+<footer class="container-fluid" >
 <div class="container">
 	<!-- REDES SOCIALES -->
 	<div class="social text-center col-md-6">
@@ -31,24 +31,11 @@
 <script src="bootstrap/js/jquery.easing.min.js"></script>
 <script src="bootstrap/js/scrolling-nav.js"></script>
 
-<!-- script mostrar ocultar sidenav mytrn -->
-<script type="text/javascript">
-function ocultar(){
-	document.getElementById('menuizq').style.display = 'none';
-	document.getElementById('btn-cerrar').style.display = 'inline';
-	document.getElementById('btn-abrir').style.display = 'none';
-}
 
-function mostrar(){
-	document.getElementById('menuizq').style.display = 'block';
-	document.getElementById('btn-abrir').style.display = 'inline';
-	document.getElementById('btn-cerrar').style.display = 'none';
-}
+<!-- JS carousel -->
+<script>
+$('.carousel').carousel();
 </script>
-	<!-- JS carousel -->
-	<script>
-	$('.carousel').carousel();
-	</script>
 
 
 

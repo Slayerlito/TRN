@@ -1,0 +1,64 @@
+/* CSS mytrn.tpl */
+
+main {
+	width:100%;
+}
+
+#menuizq {
+	margin-left: -15px;
+	margin-right: 0;
+	padding-top: 50px;
+	height: 100%;
+	z-index: -1;
+}
+
+#imgmytrn {
+	width: 220px;
+}
+
+
+#btn-cerrar {
+	display: none;
+}
+
+#submenu {
+	background-color: greenlight;
+	z-index:1;
+	padding: 20px 0;
+	width: 100%;
+}
+
+#submenu ul li a{
+	text-decoration: none;
+}
+
+/* -----------------------------TABLET----------------------------- */
+@media only screen and (max-width: 991px) {
+
+	#imgmytrn {
+		width: 180px;
+	}
+	
+	#menuizq {
+		margin-right: -15px;
+	}
+	
+}
+
+/* -----------------------------MOBILE----------------------------- */
+@media only screen and (max-width: 425px) {
+
+	#imgmytrn {
+		width: 120px;
+	}
+	#menuizq {
+		margin-right: -15px;
+		width; 100%;
+	}
+	
+	html {
+		font-size: 28px;
+	}
+	
+}
+/* CSS mytrn.tpl */

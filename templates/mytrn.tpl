@@ -1,91 +1,95 @@
-<main class="container-fluid" >
-<!-- MENU IZQUIERDO -->
-<div id="menuizq" class=" container-fluid col-md-3 center-block">
-	<!-- FICHA TECNICA -->
-	<div id="ficha-tecnica" class="text-center">
-		<img id="imgmytrn" class="img-circle img-responsive center-block" src="images/team.jpg">
-		<h3>{$usuario->getNombre()}</h3>
-		<h4>{$usuario->getApellidos()}</h4>
-		<div>{$usuario->getPeso()} Kg</div>
-		<div>{$usuario->getAltura()} cm</div>
-		
-	</div>
-	<!-- /FICHA TECNICA -->
-	<hr>
-	<!-- LISTA DE OBJETIVOS -->
-	<div class="text-center">
-		<h4 >MIS OBJETIVOS</h4>
-		<ul class="list-unstyled">
-			{foreach from=$listaObjetivos item=$objetivo}
-			<li>{$objetivo->getObjetivo()}</li>
-			{/foreach}
-		</ul>
-	</div>
-	<!-- /LISTA DE OBJETIVOS -->
-</div>
-<!-- /MENU IZQUIERDO -->
-<!-- OBJETIVOS -->
-<div id="objetivos" class="col-md-9 col-sm-9 center-block">
-	<!-- SUBMENU -->
-	<div id="submenu" class="text-center col-md-9 col-sm-9">
-				<!-- BOTON MOSTRAR OCULTAR -->
-		<a class="pull-left" onclick="ocultar();" id="btn-abrir"><span class="glyphicon glyphicon-triangle-left"></span></a>
-		<a class="pull-left " onclick="mostrar();" id="btn-cerrar"><span class="glyphicon glyphicon-triangle-right"></span></a>
-		<!-- /BOTON MOSTRAR OCULTAR -->
-		<ul class="list-unstyled">
-			<li class="col-md-3"><a>OBJETIVO ACTUAL</a></li>
-			<li class="col-md-4"><a>NUEVO OBJETIVO</a></li>
-			<li class="col-md-4"><a>EDITAR OBJETIVO</a></li>
-		</ul>
-	</div>
-	<!-- /SUBMENU -->
-	<!-- GRAFICOS -->
-	<div class="container-fluid">
-		<div class="container-fluid">
-			<div class="col-md-4 center">
-				<canvas id="bubble" class="center-block" style="margin: 0 auto;"> 
-					<script>burbuja();</script>
-				</canvas>
+<main>
+	<!-- MENU IZQUIERDO -->
+	<div id="menuizq" class="container-fluid col-md-3 animated">
+		<!-- FICHA TECNICA -->
+		<div id="ficha-tecnica" class="text-center">
+			<div class="container-fluid">
+				<img id="imgmytrn" class="img-circle center-block" src="images/team.jpg">
 			</div>
-			<div class="col-md-6 col-md-offset-1">
-				<canvas id="progreso" class="center-block">
-					<script>linea_progreso();</script>
-				</canvas>
+			<span class="glyphicon glyphicon-chevron-left center-block text-right"  onclick="cerrar();" id="btn-cerrar"></span>
+			<div class="container-fluid">
+				<h3>{$usuario->getNombre()}</h3>
+				<h4>{$usuario->getApellidos()}</h4>
+				<h6>{$usuario->getPeso()} Kg</h6>
+				<h6>{$usuario->getAltura()} cm</h6>
 			</div>
 		</div>
-		<hr>
-		<div class="container-fluid">
-			<div class="col-md-5">
-				<canvas id="peso" class="center-block">
-					<script>linea_peso();</script>
-				</canvas>
+		<!-- /FICHA TECNICA -->
+		<!-- LISTA DE OBJETIVOS -->
+		<div class=" container-fluid text-center">
+			<div>
+				<h4 >MIS OBJETIVOS</h4>
 			</div>
-			<div class="col-md-6 center-block">
-				<div id="slidermytrn" class="carousel slider">
-					<ol class="carousel-indicators">
-						<li data-target="#slidermytrn" data-slide-to="0" class="active"></li>
-						<li data-target="#slidermytrn" data-slide-to="1"></li>
-						<li data-target="#slidermytrn" data-slide-to="2"></li>
-					</ol>
-					<div class="carousel-inner">
-						<div class="item active">
-							<img class="img-responsive col-md-4" src="http://image.flaticon.com/icons/png/512/28/28265.png">
-							<img class="img-responsive col-md-4" src="http://image.flaticon.com/icons/png/512/43/43368.png">
-							<img class="img-responsive col-md-4" src="http://image.flaticon.com/icons/png/512/55/55314.png">
+			<ul class="list-unstyled">
+				{foreach from=$listaObjetivos item=$objetivo}
+				<li>{$objetivo->getObjetivo()}</li>
+				{/foreach}
+				<li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li>
+			</ul>
+		</div>
+		<!-- /LISTA DE OBJETIVOS -->
+	</div>
+	<!-- /MENU IZQUIERDO -->
+<div id="zonaobjetivos" class="container-fluid col-md-9">
+	<!-- OBJETIVOS -->
+	<div class="container-fluid">
+		<!-- SUBMENU -->
+		<div id="submenu" class="text-center center-block">
+			<ul class="list-unstyled">
+				<li class="col-md-4"><a>OBJETIVO ACTUAL</a></li>
+				<li class="col-md-4"><a>NUEVO OBJETIVO</a></li>
+				<li class="col-md-4"><a>EDITAR OBJETIVO</a></li>
+			</ul>
+		</div>
+		<!-- /SUBMENU -->
+		<!-- GRAFICOS -->
+		<div class="container-fluid">
+			<div class="container-fluid">
+				<div class="col-md-3 center">
+					<canvas id="bubble" class="center-block" style="margin: 0 auto;"> 
+						<script>burbuja();</script>
+					</canvas>
+				</div>
+				<div class="col-md-7 col-md-offset-1">
+					<canvas id="progreso" class="center-block">
+						<script>linea_progreso();</script>
+					</canvas>
+				</div>
+			</div>
+			<hr>
+			<div class="container-fluid">
+				<div class="col-md-5">
+					<canvas id="peso" class="center-block">
+						<script>linea_peso();</script>
+					</canvas>
+				</div>
+				<div class="col-md-6 center-block" style="border: 2px double red; padding: 30px;">
+					<div id="slidermytrn" class="carousel slider">
+						<ol class="carousel-indicators">
+							<li data-target="#slidermytrn" data-slide-to="0" class="active"></li>
+							<li data-target="#slidermytrn" data-slide-to="1"></li>
+							<li data-target="#slidermytrn" data-slide-to="2"></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="item active">
+								<img class="img-responsive col-md-4" src="http://image.flaticon.com/icons/png/512/28/28265.png">
+								<img class="img-responsive col-md-4" src="http://image.flaticon.com/icons/png/512/43/43368.png">
+								<img class="img-responsive col-md-4" src="http://image.flaticon.com/icons/png/512/55/55314.png">
+							</div>
+							<div class="item">
+								<img class="img-responsive col-md-4" src="https://2.bp.blogspot.com/-F6g-dRni3dM/V1tJTVnxLuI/AAAAAAAFtbs/YR4i63pnOZsJcUtJzXQm6wtKarWe5ByJgCLcB/s1600/DEPORTES%2B%2528ARTES%2BMARCIALES%2529%2B%252850%2529.png">
+								<img class="img-responsive col-md-4" src="http://image.flaticon.com/icons/png/512/30/30939.png">
+								<img class="img-responsive col-md-4" src="http://image.flaticon.com/icons/png/512/30/30340.png">
+							</div>
 						</div>
-						<div class="item">
-							<img class="img-responsive col-md-4" src="https://2.bp.blogspot.com/-F6g-dRni3dM/V1tJTVnxLuI/AAAAAAAFtbs/YR4i63pnOZsJcUtJzXQm6wtKarWe5ByJgCLcB/s1600/DEPORTES%2B%2528ARTES%2BMARCIALES%2529%2B%252850%2529.png">
-							<img class="img-responsive col-md-4" src="http://image.flaticon.com/icons/png/512/30/30939.png">
-							<img class="img-responsive col-md-4" src="http://image.flaticon.com/icons/png/512/30/30340.png">
-						</div>
+						<a href="#slidermytrn" clasS="left carousel-control" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+						<a href="#slidermytrn" clasS="right carousel-control" data-slide="prev"><span class="glyphicon glyphicon-chevron-right"></span></a>
 					</div>
-					<a href="#slidermytrn" clasS="left carousel-control" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-					<a href="#slidermytrn" clasS="right carousel-control" data-slide="prev"><span class="glyphicon glyphicon-chevron-right"></span></a>
 				</div>
 			</div>
 		</div>
+			<!-- /GRAFICOS -->
 	</div>
-		<!-- /GRAFICOS -->
+	<!-- OBJETIVOS -->
 </div>
-<!-- OBJETIVOS -->
 </main>

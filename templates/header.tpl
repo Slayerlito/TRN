@@ -68,18 +68,17 @@
             </div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse my-navbar-collapse">
+				{IF $usuario == 'false'}	
 				<!-- Login / Registro -->
 				<ul class="nav navbar-nav navbar-right">
-					<!-- Iniciar sesión -->		
-					{IF $usuario == 'false'}	
+					<!-- Iniciar sesión -->	
 					<li class="dropdown">
 						<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="login"><span class="glyphicon glyphicon-user">&nbsp;</span>Identifícate</a>
-						<!--<ul class="dropdown-menu-left dropdown-menu">-->
 						<ul class="dropdown-menu dropdown-lr animated flipInX dropdown-menu-left" role="menu">
 							<div class="col-md-12">
 								<form class="form text-center" role="form" action="index.php" method="post">
 									<div class="form-group">
-										<input class="form-control" type="text" id="email_l" name="email" autofocus placeholder="E-mail" required>
+										<input class="form-control" type="text" id="email_l" name="email" autofocus  placeholder="E-mail" required>
 									</div>
 									<div class="fomr-group">
 										<input class="form-control" type="password" id="password" name="password" placeholder="Contraseña" required>
@@ -134,43 +133,41 @@
 									
 								</form>
 							</div>
-							<div class="col-md-12">
-								<!-- SE ESTA MOSTRANDO DENTRO DEL DIV DEL LOGIN.. HAY QUE PONERLO FUERA PARA QUE SE VEA CUANDO FALLA -->
-								{IF $registro == 'pass'}
-								<div class="alert alert-danger">
-									<p>Las contraseñas no son iguales.</p>
-									<a href="" >¿Has olvidado la contraseña?</a>
-								</div>
-								{ELSEIF $registro == 'email'}
-								<div class="alert alert-danger">
-									<p>Ya existe un usuario con ese E-mail.</p>
-								</div>
-								{ELSEIF $registro == '-1'}
-								<div class="alert alert-danger">
-									<p>No se ha podido registrar.</p>
-									<a href="" >¿Has olvidado la contraseña?</a>
-								</div>
-								{ELSEIF $registro == 'true'}
-								<div class="alert alert-success">
-									<p>Usuario registrado con exito.</p>
-								</div>
-								{/IF}
-								<!-- --------------------------------------------------- -->
-								<!-- /Registro -->
-								{ELSE}
-								<!-- Boton usuario/Boton desconectar -->
-								<li>
-									<a href="#" id="login"><span class="glyphicon glyphicon-user"></span> {$user}</a>
-								</li>
-								<li>
-									<a class="btn-danger" href="logout.php" id="logout"><span class="glyphicon glyphicon-off"></span> Desconectar</a>
-								</li>
-								<!-- Fin Boton usuario/Boton desconectar -->
-								{/IF}	
-								<!-- FIN  del IF Smarty -->
-							</div>
 						</ul>
 					</li>
+					<!-- /Registro -->
+						<!-- SE ESTA MOSTRANDO DENTRO DEL DIV DEL LOGIN.. HAY QUE PONERLO FUERA PARA QUE SE VEA CUANDO FALLA -->
+						{IF $registro == 'pass'}
+						<div class="alert alert-danger">
+							<p>Las contraseñas no son iguales.</p>
+							<a href="" >¿Has olvidado la contraseña?</a>
+						</div>
+						{ELSEIF $registro == 'email'}
+						<div class="alert alert-danger">
+							<p>Ya existe un usuario con ese E-mail.</p>
+						</div>
+						{ELSEIF $registro == '-1'}
+						<div class="alert alert-danger">
+							<p>No se ha podido registrar.</p>
+							<a href="" >¿Has olvidado la contraseña?</a>
+						</div>
+						{ELSEIF $registro == 'true'}
+						<div class="alert alert-success animated flipOutX">
+							<p>Usuario registrado con exito.</p>
+						</div>
+						{/IF}
+						<!-- --------------------------------------------------- -->
+					{ELSE}
+					<ul id="estado" class="navbar-nav navbar-right">
+						<li class="list-unstyled">
+							<!-- Boton usuario/Boton desconectar -->
+							<a href="#"><span class="glyphicon glyphicon-user">&nbsp;</span>{$user}</a>
+							<a href="logout.php" id="logout"><span class="glyphicon glyphicon-off"></span></a>
+							<!-- Fin Boton usuario/Boton desconectar -->
+						</li>
+					</ul>
+					{/IF}
+					<!-- FIN  del IF Smarty -->
 				</ul>
 				<!-- / Login / Registro -->
 				<!-- MENU -->
