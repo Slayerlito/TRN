@@ -54,7 +54,7 @@ function linea_progreso(){
 			}]
 		}]
 	},
-	options: { responsive: true,
+	options: { responsive: false,
 		scales: {
 			xAxes: [{
 				type: 'linear',
@@ -87,7 +87,7 @@ function linea_peso(){
 			}]
 		}]
 	},
-	options: { responsive: true,
+	options: { responsive: false,
 		scales: {
 			xAxes: [{
 				type: 'linear',

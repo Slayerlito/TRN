@@ -48,36 +48,29 @@ p, h3, h4 {
 /* CSS index.tpl*/
 
 
-/* CSS footer.tpl */
-
-/* CSS footer.tpl */
-
-
-
 
 
 /** css mytrn.tpl **/
+#btn-cerrar {
+	padding-top:10px;
+	color: white;
+}
 
 #menuizq {
 	z-index: 1;
 	background-color: rgb(150,150,125);
 	height: auto;
 	margin-top: 60px;
-	padding-top: 50px;
-	border-radius: 5px 25px 5px 150px;
-	margin-left: 15px;
 }
+
+#submenu{
+	background-color: rgb(150,150,125);
+	padding: 10px;
+}
+
 
 #zonaobjetivos {
 	margin-top: 60px;
+	margin-bottom: 60px;
 	background-color: white; 
-	border-radius: 0 40px 5px 5px;
-	margin-left: -25px;
-	height: auto;
-}
-
-#submenu ul li{
-	background-color: rgb(150,150,125);
-	border-radius: 5px 50px 5px 50px;
-	margin-bottom: 35px;
 }

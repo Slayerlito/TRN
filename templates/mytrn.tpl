@@ -1,49 +1,49 @@
-<main>
-	<!-- MENU IZQUIERDO -->
-	<div id="menuizq" class="container-fluid col-md-3 animated">
-		<!-- FICHA TECNICA -->
-		<div id="ficha-tecnica" class="text-center">
-			<div class="container-fluid">
-				<img id="imgmytrn" class="img-circle center-block" src="images/team.jpg">
-			</div>
-			<span class="glyphicon glyphicon-chevron-left center-block text-right"  onclick="cerrar();" id="btn-cerrar"></span>
-			<div class="container-fluid">
-				<h3>{$usuario->getNombre()}</h3>
-				<h4>{$usuario->getApellidos()}</h4>
-				<h6>{$usuario->getPeso()} Kg</h6>
-				<h6>{$usuario->getAltura()} cm</h6>
-			</div>
-		</div>
-		<!-- /FICHA TECNICA -->
-		<!-- LISTA DE OBJETIVOS -->
-		<div class=" container-fluid text-center">
-			<div>
-				<h4 >MIS OBJETIVOS</h4>
-			</div>
-			<ul class="list-unstyled">
-				{foreach from=$listaObjetivos item=$objetivo}
-				<li>{$objetivo->getObjetivo()}</li>
-				{/foreach}
-				<li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li>
-			</ul>
-		</div>
-		<!-- /LISTA DE OBJETIVOS -->
-	</div>
-	<!-- /MENU IZQUIERDO -->
-<div id="zonaobjetivos" class="container-fluid col-md-9">
-	<!-- OBJETIVOS -->
-	<div class="container-fluid">
-		<!-- SUBMENU -->
-		<div id="submenu" class="text-center center-block">
-			<ul class="list-unstyled">
-				<li class="col-md-4"><a>OBJETIVO ACTUAL</a></li>
-				<li class="col-md-4"><a>NUEVO OBJETIVO</a></li>
-				<li class="col-md-4"><a>EDITAR OBJETIVO</a></li>
-			</ul>
-		</div>
-		<!-- /SUBMENU -->
-		<!-- GRAFICOS -->
+<main  class="container-fluid">
+<!-- MENU IZQUIERDO -->
+<div id="menuizq" class="col-md-3">
+	<span class="glyphicon glyphicon-remove center-block text-right" id="btn-cerrar"></span>
+	<!-- FICHA TECNICA -->
+	<div id="ficha-tecnica" class="text-center">
 		<div class="container-fluid">
+			<img id="imgmytrn" class="img-circle img-responsive center-block" src="images/team.jpg">
+		</div>
+		<div class="container-fluid">
+			<h3>{$usuario->getNombre()}</h3>
+			<h4>{$usuario->getApellidos()}</h4>
+			<h6>{$usuario->getPeso()} Kg</h6>
+			<h6>{$usuario->getAltura()} cm</h6>
+		</div>
+	</div>
+	<!-- /FICHA TECNICA -->
+	<!-- LISTA DE OBJETIVOS -->
+	<div class=" container-fluid text-center">
+		<div class="center-block">
+			<h4 >MIS OBJETIVOS</h4>
+		</div>
+		<ul class="list-unstyled">
+			{foreach from=$listaObjetivos item=$objetivo}
+			<li>{$objetivo->getObjetivo()}</li>
+			{/foreach}
+			<li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li>
+		</ul>
+	</div>
+	<!-- /LISTA DE OBJETIVOS -->
+</div>
+<!-- /MENU IZQUIERDO -->
+
+<!-- OBJETIVO -->
+<div id="zonaobjetivos" class="container-fluid col-md-9">
+	<!-- SUBMENU MYTRN --->
+	<div id="submenu" class="container-fluid col-md-12 text-center center-block">
+		<ul class="list-unstyled">
+			<li class="col-md-4"><a>OBJETIVO ACTUAL</a></li>
+			<li class="col-md-4"><a>NUEVO OBJETIVO</a></li>
+			<li class="col-md-4"><a>EDITAR OBJETIVO</a></li>
+		</ul>
+	</div>
+	<!-- / SUBMENU MYTRN-->
+	<!-- GRAFICOS -->
+	<div class="container-fluid">
 			<div class="container-fluid">
 				<div class="col-md-3 center">
 					<canvas id="bubble" class="center-block" style="margin: 0 auto;"> 
@@ -88,8 +88,9 @@
 				</div>
 			</div>
 		</div>
-			<!-- /GRAFICOS -->
-	</div>
-	<!-- OBJETIVOS -->
+	<!-- /GRAFICOS -->
+
+
 </div>
+<!-- / OBJETIVO -->
 </main>

@@ -1,5 +1,5 @@
-<footer class="container-fluid" >
-<div class="container">
+<footer style="color: white; background-color: black;" >
+<div class="container-fluid">
 	<!-- REDES SOCIALES -->
 	<div class="social text-center col-md-6">
 		<a href="http://www.twitter.es" class="btn btn-sm btn-social-icon btn-twitter" target="_blank"><span class="fa fa-twitter"></span></a> &nbsp;
@@ -38,6 +38,18 @@ $('.carousel').carousel();
 </script>
 
 
+
+<!-- preuba boton cerrar abrir -->
+
+<script>
+$('#btn-cerrar').click(cerrarMenu);
+
+function cerrarMenu(){
+	$('#menuizq').addClass('hidden');
+	$('#zonaobjetivos').removeClass("col-md-9");
+	$('#zonaobjetivos').addClass("col-md-12");
+}
+</script>
 
 </body>
 </html>
