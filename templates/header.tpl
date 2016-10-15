@@ -47,7 +47,6 @@
 	
 </head>
 
-
 <body id="inicio">
 
 <header>
@@ -70,7 +69,7 @@
             <div class="collapse navbar-collapse my-navbar-collapse">
 				{IF $usuario == 'false'}	
 				<!-- Login / Registro -->
-				<ul class="nav navbar-nav navbar-right">
+				<ul id="estado" class="nav navbar-nav navbar-right">
 					<!-- Iniciar sesión -->	
 					<li class="dropdown">
 						<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="login"><span class="glyphicon glyphicon-user">&nbsp;</span>Identifícate</a>
@@ -78,14 +77,13 @@
 							<div class="col-md-12">
 								<form class="form text-center" role="form" action="index.php" method="post">
 									<div class="form-group">
+										
 										<input class="form-control" type="text" id="email_l" name="email" autofocus  placeholder="E-mail" required>
 									</div>
-									<div class="fomr-group">
+									<div class="form-group">
 										<input class="form-control" type="password" id="password" name="password" placeholder="Contraseña" required>
 									</div>
-									<div class="help-block">
-										<a href="http://es.ccm.net/faq/6599-como-recuperar-tu-contrasena-de-gmail">¿Has olvidado la contraseña?</a>
-									</div>
+									<a class="center-block" href="http://es.ccm.net/faq/6599-como-recuperar-tu-contrasena-de-gmail">¿Has olvidado la contraseña?</a>
 									<div class="form-group">
 										<button type="submit" name="login" class="form-control">Iniciar Sesión</button>
 									</div>
@@ -158,14 +156,12 @@
 						{/IF}
 						<!-- --------------------------------------------------- -->
 					{ELSE}
-					<ul id="estado" class="navbar-nav navbar-right">
-						<li class="list-unstyled">
+					<li class="navbar-nav navbar-right list-unstyled">
 							<!-- Boton usuario/Boton desconectar -->
 							<a href="#"><span class="glyphicon glyphicon-user">&nbsp;</span>{$user}</a>
 							<a href="logout.php" id="logout"><span class="glyphicon glyphicon-off"></span></a>
 							<!-- Fin Boton usuario/Boton desconectar -->
-						</li>
-					</ul>
+					</li>
 					{/IF}
 					<!-- FIN  del IF Smarty -->
 				</ul>

@@ -52,8 +52,8 @@ p, h3, h4 {
 
 /** css mytrn.tpl **/
 #btn-cerrar {
-	padding-top:10px;
-	color: white;
+
+	display: none;
 }
 
 #menuizq {
@@ -64,13 +64,57 @@ p, h3, h4 {
 }
 
 #submenu{
-	background-color: rgb(150,150,125);
 	padding: 10px;
+
 }
 
+#submenu li {
+
+}
 
 #zonaobjetivos {
 	margin-top: 60px;
 	margin-bottom: 60px;
 	background-color: white; 
+}
+
+
+/* -----------------------------TABLET----------------------------- */
+@media only screen and (max-width: 991px) {
+
+	#imgmytrn {
+		width: 180px;
+	}
+	
+	#menuizq {
+		margin-top: 15px;
+	}
+	
+}
+
+
+@media only screen and (max-width: 425px) {
+
+	#imgmytrn {
+		width: 120px;
+	}
+	#menuizq {
+		margin-top: 15px;
+		width; 100%;
+	}
+	
+	html {
+		font-size: 28px;
+	}
+	
+	#btn-cerrar {
+	padding-top:10px;
+	color: white;
+	display: block;
+	}
+	
+}
+
+.div-bubble {
+	margin-top: 50px;
 }

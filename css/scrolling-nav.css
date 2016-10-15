@@ -9,74 +9,6 @@
 	margin: 0;
 }
 
-.my-navbar-collapse {
-	padding-top: 5px;
-}
-
-#menu {
-	padding-right: 3%;
-}
-
-
-#estado {
-	padding: 8px;
-	margin: 0;
-}
-
-#logout span {
-	padding: 5px 5px 5px 5px;
-	border-radius: 50px;
-}
-
-#logout span:hover {
-	color: black;
-	background-color: red;
-	text-shadow: 1px 1px 1px #fff;
-	box-sizing: border-box;
-	border-radius: 50px;
-}
-
-.my-navbar-collapse ul, #estado {
-	padding-right: 3%;
-}
-
-#menu li a, #login, #registro, #estado li a{
-	color: white;
-	text-shadow: 2px 2px 10px #000;
-	padding: 10px;
-	margin: 0 10px;
-	font-weight: bold;
-}
-
-#menu li a:hover, #login:hover, #registro:hover, #login.open:hover, #estado li a:hover {
-	color: transparent;
-	background-color: transparent;
-	text-shadow: 1px 1px 1px #fff;
-	box-sizing: border-box;
-}
-
-#menu li a:active, #login:active, #registro:active, #estado li a:active {
-	background-color: rgba(255,255,255,0.2);
-	
-}
-
-.dropdown-toggle:active, .open .dropdown-toggle {
-	background: rgba(100,100,100, 0.5) !important; 
-	color: #fff !important;
-	border-radius: 5px;
-}
-
-.dropdown-menu {
-	padding: 10px 0;
-	margin: 0;
-}
-
-.page-scroll:visited {
-	background: rgba(100,100,100, 0.5) !important; 
-	color: #fff !important;
-	border-radius: 5px ;
-}
-
 .navbar {
 	background: transparent;
 }
@@ -93,7 +25,7 @@
 
 .navbar-brand:hover {
 	color: #fff;
-	text-shadow: 1px 1px 3px #fff;
+	text-shadow: 1px 1px 1px #fff;
 }
 
 .social {
@@ -103,6 +35,66 @@
 .social a {
 	margin: 0 3px;
 }
+
+.my-navbar-collapse {
+	padding-top: 5px;
+}
+
+#menu, #estado {
+	padding-right: 3%;
+}
+
+
+#estado, #menu {
+	padding: 5px;
+	margin: 0;
+}
+
+#logout span {
+	padding: 5px 5px 5px 5px;
+	border-radius: 50px;
+}
+
+#logout span:hover {
+	color: black;
+	background-color: red;
+	text-shadow: 1px 1px 1px #fff;
+	box-sizing: border-box;
+	border-radius: 50px;
+}
+
+#menu li a, #login, #registro, #estado li a{
+	color: white;
+	text-shadow: 2px 2px 10px #000;
+	padding: 10px;
+	margin: 0 10px;
+	font-weight: bold;
+}
+
+#menu li a:hover, #login:hover, #registro:hover, #login.open:hover, #estado li a:hover {
+	color: white;
+	background-color: transparent;
+	text-shadow: 1px 1px 1px #fff;
+	box-sizing: border-box;
+}
+
+#menu li a:active, #login:active, #registro:active, #estado li a:active {
+	background-color: rgba(255,255,255,0.2);
+	
+}
+
+.dropdown-toggle:active, .open .dropdown-toggle {
+	background: rgba(100,100,100, 0.5) !important; 
+	color: #fff !important;
+	border-radius: 5px;
+}
+
+.page-scroll:visited {
+	background: rgba(100,100,100, 0.5) !important; 
+	color: #fff !important;
+	border-radius: 5px ;
+}
+
 
 
 /* PERSONALIZADO * Waxabi */
@@ -114,13 +106,10 @@ body {
 }
 /* General sizing */
 ul.dropdown-lr {
-	width: 220px;
+	padding: 15px 5px 10px 5px;
+	width: 265px;
 	background-color: rgba(255,255,255,0.5);
 	padding-bottom: 0;
-}
-
-ul.dropdown-lr .form-control{
-	
 }
 
 

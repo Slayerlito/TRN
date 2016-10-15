@@ -1,11 +1,11 @@
 <main  class="container-fluid">
 <!-- MENU IZQUIERDO -->
 <div id="menuizq" class="col-md-3">
-	<span class="glyphicon glyphicon-remove center-block text-right" id="btn-cerrar"></span>
+	<span class="glyphicon glyphicon-remove text-right" id="btn-cerrar"></span>
 	<!-- FICHA TECNICA -->
 	<div id="ficha-tecnica" class="text-center">
 		<div class="container-fluid">
-			<img id="imgmytrn" class="img-circle img-responsive center-block" src="images/team.jpg">
+			<img id="imgmytrn" class="img-circle center-block" src="images/team.jpg">
 		</div>
 		<div class="container-fluid">
 			<h3>{$usuario->getNombre()}</h3>
@@ -45,25 +45,20 @@
 	<!-- GRAFICOS -->
 	<div class="container-fluid">
 			<div class="container-fluid">
-				<div class="col-md-3 center">
+				<div class="col-md-3 col-md-offset-1 div-bubble" >
 					<canvas id="bubble" class="center-block" style="margin: 0 auto;"> 
 						<script>burbuja();</script>
 					</canvas>
 				</div>
 				<div class="col-md-7 col-md-offset-1">
-					<canvas id="progreso" class="center-block">
+					<canvas id="progreso" class="center-block" width="700" height="400" >
 						<script>linea_progreso();</script>
 					</canvas>
 				</div>
 			</div>
 			<hr>
 			<div class="container-fluid">
-				<div class="col-md-5">
-					<canvas id="peso" class="center-block">
-						<script>linea_peso();</script>
-					</canvas>
-				</div>
-				<div class="col-md-6 center-block" style="border: 2px double red; padding: 30px;">
+				<div class="col-md-6 center-block">
 					<div id="slidermytrn" class="carousel slider">
 						<ol class="carousel-indicators">
 							<li data-target="#slidermytrn" data-slide-to="0" class="active"></li>
@@ -85,12 +80,16 @@
 						<a href="#slidermytrn" clasS="left carousel-control" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
 						<a href="#slidermytrn" clasS="right carousel-control" data-slide="prev"><span class="glyphicon glyphicon-chevron-right"></span></a>
 					</div>
+
+				</div>
+				<div class="col-md-5">
+					<canvas id="peso" class="center-block">
+						<script>linea_peso();</script>
+					</canvas>
 				</div>
 			</div>
 		</div>
 	<!-- /GRAFICOS -->
-
-
 </div>
 <!-- / OBJETIVO -->
 </main>
