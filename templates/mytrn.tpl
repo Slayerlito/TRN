@@ -31,6 +31,8 @@
 </div>
 <!-- /MENU IZQUIERDO -->
 
+
+
 <!-- OBJETIVO -->
 <div id="zonaobjetivos" class="container-fluid col-md-9">
 	<!-- SUBMENU MYTRN --->
