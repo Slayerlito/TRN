@@ -52,134 +52,168 @@
 <header>
 	 <!-- NAV  -->
     <nav id="nav-top" class="navbar navbar-fixed-top" role="navigation">
-			<div class="navbar-header">
-                <button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target=".my-navbar-collapse">
-					<span class="glyphicon glyphicon-menu-hamburger"></span>
-                </button>
-                <a class="navbar-brand" href="index.php"><span>TRN</span></a>
-				<!-- REDES SOCIALES -->
-				<div class="social navbar-left">
-					<a href="http://www.twitter.es" class="btn btn-sm btn-social-icon btn-twitter" target="_blank"><span class="fa fa-twitter"></span></a>
-					<a href="http://www.facebook.es" class="btn btn-sm btn-social-icon btn-facebook" target="_blank"><span class="fa fa-facebook"></span></a>
-					<a href="https://www.instagram.com/" class="btn btn-sm btn-social-icon btn-instagram" target="_blank"><span class="fa fa-instagram"></span></a>
-				</div>
-				<!-- REDES SOCIALES -->	
-            </div>
-			<!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse my-navbar-collapse">
-				{IF $usuario == 'false'}	
-				<!-- Login / Registro -->
-				<ul id="estado" class="nav navbar-nav navbar-right">
-					<!-- Iniciar sesión -->	
-					<li class="dropdown">
-						<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="login"><span class="glyphicon glyphicon-user">&nbsp;</span>Identifícate</a>
-						<ul class="dropdown-menu dropdown-lr animated flipInX dropdown-menu-left" role="menu">
-							<div class="col-md-12">
-								<form class="form text-center" role="form" action="index.php" method="post">
-									<div class="form-group">
-										
-										<input class="form-control" type="text" id="email_l" name="email" autofocus  placeholder="E-mail" required>
-									</div>
-									<div class="form-group">
-										<input class="form-control" type="password" id="password" name="password" placeholder="Contraseña" required>
-									</div>
-									<a class="center-block" href="http://es.ccm.net/faq/6599-como-recuperar-tu-contrasena-de-gmail">¿Has olvidado la contraseña?</a>
-									<div class="form-group">
-										<button type="submit" name="login" class="form-control">Iniciar Sesión</button>
-									</div>
-								</form>
-							</div>
-							<div class="col-md-12">
-							<!-- DAVID // MOSTRARLO CUANDO EL LOGIN NO ES CORRECTO -->
-							{IF $login == 'false'}
-								<div class="alert alert-danger">
-									<p>El usuario o la contraseña no son correctos.</p>
+		<!-- NAVBAR HEADER -->
+		<div class="navbar-header">
+			<!-- BOTONES COLLAPSE -->
+			<button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target=".my-navbar-collapse-menu"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+			<button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target=".my-navbar-collapse-login-registro"><span class="glyphicon glyphicon-user"></span> / <span class="glyphicon glyphicon-log-in"></span></button>
+
+			<!-- /BOTONES COLLAPSE -->
+			
+			<!-- NAVBAR BRAND -->
+			<a class="navbar-brand" href="index.php"><span>TRN</span></a>
+			<!-- /NAVBAR BRAND -->
+			
+			<!-- REDES SOCIALES -->
+			<div class="social navbar-left">
+				<a href="http://www.twitter.es" class="btn btn-sm btn-social-icon btn-twitter" target="_blank"><span class="fa fa-twitter"></span></a>
+				<a href="http://www.facebook.es" class="btn btn-sm btn-social-icon btn-facebook" target="_blank"><span class="fa fa-facebook"></span></a>
+				<a href="https://www.instagram.com/" class="btn btn-sm btn-social-icon btn-instagram" target="_blank"><span class="fa fa-instagram"></span></a>
+			</div>
+			<!-- REDES SOCIALES -->	
+		</div>
+		<!-- /NAVBAR HEADER -->
+		
+		<!-- COLLAPSE LOGIN/REGISTRO -->
+		<div class="navbar-right collapse navbar-collapse my-navbar-collapse-login-registro">
+			<!-- REGISTRO -->
+			{IF $usuario == 'false'}
+			<ul id="registro" class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+				<a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in">&nbsp;</span>Registro</a>
+					<ul class="dropdown-menu dropdown-lr animated flipInX" role="menu">
+						<div class="col-md-12">
+							<form class="form text-center" role="form" action="index.php" method="post">
+								<div class="form-group">
+									<input class="form-control" type="text" id="email_r" name="email" autofocus="autofocus" placeholder="E-mail">
 								</div>
-							{/IF}
-							<!------------------------------------------------------->
-							</div>
-						</ul>
-					</li>
-					<!-- /Iniciar sesión -->
-					<!-- Registro -->
-					<li class="dropdown">
-						<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="registro"><span class="glyphicon glyphicon-log-in">&nbsp;</span>Registro</a>
-						<ul class="dropdown-menu dropdown-lr animated flipInX" role="menu">
-							<div class="col-md-12">
-								<form class="form text-center" role="form" action="index.php" method="post">
-									<div class="form-group">
-										<input class="form-control" type="text" id="email_r" name="email" autofocus="autofocus" placeholder="E-mail">
-									</div>
-									<div class="form-group">
-										<input class="form-control"  type="password" id="password_r" name="password" placeholder="Contraseña">
-									</div>
-									<div class="form-group">
-										<input class="form-control"  type="password" id="password2" name="password2"  placeholder="Repita Contraseña">
-									</div>
-									<div class="form-group">
-										<input class="form-control"  type="text" id="first_name" name="nombre"  placeholder="Nombre">
-									</div>
-									<div class="form-group">
-										<input class="form-control" type="text" id="last_name" name="apellidos"  placeholder="Apellidos">
-									</div>
-									<div class="form-group">
-										<input class="form-control" type="text" id="birthdate" name="nacimiento"  placeholder="Fecha de Nacimiento">
-									</div>
-									<div class="form-group">
-										<button class="form-control" type="submit" class="btn" name="registro">Registrarse</button>
-									</div>
+								<div class="form-group">
+									<input class="form-control"  type="password" id="password_r" name="password" placeholder="Contraseña">
+								</div>
+								<div class="form-group">
+									<input class="form-control"  type="password" id="password2" name="password2"  placeholder="Repita Contraseña">
+								</div>
+								<div class="form-group">
+									<input class="form-control"  type="text" id="first_name" name="nombre"  placeholder="Nombre">
+								</div>
+								<div class="form-group">
+									<input class="form-control" type="text" id="last_name" name="apellidos"  placeholder="Apellidos">
+								</div>
+								<div class="form-group">
+									<input class="form-control" type="text" id="birthdate" name="nacimiento"  placeholder="Fecha de Nacimiento">
+								</div>
+								<div class="form-group">
+									<button class="form-control" type="submit" class="btn" name="registro">Registrarse</button>
+								</div>
+								
+							</form>
+						</div>
+					</ul>
+				</li>
+			</ul>
+			{ELSE}
+			<!-- DESCONECTAR -->
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a class="alert-danger" href="logout.php" id="desconectar"><span class="glyphicon glyphicon-off"></span></a>
+				</li>
+			</ul>
+			<!-- /DESCONECTAR -->
+			{/IF}
+			<!-- /REGISTRO -->
+			
+			<!-- LOGIN -->
+			{IF $usuario == 'false'}	
+			<ul id="login" class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-user">&nbsp;</span>Identifícate</a>
+					<ul class="dropdown-menu dropdown-lr animated flipInX dropdown-menu-left" role="menu">
+						<div class="col-md-12">
+							<form class="form text-center" role="form" action="index.php" method="post">
+								<div class="form-group">
 									
-								</form>
+									<input class="form-control" type="text" id="email_l" name="email" autofocus  placeholder="E-mail" required>
+								</div>
+								<div class="form-group">
+									<input class="form-control" type="password" id="password" name="password" placeholder="Contraseña" required>
+								</div>
+								<a class="center-block" href="http://es.ccm.net/faq/6599-como-recuperar-tu-contrasena-de-gmail">¿Has olvidado la contraseña?</a>
+								<div class="form-group">
+									<button type="submit" name="login" class="form-control">Iniciar Sesión</button>
+								</div>
+							</form>
+						</div>
+						
+						
+						<!-- DAVID // MOSTRARLO CUANDO EL LOGIN NO ES CORRECTO HACER UNA ALERTA  -->
+						<div class="col-md-12">
+
+						{IF $login == 'false'}
+							<div class="alert alert-danger">
+								<p>El usuario o la contraseña no son correctos.</p>
 							</div>
-						</ul>
-					</li>
-					<!-- /Registro -->
-						<!-- SE ESTA MOSTRANDO DENTRO DEL DIV DEL LOGIN.. HAY QUE PONERLO FUERA PARA QUE SE VEA CUANDO FALLA -->
-						{IF $registro == 'pass'}
-						<div class="alert alert-danger">
-							<p>Las contraseñas no son iguales.</p>
-							<a href="" >¿Has olvidado la contraseña?</a>
-						</div>
-						{ELSEIF $registro == 'email'}
-						<div class="alert alert-danger">
-							<p>Ya existe un usuario con ese E-mail.</p>
-						</div>
-						{ELSEIF $registro == '-1'}
-						<div class="alert alert-danger">
-							<p>No se ha podido registrar.</p>
-							<a href="" >¿Has olvidado la contraseña?</a>
-						</div>
-						{ELSEIF $registro == 'true'}
-						<div class="alert alert-success animated flipOutX">
-							<p>Usuario registrado con exito.</p>
-						</div>
 						{/IF}
-						<!-- --------------------------------------------------- -->
-					{ELSE}
-					<li class="navbar-nav navbar-right list-unstyled">
-							<!-- Boton usuario/Boton desconectar -->
-							<a href="#"><span class="glyphicon glyphicon-user">&nbsp;</span>{$user}</a>
-							<a href="logout.php" id="logout"><span class="glyphicon glyphicon-off"></span></a>
-							<!-- Fin Boton usuario/Boton desconectar -->
-					</li>
-					{/IF}
-					<!-- FIN  del IF Smarty -->
-				</ul>
-				<!-- / Login / Registro -->
-				<!-- MENU -->
-                <ul id="menu" class="nav navbar-nav navbar-right navbar-collapse">
-                    <!-- li oculto para el scroll del nav -->
-					<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li><a class="page-scroll" href="#inicio">Inicio</a></li>
-                    <li><a class="page-scroll" href="#noticias">Noticias</a></li>
-                    <li><a class="page-scroll" href="#planes">Planes</a></li>
-					<li><a class="page-scroll" href="mytrn.php">My TRN</a></li>
-					<li><a class="page-scroll" href="prueba.php">PRUEBAS</a></li>
-                </ul>
-				<!-- MENU -->
-				<!-- FIN Login / Registro -->
-            </div>
-            <!-- /.navbar-collapse -->
+						
+						</div>
+						<!------------------------------------------------------->
+						
+						
+					</ul>
+				</li>
+			</ul>
+			{ELSE}
+			<!-- USUARIO -->
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="#" id="usuario"><span class="glyphicon glyphicon-user"></span> {$user}</a>
+				</li>
+			</ul>
+			<!-- /USUARIO -->
+			{/IF}
+			<!-- /LOGIN -->
+			
+			<!-- ALERTS QUE SE MUESTRAN CUANDO FALLA EL REGISTRO - LOGIN -->
+			<!-- SE ESTA MOSTRANDO DENTRO DEL DIV DEL LOGIN.. HAY QUE PONERLO FUERA PARA QUE SE VEA CUANDO FALLA -->
+			{IF $registro == 'pass'}
+				<div class="alert alert-danger" >
+					<p>Las contraseñas no son iguales.</p>
+					<a href="" >¿Has olvidado la contraseña?</a>
+				</div>
+			{ELSEIF $registro == 'email'}
+				<div class="alert alert-danger">
+					<p>Ya existe un usuario con ese E-mail.</p>
+				</div>
+			{ELSEIF $registro == '-1'}
+				<div class="alert alert-danger">
+					<p>No se ha podido registrar.</p>
+					<a href="" >¿Has olvidado la contraseña?</a>
+				</div>
+			{ELSEIF $registro == 'true'}
+				<div class="alert alert-success">
+					<p>Usuario registrado con exito.</p>
+				</div>
+			{/IF}
+			<!-- --------------------------------------------------- -->
+			<!-- ALERTS QUE SE MUESTRAN CUANDO FALLA EL REGISTRO - LOGIN -->
+				
+		</div>
+		<!-- /COLLAPSE LOGIN/REGISTRO -->
+		
+		<!-- COLLAPSE MENU -->
+		<div id="menu" class="navbar-right collapse navbar-collapse my-navbar-collapse-menu">
+			<!-- MENU -->
+			<ul class="nav navbar-nav">
+				<!-- li oculto para el scroll del nav -->
+				<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+				<li><a class="page-scroll" href="#inicio">Inicio</a></li>
+				<li><a class="page-scroll" href="#noticias">Noticias</a></li>
+				<li><a class="page-scroll" href="#planes">Planes</a></li>
+				<li><a class="page-scroll" href="mytrn.php">My TRN</a></li>
+				<li><a class="page-scroll" href="prueba.php">PRUEBAS</a></li>
+			</ul>
+			<!-- MENU -->
+		</div>
+		<!-- /COLLAPSE MENU -->
 	</nav>
-	<!-- FIN NAV -->
+	<!-- /NAV -->
 </header>
