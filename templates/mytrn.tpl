@@ -24,7 +24,7 @@
 			{foreach from=$listaObjetivos item=$objetivo}
 			<li>{$objetivo->getObjetivo()}</li>
 			{/foreach}
-			<li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li><li>PRUEBA</li>
+		
 		</ul>
 	</div>
 	<!-- /LISTA DE OBJETIVOS -->
