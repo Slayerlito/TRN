@@ -20,10 +20,14 @@
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- CSS Bootstrap social -->
 	<link rel="stylesheet" href="bootstrap/css/bootstrap-social.css">
-	<!-- CSS scrolling nav -->
-	<link href="css/scrolling-nav.css" rel="stylesheet">
+	
+	<!-- CSS header -->
+	<link rel="stylesheet" href="css/header.css">
+	
 	<!-- CSS  slider -->
     <link href="css/full-slider.css" rel="stylesheet">
+	<!-- CSS tablet -->
+	<link href="css/tablet.css" rel="stylesheet">
 	<!-- CSS Principal -->
 	<link rel="stylesheet" href="css/style.css">
 

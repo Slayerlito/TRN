@@ -1,0 +1,15 @@
+/* ********** CSS SCROLLING NAV ********** */ 
+@media(min-width: 991px) {
+    .navbar {
+        padding: 5px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out; 
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .3s ease-in-out;
+    }
+	
+    .top-nav-collapse {
+		background: rgba(0,0,0,0.5);
+        padding: 0;
+    }
+}
+/* ********** CSS SCROLLING NAV ********** */ 

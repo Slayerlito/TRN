@@ -1,0 +1,36 @@
+/* ********** CSS NAV ********** */ 
+
+#nav-top {
+	margin: 0;
+}
+
+.navbar {
+	background: transparent;
+}
+
+.navbar-toggle{
+	color: white;
+}
+
+.navbar-brand {
+	padding: 20px;
+	height: auto;
+	color: #fff;
+}
+
+.navbar-brand:hover {
+	color: #fff;
+	text-shadow: 1px 1px 1px #fff;
+}
+
+.my-navbar-collapse {
+	padding-top: 5px;
+}
+
+.my-navbar-collapse-login-registro {
+	padding: 10px;
+	padding-right: 50px;
+	padding-left: 50px;	
+	margin: 0;
+}
+/* ********** CSS NAV ********** */ 

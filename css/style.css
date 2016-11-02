@@ -1,4 +1,4 @@
-/*CSS*/
+/* ********** CSS PRINCIPAL ********** */
 @import 'https://fonts.googleapis.com/css?family=Play';
 
 body {
@@ -13,7 +13,6 @@ html {
     height: 100%;
 }
 
-/* ----------------------*/
 /* CSS index.tpl*/
 
 section {
@@ -90,7 +89,8 @@ p, h3, h4 {
 	}
 	
 }
-
+/* -----------------------------TABLET----------------------------- */
+/* -----------------------------MOBILE----------------------------- */
 
 @media only screen and (max-width: 425px) {
 
@@ -114,6 +114,10 @@ p, h3, h4 {
 	
 }
 
+/* -----------------------------MOBILE----------------------------- */
+
 .div-bubble {
 	margin-top: 50px;
 }
+
+/* ********** CSS PRINCIPAL ********** */
