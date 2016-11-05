@@ -35,6 +35,13 @@
 	
 }
 
+.mensaje {
+	margin-top:50px;
+	position:absolute;
+	width:230px;
+	overflow:auto;
+}
+
 /* DROPDOWN */
 /* General sizing */
 ul.dropdown-lr {

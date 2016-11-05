@@ -1,7 +1,7 @@
 <?php
 
 //Include de los parametros de smarty
-require_once('setup.php'); 
+require_once('../setup.php'); 
 
 //Declaracion de la funcion de smarty
 $smarty = new Smarty_setup();
@@ -10,7 +10,7 @@ $smarty = new Smarty_setup();
 require_once('header.php');
 
 //Funcionalidad del index
-$smarty->assign('listaPlanes', ControladorWeb::getListaPlanes());
+//$smarty->assign('listaPlanes', ControladorWeb::getListaPlanes());
 
 $smarty->display('index.tpl');
 
