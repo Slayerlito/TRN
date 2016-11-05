@@ -3,10 +3,10 @@
 	<li class="dropdown">
 	<a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in">&nbsp;</span>Registro</a>
 		<ul class="dropdown-menu dropdown-lr animated flipInX" role="menu">
-			<div class="col-md-12">
-				<form class="form text-center" role="form" action="index.php" method="post">
+			<li class="col-md-12">
+				<form class="form text-center" action="index.php" method="post">
 					<div class="form-group">
-						<input class="form-control" type="text" id="email_r" name="email" autofocus="autofocus" placeholder="E-mail">
+						<input class="form-control" type="text" id="email_r" name="email" placeholder="E-mail">
 					</div>
 					<div class="form-group">
 						<input class="form-control"  type="password" id="password_r" name="password" placeholder="Contraseña">
@@ -24,11 +24,11 @@
 						<input class="form-control" type="text" id="birthdate" name="nacimiento"  placeholder="Fecha de Nacimiento">
 					</div>
 					<div class="form-group">
-						<button class="form-control" type="submit" class="btn" name="registro">Registrarse</button>
+						<button class="form-control btn" type="submit" name="registro">Registrarse</button>
 					</div>
 					
 				</form>
-			</div>
+			</li>
 		</ul>
 	</li>
 </ul>
@@ -64,5 +64,5 @@
 		</div>
 	{/IF}
 </div>
-<!-- --------------------------------------------------- -->
+<!-- ******************************************************* -->
 <!-- ALERTS QUE SE MUESTRAN CUANDO FALLA EL REGISTRO - LOGIN -->

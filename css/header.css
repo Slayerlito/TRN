@@ -1,9 +1,9 @@
 /* ********** CSS header.tpl ********** */ 
 
-@import url('../modules/header/nav/nav.css');
-@import url('../modules/header/nav/scrolling-nav.css');
-@import url('../modules/header/rss/rrss.css');
-@import url('../modules/header/menu/menu.css');
+@import url('../css/modules/nav/nav.css');
+@import url('../css/modules/nav/scrolling-nav.css');
+@import url('../css/modules/rrss/rrss.css');
+@import url('../css/modules/menu/menu.css');
 
 
 /* ********** CSS header.tpl ********** */ 

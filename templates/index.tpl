@@ -25,10 +25,10 @@
 	</div>
 	<!-- Controls -->
 	<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-		<span class="glyphicon glyphicon-chevron-left" href="#myCarousel"></span>
+		<span class="glyphicon glyphicon-chevron-left"></span>
 	</a>
 	<a class="right carousel-control" href="#myCarousel" data-slide="next">
-		<span class="glyphicon glyphicon-chevron-right" href="#myCarousel"></span>
+		<span class="glyphicon glyphicon-chevron-right"></span>
 	</a>
 	<!-- / Controls -->
 </div>
@@ -132,15 +132,14 @@
 					<div class="planes">
 						<h4>{$planUF->getNombre()}</h4>
 						<ul class="list-unstyled">
-						<li> {$planUF->getChat()} Chat</li>
-						<li> {$planUF->getEntrenamiento()} Entrenamiento</li>
-						<li> {$planUF->getNutricion()} Nutrición</li>
-						<li> {$planUF->getSeguimiento()} Sesiones seguimiento</li>
+							<li> {$planUF->getChat()} Chat</li>
+							<li> {$planUF->getEntrenamiento()} Entrenamiento</li>
+							<li> {$planUF->getNutricion()} Nutrición</li>
+							<li> {$planUF->getSeguimiento()} Sesiones seguimiento</li>
 						</ul>
 					</div>
 				</div>
 		{/foreach}
-		</div>
 	</div>
 </section>
 <!-- /PLANES -->
