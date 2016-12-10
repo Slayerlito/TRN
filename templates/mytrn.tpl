@@ -2,6 +2,12 @@
 <!-- MENU IZQUIERDO -->
 <div id="menuizq" class="col-md-3">
 	<span class="glyphicon glyphicon-remove text-right" id="btn-cerrar"></span>
+	<!-- MODIFICACIONES USUARIO -->
+	<div id="cpannel">
+		<a href="" class="cpannel"><span class="glyphicon glyphicon-pencil " title="Modificar"></span></a>
+		<a href="cpannel/" target="__blank" class="cpannel"><span class="glyphicon glyphicon-cog " title="Panel de Control"></span></a>
+	</div>
+	<!-- /MODIFICACIONES USUARIO -->
 	<!-- FICHA TECNICA -->
 	<div id="ficha-tecnica" class="text-center">
 		<div class="container-fluid">

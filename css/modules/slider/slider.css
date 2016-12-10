@@ -1,0 +1,65 @@
+/* ********** CSS SLIDER ********** */ 
+.marco{
+	border:2px dashed silver;
+	border-radius:10px;
+	overflow:auto;
+	width:853px;
+	margin:auto;
+	padding:20px;
+}
+
+.imagen {
+	border:1px solid black;
+	border-radius:5px;
+	box-shadow: 5px 5px 10px #888888;
+	padding:40px 10px 40px 10px;
+	width:140px;
+	text-align:center;
+	font-size:40px;
+	float:left;
+	margin:0 1% 0 0;
+	text-decoration:none;
+	color:black;
+	display:block;
+}
+
+.imagen:hover {
+	border:1px solid silver;
+	box-shadow: 5px 5px 10px #ccc;
+}
+
+.disabled {
+	pointer-events: none;
+	cursor: default;
+	border:1px solid #eee;
+	box-shadow: 5px 5px 10px #eee;
+	color: #eee;
+}
+
+
+.enviar{
+	padding:10px 0px 10px 0px;
+	border-radius:5px;
+	width:150px;
+	margin-top:20px;
+	margin-left:350px;
+}
+
+.imagenup {
+	border:1px solid black;
+	padding:10px;
+	width:158px;
+	float:left;
+	overflow:auto;
+	display:none;
+	
+}
+
+.imagenup img {
+	width:158px;
+}
+
+
+
+
+

@@ -9,8 +9,8 @@ session_start();
 // ------- Declaracion de la funcion de smarty
 $smarty = new Smarty_setup();
 
-require_once('modules/header/login/login.php');
-require_once('modules/header/registro/registro.php');
+require_once('modules/login/login.php');
+require_once('modules/registro/registro.php');
 
 $smarty->display('header.tpl');
 ?>

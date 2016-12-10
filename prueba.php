@@ -22,5 +22,5 @@ require_once('header.php');
 $smarty->display('prueba.tpl');
 
 //Include del footer
-require_once('footer.php');
+//require_once('footer.php');
 ?>

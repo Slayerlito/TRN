@@ -1,0 +1,39 @@
+
+---Pagina
+ |
+ |--header
+ |		|---login
+ |		|---menu
+ |		|---registro
+ |		|---rrss
+ |
+ |--main
+ |		|---slider
+ |		|---especialidades
+ |		|---noticias
+ |		|---planes
+ |		|
+ |		|
+ |		|
+ |		|
+ |		|
+ |		|
+ |		|
+ |		|
+ |		|
+ |		|
+ |		|
+ |		|
+ |		|
+ |		|
+ |		|
+ |		|
+ |
+ |--footer
+		|
+		|
+		|
+		|
+		|
+		|
+ 

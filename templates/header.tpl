@@ -20,7 +20,6 @@
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- CSS Bootstrap social -->
 	<link rel="stylesheet" href="bootstrap/css/bootstrap-social.css">
-	
 	<!-- CSS header -->
 	<link rel="stylesheet" href="css/header.css">
 	
@@ -48,7 +47,8 @@
 	<script src="js/scripts.js"></script>
 	<!-- JS Graficos -->
 	<script src="js/graficos.js"></script>
-	
+	<!-- JS CP slider -->
+	<script src="js/slider/cp/fileinput.js"></script>
 </head>
 <body id="inicio">
 <header>
@@ -67,7 +67,7 @@
 			<!-- /NAVBAR BRAND -->
 			
 			<!-- REDES SOCIALES -->
-				{include file='modules/header/rrss/rrss.tpl'}
+				{include file='modules/rrss/rrss.tpl'}
 			<!-- REDES SOCIALES -->	
 		</div>
 		<!-- /NAVBAR HEADER -->
@@ -75,16 +75,16 @@
 		<!-- COLLAPSE LOGIN/REGISTRO -->
 		<div class="navbar-right collapse navbar-collapse my-navbar-collapse-login-registro">
 			<!-- REGISTRO -->
-				{include file='modules/header/registro/registro.tpl'}
+				{include file='modules/registro/registro.tpl'}
 			<!-- /REGISTRO -->	
 			<!-- LOGIN -->
-				{include file='modules/header/login/login.tpl'}
+				{include file='modules/login/login.tpl'}
 			<!-- /LOGIN -->
 			
 		</div>
 		<!-- /COLLAPSE LOGIN/REGISTRO -->
 		<!-- MENU -->
-		{include file='modules/header/menu/menu.tpl'}
+		{include file='modules/menu/menu.tpl'}
 		<!-- /MENU -->
 	</nav>
 	<!-- /NAV -->

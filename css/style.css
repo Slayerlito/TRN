@@ -61,6 +61,24 @@ p, h3, h4 {
 	margin-top: 60px;
 }
 
+#cpannel {
+	position:relative;
+	top:10px;
+	text-align:right;
+	display:block;
+}
+
+a.cpannel {
+	padding:2px;
+	text-decoration:none;
+	color:black;
+	
+}
+
+a.cpannel:hover {
+	color:silver;
+}
+
 #submenu{
 	padding: 10px;
 
