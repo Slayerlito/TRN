@@ -3,16 +3,16 @@
 		<h1>Registrate en TRN</h1>
 	</div>
 	<div>
-		<label for="email">Dirección de E-mail</label>
+		<label for="email">DirecciÃ³n de E-mail</label>
 		<input type="mail" id="email" name="email" tabindex="1" autofocus="autofocus">
 		
 		<label for="username">Nombre de usuario</label>
 		<input type="text" id="username" name="username" tabindex="">
 		
-		<label for="password">Contraseña</label>
+		<label for="password">ContraseÃ±a</label>
 		<input type="text" id="password" name="password" tabindex="">
 		
-		<label for="password_check">Confirmar Contraseña</label>
+		<label for="password_check">Confirmar Contraseï¿½a</label>
 		<input type="text" id="password_check" name="password_check" tabindex="">
 	</div>
 	<hr>
@@ -34,5 +34,5 @@
 </form>
 
 <div>
-	<span><a href="registro.php">Inicia sesión</a> Si ya eres usuarío</span>
+	<span><a href="registro.php">Inicia sesiÃ³n</a> Si ya eres usuarÃ­o</span>
 </div>

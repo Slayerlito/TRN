@@ -8,7 +8,9 @@
 		<li><a class="page-scroll" href="#noticias">Noticias</a></li>
 		<li><a class="page-scroll" href="#planes">Planes</a></li>
 		<li><a class="page-scroll" href="mytrn.php">My TRN</a></li>
-		<li><a class="page-scroll" href="prueba.php">PRUEBAS</a></li>
+                {IF ISSET ($backend) && $backend == 1}
+                    <li><a class="page-scroll" href="cpannel/index.php">CPannel</a></li>
+                {/IF}
 	</ul>
 	<!-- MENU -->
 </div>

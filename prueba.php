@@ -1,26 +1,6 @@
-<?php
 
-//Include de los parametros de smarty
-require_once('setup.php'); 
+ <form acction="subir.php" method="POST" enctype=”multipart/form-data">
+                <input type="file" name="imagen">
+                <input type="submit" value="Subir Imagen" name="uploadimg">
+</form>
 
-//Declaracion de la funcion de smarty
-$smarty = new Smarty_setup();
-
-//Include del header
-require_once('header.php');
-
-//Pruebas
-
-
-
-
-
-
-
-
-
-$smarty->display('prueba.tpl');
-
-//Include del footer
-//require_once('footer.php');
-?>

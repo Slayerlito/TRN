@@ -1,25 +1,25 @@
 {IF $usuario == 'false'}	
 <ul id="login" class="nav navbar-nav navbar-right">
-	<li class="dropdown">
-		<a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-user">&nbsp;</span>Identifícate</a>
-		<ul class="dropdown-menu dropdown-lr animated flipInX dropdown-menu-left" role="menu">
-			<li class="col-md-12">
-				<form class="form text-center" action="index.php" method="post">
-					<div class="form-group">
-						
-						<input class="form-control" type="text" id="email_l" name="email" placeholder="E-mail" required>
-					</div>
-					<div class="form-group">
-						<input class="form-control" type="password" id="password" name="password" placeholder="Contraseña" required>
-					</div>
-					<a class="center-block" href="http://es.ccm.net/faq/6599-como-recuperar-tu-contrasena-de-gmail">¿Has olvidado la contraseña?</a>
-					<div class="form-group">
-						<button type="submit" name="login" class="form-control">Iniciar Sesión</button>
-					</div>
-				</form>
-			</li>
-		</ul>
-	</li>
+    <li class="dropdown">
+        <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-user">&nbsp;</span>Identifícate</a>
+        <ul class="dropdown-menu dropdown-lr animated flipInX dropdown-menu-left" role="menu">
+            <li class="col-md-12">
+                <form class="form text-center" action="index.php" method="post">
+                    <div class="form-group">
+
+                            <input class="form-control" type="text" id="email_l" name="email" placeholder="E-mail" required>
+                    </div>
+                    <div class="form-group">
+                            <input class="form-control" type="password" id="password" name="password" placeholder="Contraseña" required>
+                    </div>
+                    <a class="center-block" href="http://es.ccm.net/faq/6599-como-recuperar-tu-contrasena-de-gmail">¿Has olvidado la contraseña?</a>
+                    <div class="form-group">
+                            <button type="submit" name="login" class="form-control">Iniciar Sesión</button>
+                    </div>
+                </form>
+            </li>
+        </ul>
+    </li>
 </ul>
 <div class="col-md-12 mensaje">
 	{IF $login == 'false'}

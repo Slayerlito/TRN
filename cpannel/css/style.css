@@ -1,0 +1,278 @@
+@import url('menu.css');
+
+/* CSS Cpannel */
+html{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background:  #1b6d85;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    float: left;
+    width: 100%;
+    background: black;
+    height: 50px;
+    border-bottom: 6px black groove;
+    background: rgba(43,43,43,1);
+    background: -moz-linear-gradient(top, rgba(43,43,43,1) 0%, rgba(43,43,43,1) 29%, rgba(18,18,18,1) 53%, rgba(28,28,28,1) 81%, rgba(18,18,18,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(43,43,43,1)), color-stop(29%, rgba(43,43,43,1)), color-stop(53%, rgba(18,18,18,1)), color-stop(81%, rgba(28,28,28,1)), color-stop(100%, rgba(18,18,18,1)));
+    background: -webkit-linear-gradient(top, rgba(43,43,43,1) 0%, rgba(43,43,43,1) 29%, rgba(18,18,18,1) 53%, rgba(28,28,28,1) 81%, rgba(18,18,18,1) 100%);
+    background: -o-linear-gradient(top, rgba(43,43,43,1) 0%, rgba(43,43,43,1) 29%, rgba(18,18,18,1) 53%, rgba(28,28,28,1) 81%, rgba(18,18,18,1) 100%);
+    background: -ms-linear-gradient(top, rgba(43,43,43,1) 0%, rgba(43,43,43,1) 29%, rgba(18,18,18,1) 53%, rgba(28,28,28,1) 81%, rgba(18,18,18,1) 100%);
+    background: linear-gradient(to bottom, rgba(43,43,43,1) 0%, rgba(43,43,43,1) 29%, rgba(18,18,18,1) 53%, rgba(28,28,28,1) 81%, rgba(18,18,18,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b2b2b', endColorstr='#121212', GradientType=0 );
+}
+
+nav{
+    color:silver;
+}
+
+nav ul li{
+    text-decoration: none;
+    float: left;
+    margin-right: 10px;
+    list-style-type: none;
+}
+
+nav a{
+    text-decoration: none;
+    margin-right: 5px;
+    display: block;
+    float: right;
+    
+}
+
+nav a img{
+    width: 20px;
+    margin-left: 5px;
+}
+
+nav .usuario{
+    float: right;
+}
+
+main{
+}
+
+main .mensaje_exito{
+    background: #c8e5bc;
+    color:green;
+    float: right;
+    width: 50%;
+    padding: 0 10px;
+    border: 2px solid green;
+    border-radius: 5px;
+    text-align: center;
+}
+
+main .mensaje_error{
+    background: #F6CECE;
+    color:red;
+    float: right;
+    width: 50%;
+    padding: 0 10px;
+    border: 2px solid red;
+    border-radius: 5px;
+    text-align: center;
+}
+
+main #options{
+    background: #ccc;
+    float: left;
+    margin: 1% auto;
+    overflow: auto;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 80%;
+    padding-top: 20px;
+}
+
+main #options h1{
+    text-align: center;
+    
+}
+
+main #options a{
+    display: block;
+    padding: 20px;
+    margin: 10px;
+    float: left;
+}
+
+main #options a:hover{
+    background: silver;
+    border-radius: 15px;
+}
+
+main #options a img{
+    width:100px;
+}
+
+main #options .form_upload{
+    width: 500px;
+    border: 2px dotted grey;
+    margin: auto;
+    padding: 25px 10px 10px 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+main #options .preview {
+    width:80%;
+    border: 1px solid silver;
+    overflow: auto;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+
+main #options .preview img{
+    width: 15%;
+    float: left;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    border-radius: 5px;
+    border:1px solid black;
+}
+
+/* LISTADO de datos */
+
+main #options .listado{
+    text-align: center;
+    margin: 2% auto;
+    border: 1px solid silver;
+    border-collapse: collapse;
+    
+}
+
+main #options .listado th{
+    padding: 10px;
+}
+
+main #options .listado td{
+    padding: 5px;
+}
+
+main #options .listado a{
+    padding: 5px;
+    margin: 2px;
+}
+
+main #options .listado img{
+    width:16px;
+}
+
+main #options .listado .par{
+    background: #F78181;
+}
+
+main #options .listado .par:hover{
+    background: #F5F6CE;
+}
+
+main #options .listado .impar{
+    background: #F6CECE;
+}
+
+main #options .listado .impar:hover{
+    background: #F5F6CE;
+}
+
+/* Formularios */
+
+main #options .form {
+    margin: 30px auto;
+    width: 80%;
+    overflow: auto;
+   
+}
+
+main #options .form .name_box{
+    float:left;
+    width: 30%;
+    text-align: right;
+    height: 10px;
+    padding-top: 5px;
+}
+
+main #options .form .input_box{
+    float:left;
+    width: 50%;
+    height: 20px;
+    padding-top: 20px; 
+    padding-left: 10px;
+}
+
+main #options .form .boton_form{
+    padding-top: 30px;
+    width: 300px;
+    margin: auto;
+    overflow: auto;
+    
+}
+
+main #options .form .boton_form .enviar{
+    float: left;
+    width: 100px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+main #options .form .boton_form .enviar:hover{
+    background: green;
+    color:silver;
+    font-weight: bold;
+}
+
+main #options .form .boton_form .borrar{
+    float: left;
+    width: 100px;
+    border-radius: 10px;
+}
+
+main #options .form .boton_form .borrar:hover{
+    background: red;
+    color:silver;
+    font-weight: bold;
+}
+
+main #options .form .input_box input{
+    width: 200px;
+    background: cornsilk;
+    
+}
+
+.login {
+	margin:auto;
+	padding:30px;
+	border:1px solid black;
+	border-radius:15px;
+	width:250px;
+	overflow:auto;
+	margin-top:10%;
+}
+
+.campologin1 {
+	float:left;
+	text-align:left;
+	width:95px;
+	height:30px;
+	text-align:right;
+	padding-right:5px;
+}
+
+.campologin2 {
+	float:left;
+	width:150px;
+	height:30px;
+	padding-top:15px;
+}
+
