@@ -15,7 +15,7 @@
         <!-- Formulario para subir imagen nueva -->
         <div class="form_upload">
             <form acction="slider.php" method="POST" name="upload" enctype=”multipart/form-data">
-                <input type="file" name="imagen" id="imagen" />
+                <input type="file" name="imagen" />
                 <input type="submit" value="Subir Imagen" name="uploadimg" />
             </form>
         </div>

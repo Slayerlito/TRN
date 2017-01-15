@@ -12,17 +12,23 @@ session_start();
 $smarty = new Smarty_setup();
 
 	/*======================Comprobacion de usuario registrado()======================================
-     Comprueba que existe el usuario registrado como logueado de lo contrario aparece para que se loguee
+     Comprueba que el usuario que accede este logueado y que tenga permisos para acceder al panel
 	****************************************************************************************** */
 	
 if(isset($_SESSION['usuario'])){
-	
-	$smarty->assign('user', $_SESSION['usuario']->getNombre());
-	$smarty->assign('login' , 'true');
-	$smarty->assign('usuario' , 'true');
+	$perfil = $_SESSION['usuario']->getPerfil();
+        $permiso = ControladorSQL::getControlador()->ejecutarSQL("SELECT BACKEND FROM TRN_LKP_ROLES_SEGURIDAD WHERE ID_PERFIL ='$perfil' ");
+        $permiso = $permiso->fetch_array(MYSQLI_ASSOC);
+        
+        if($permiso['BACKEND'] == 1){
+            $smarty->assign('user', $_SESSION['usuario']->getNombre());
+            $smarty->assign('login' , 'true');
+            $smarty->assign('usuario' , 'true');
+        }else{
+            header("Location: ../index.php");
+        }
+        
 }else{
-	$smarty->assign('usuario' , 'false');
-	$smarty->assign('login' , 'true');
 	session_destroy();
         header("Location: ../index.php");
 }
