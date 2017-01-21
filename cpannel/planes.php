@@ -32,31 +32,29 @@ if(isset($_REQUEST['modificar'])){
     
 }
 
-// Al añadir un plan nuevo
-if(isset($_REQUEST['crear'])){
-    $nombre         = $_REQUEST['plan'];
-    $seguimiento    = $_REQUEST['seguimientos'];
-    $chat           = $_REQUEST['chat'];
-    $entrenamiento  = $_REQUEST['entrenamiento'];
-    $nutricion      = $_REQUEST['nutricion'];
-    $precio         = $_REQUEST['precio'];
-    $visible        = $_REQUEST['visible'];
-    $consulta = ControladorSQL::getControlador()->ejecutarSQL("INSERT INTO TRN_LKP_PLANES_CONTRATABLES (NOMBRE,SEGUIMIENTO_SEM,CHAT,ENTRENAMIENTO,NUTRICION,PRECIO,VISIBLE) VALUES('$nombre',$seguimiento,$chat,$entrenamiento,$nutricion,$precio,$visible)");
-    
-}
+
 
 // Recogemos la accion a desempeñar
 if(isset($_REQUEST['opcion']) && $_REQUEST['opcion'] != ""){
     
     $opcion = $_REQUEST['opcion'];
-
-// Mostramos todos los planes    
-    if($opcion == "all"){
+    
+    // Al añadir un plan nuevo
+    if($opcion == "nuevo"){
+        $nombre         = $_REQUEST['plan'];
+        $seguimiento    = $_REQUEST['seguimientos'];
+        $chat           = $_REQUEST['chat'];
+        $entrenamiento  = $_REQUEST['entrenamiento'];
+        $nutricion      = $_REQUEST['nutricion'];
+        $precio         = $_REQUEST['precio'];
+        $visible        = $_REQUEST['visible'];
+        $consulta = ControladorSQL::getControlador()->ejecutarSQL("INSERT INTO TRN_LKP_PLANES_CONTRATABLES (NOMBRE,SEGUIMIENTO_SEM,CHAT,ENTRENAMIENTO,NUTRICION,PRECIO,VISIBLE) VALUES('$nombre',$seguimiento,$chat,$entrenamiento,$nutricion,$precio,$visible)");
+        
         // Obtenemos todos los campos de la tabla de planes contratables
         $consulta = ControladorSQL::getControlador()->ejecutarSQL("SELECT * FROM trn_lkp_planes_contratables");
 
         // Asignamos el contenido a las variables del template
-        $smarty->assign("opcion", $opcion);
+        $smarty->assign("opcion", "");
         $smarty->assign("planes", $consulta);
     }
     
@@ -76,17 +74,21 @@ if(isset($_REQUEST['opcion']) && $_REQUEST['opcion'] != ""){
     if($opcion == "eliminar"){
         $id = $_REQUEST['id'];
         $consulta = ControladorSQL::getControlador()->ejecutarSQL("DELETE FROM trn_lkp_planes_contratables WHERE ID_PLAN = '$id'");
-        header('Location: planes.php?opcion=all');
+        header('Location: planes.php?opcion');
       
+        
     }
 
     // Asignamos el contenido a las variables del template
     $smarty->assign("opcion", $opcion);
 }
 else{
-    // Asignamos el contenido a las variables del template
-    $smarty->assign("opcion", "");
-    $smarty->assign("planes", "");
+     // Obtenemos todos los campos de la tabla de planes contratables
+        $consulta = ControladorSQL::getControlador()->ejecutarSQL("SELECT * FROM trn_lkp_planes_contratables");
+
+        // Asignamos el contenido a las variables del template
+        $smarty->assign("opcion", "");
+        $smarty->assign("planes", $consulta);
 }
 
 

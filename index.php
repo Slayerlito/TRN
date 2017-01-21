@@ -10,6 +10,14 @@ $smarty = new Smarty_setup();
 require_once('header.php');
 
 //Funcionalidad del index
+
+//Slider
+    
+require_once 'modules/slider/slider.php';
+
+//
+//
+//
 //Planes Contratables
 $smarty->assign('planesFilaCompleta', ControladorWeb::getPlanesFilaCompleta());
 $smarty->assign('planesUltimaFila', ControladorWeb::getPlanesUltimaFila());

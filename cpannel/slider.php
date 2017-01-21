@@ -1,7 +1,8 @@
 <?php
 
-require("php/galeria.php");
-
+require_once('php/controladores/ControladorWEB.php');
+require_once('php/controladores/ControladorSQL.php');
+require_once("php/modelo/Slider.php");
 
 //Include de los parametros de smarty
 
@@ -18,57 +19,41 @@ $smarty = new Smarty_setup();
 require_once('header.php');
 
 
-//Indica en que opcion del slider nos encotramos
-
-$slider=$_REQUEST['slider'];
-
-
 // En caso de hacer un UPDATE de una imagen
 // TODO Comprobar errores de subida de imagenes y crear su clase adecuadamente
 if(isset($_REQUEST["uploadimg"])){
-   
-   $dir_subida = "C:\\xampp/htdocs/TRN/images/slider/";
-   $fichero_subido = $dir_subida . basename($_FILES['imagen']['name']);
-   
-    if(move_uploaded_file($_FILES["imagen"]['tmp_name'], $fichero_subido)){
-            echo "funciona";
-        }  else {
-            echo "error";
-        }
+
+    $update = new Slider();
     
+    $result_update = $update->upload("../images/slider/", $_FILES['imagen']);
     
-     $imagen = "C:\\xampp/htdocs/TRN/images/slider/" . basename($_FILES['imgslider']['name']);
-        echo $imagen;
-        if(move_uploaded_file($_FILES["imgslider"]['tmp_name'], $imagen)){
-            echo "funciona";
-        }  else {
-            echo "error";
-        }
+    IF($result_update == 1){
+        
+    }
     
-    
-    
- //   $update = new Galeria();
- //   $result_update = $update->upload("../images/slider/", $archivo);
- //   var_dump($result_update);
 }
 
 
-// Muestra todas las fotos alojadas en la carpeta indicada
+// Muestra todas las fotos alojadas en la base de datos
 
-$galeria = new Galeria();
+$galeria = new Slider();
 
-$imagenes = $galeria->leer("../images/slider/");
+$imagenes = $galeria->leerTodos();
 
 
 // Muestra las imagenes actuales en el slider
-// 
-//TODO Hacer la funcionalidad del mismo
+ 
+$carrusel = new Slider();
+
+$slider = $carrusel->leerUsados();
+
+
 //
 // Asigna las variables smarty
 
-$smarty->assign('imagenes', $imagenes);
+$smarty->assign('slider', $slider);
 
-$smarty->assign('slider' , $slider);
+$smarty->assign('imagenes', $imagenes);
 
 $smarty->display('slider.tpl');
 
