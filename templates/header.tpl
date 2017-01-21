@@ -20,15 +20,15 @@
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- CSS Bootstrap social -->
 	<link rel="stylesheet" href="bootstrap/css/bootstrap-social.css">
-	<!-- CSS header -->
-	<link rel="stylesheet" href="css/header.css">
 	
+	<!-- CSS header -->
+	<link href="css/header.css" rel="stylesheet">
 	<!-- CSS  slider -->
     <link href="css/full-slider.css" rel="stylesheet">
 	<!-- CSS tablet -->
 	<link href="css/tablet.css" rel="stylesheet">
 	<!-- CSS Principal -->
-	<link rel="stylesheet" href="css/style.css">
+	<link href="css/style.css" rel="stylesheet">
 
 	<!-- Título de la Web -->
 	<title>TRN</title>
@@ -73,7 +73,7 @@
 		<!-- /NAVBAR HEADER -->
 		
 		<!-- COLLAPSE LOGIN/REGISTRO -->
-		<div class="navbar-right collapse navbar-collapse my-navbar-collapse-login-registro">
+		<div class="navbar-right collapse navbar-collapse my-navbar-collapse-login-registro" style="margin-right: 20px;">
 			<!-- REGISTRO -->
 				{include file='modules/registro/registro.tpl'}
 			<!-- /REGISTRO -->	
