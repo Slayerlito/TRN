@@ -6,6 +6,12 @@ html{
     margin: 0;
 }
 
+h2{
+    text-align: center;
+    color:grey;
+    font-weight: bold;
+}
+
 body{
     background:  #1b6d85;
     padding: 0;
@@ -114,7 +120,7 @@ main #options a img{
 }
 
 main #options .form_upload{
-    width: 500px;
+    width: 95%;
     border: 2px dotted grey;
     margin: auto;
     padding: 25px 10px 10px 10px;
@@ -143,6 +149,53 @@ main #options .preview img{
     border:1px solid black;
 }
 
+
+main #options .preview_in {
+    width:15%;
+    border: 1px solid silver;
+    overflow: auto;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    float: left;
+    
+}
+
+main #options .preview .preview_in img{
+    width: 100%;
+    float: left;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    border-radius: 5px;
+    border:1px solid black;
+}
+
+main #options .preview .preview_in a img{
+    border: 0;
+    width:90%;
+    margin: 0;
+}
+
+main #options .preview .preview_in a {
+    padding: 0;
+    margin: auto;
+}
+
+main #options .preview .preview_in a:hover {
+    padding: 0;
+    margin: auto;
+}
+
+main #options .preview_name{
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+
+
 /* LISTADO de datos */
 
 main #options .listado{
@@ -151,6 +204,17 @@ main #options .listado{
     border: 1px solid silver;
     border-collapse: collapse;
     
+}
+
+input.crear {
+    border-radius: 15px;
+    padding: 5px;
+}
+
+input.crear:hover {
+    background: silver;
+    border-radius: 15px;
+    padding: 5px;
 }
 
 main #options .listado th{
@@ -188,14 +252,14 @@ main #options .listado .impar:hover{
 
 /* Formularios */
 
-main #options .form {
+.form {
     margin: 30px auto;
     width: 80%;
     overflow: auto;
    
 }
 
-main #options .form .name_box{
+.name_box{
     float:left;
     width: 30%;
     text-align: right;
@@ -203,7 +267,7 @@ main #options .form .name_box{
     padding-top: 5px;
 }
 
-main #options .form .input_box{
+.input_box{
     float:left;
     width: 50%;
     height: 20px;
@@ -211,7 +275,7 @@ main #options .form .input_box{
     padding-left: 10px;
 }
 
-main #options .form .boton_form{
+.boton_form{
     padding-top: 30px;
     width: 300px;
     margin: auto;
@@ -219,32 +283,32 @@ main #options .form .boton_form{
     
 }
 
-main #options .form .boton_form .enviar{
+.boton_form .enviar{
     float: left;
     width: 100px;
     border-radius: 10px;
     margin-right: 10px;
 }
 
-main #options .form .boton_form .enviar:hover{
+.boton_form .enviar:hover{
     background: green;
     color:silver;
     font-weight: bold;
 }
 
-main #options .form .boton_form .borrar{
+.boton_form .borrar{
     float: left;
     width: 100px;
     border-radius: 10px;
 }
 
-main #options .form .boton_form .borrar:hover{
+.boton_form .borrar:hover{
     background: red;
     color:silver;
     font-weight: bold;
 }
 
-main #options .form .input_box input{
+.input_box input{
     width: 200px;
     background: cornsilk;
     
