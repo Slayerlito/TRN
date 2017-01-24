@@ -33,7 +33,7 @@
             <a href="entrenamiento.php">Entrenamiento</a>
             <ul>
                 <li class="has-sub">
-                    <a href="">Ejercicios</a>
+                    <a href="ejercicios.php">Ejercicios</a>
                 </li>
                 <li class="has-sub">
                     <a href="">Planes de Entrenamiento</a>
