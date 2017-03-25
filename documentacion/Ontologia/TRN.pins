@@ -1,4 +1,18 @@
-; Wed Mar 22 09:59:42 CET 2017
+; Wed Mar 22 12:18:56 CET 2017
 ; 
 ;+ (version "3.4.8")
 ;+ (build "Build 629")
+
+([TRN_Class27] of  TRN
+
+	(Aplicaciones-TRN [TRN_Class29])
+	(BBDD-TRN [TRN_Class32])
+	(Desc_TRN "TRN"))
+
+([TRN_Class29] of  Back-Office
+
+	(Desc_Web "Back-Office"))
+
+([TRN_Class32] of  Base+de+Datos
+
+	(TRN-BBDD "TRN-BBDD"))
