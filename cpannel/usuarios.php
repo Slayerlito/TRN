@@ -20,7 +20,11 @@ $smarty = new Smarty_setup();
 require_once('header.php');
 
 if(!isset($_REQUEST['buscar']) || $_REQUEST['value'] == 0){
-    $nombre = $_REQUEST['nombre'];
+	if(!isset($_REQUEST['buscar'])){
+		$nombre = "";
+	}else{
+		$nombre = $_REQUEST['nombre'];
+	}
     $result=  ControladorSQL::getControlador()->ejecutarSQL("SELECT * FROM trn_lkp_usuarios WHERE nombre LIKE '%$nombre%'");
 }else{
     $perfil = $_REQUEST['value'];
