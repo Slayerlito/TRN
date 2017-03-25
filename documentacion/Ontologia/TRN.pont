@@ -1,4 +1,4 @@
-; Wed Mar 22 09:59:42 CET 2017
+; Wed Mar 22 12:18:56 CET 2017
 ; 
 ;+ (version "3.4.8")
 ;+ (build "Build 629")
@@ -6,4 +6,248 @@
 
 (defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
 	(is-a USER)
+	(role abstract)
+	(multislot Tablas_BBDD
+		(type INSTANCE)
+;+		(allowed-classes Tabla)
+		(create-accessor read-write))
+	(multislot Funcionalidades-Web
+		(type INSTANCE)
+;+		(allowed-classes Funcionalidad)
+		(create-accessor read-write))
+	(multislot Modulo-Funcional
+		(type INSTANCE)
+;+		(allowed-classes Funcionalidad)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot Usuarios-Front
+		(type INSTANCE)
+;+		(allowed-classes Usuario)
+		(create-accessor read-write))
+	(single-slot Desc_Web
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot TRN-BBDD
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot Permisos-Funcionalidad
+		(type INSTANCE)
+;+		(allowed-classes Permisos)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot BBDD-TRN
+		(type INSTANCE)
+;+		(allowed-classes Base+de+Datos)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Desc_TRN
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot Aplicaciones-TRN
+		(type INSTANCE)
+;+		(allowed-classes Aplicaciones)
+		(cardinality 1 2)
+		(create-accessor read-write))
+	(single-slot Nombre_Tabla
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot Usuarios-Back
+		(type INSTANCE)
+;+		(allowed-classes Proveedor)
+		(create-accessor read-write)))
+
+(defclass Usuario
+	(is-a USER)
 	(role abstract))
+
+(defclass Cliente
+	(is-a Usuario)
+	(role abstract))
+
+(defclass Estandar
+	(is-a Cliente)
+	(role concrete))
+
+(defclass Proveedor
+	(is-a Usuario)
+	(role abstract))
+
+(defclass Administrador
+	(is-a Proveedor)
+	(role concrete))
+
+(defclass Entrenador
+	(is-a Proveedor)
+	(role concrete))
+
+(defclass Asistente
+	(is-a Proveedor)
+	(role concrete))
+
+(defclass TRN
+	(is-a USER)
+	(role concrete)
+	(multislot Aplicaciones-TRN
+		(type INSTANCE)
+;+		(allowed-classes Aplicaciones)
+		(cardinality 1 2)
+		(create-accessor read-write))
+	(single-slot BBDD-TRN
+		(type INSTANCE)
+;+		(allowed-classes Base+de+Datos)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Desc_TRN
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Funcionalidad
+	(is-a USER)
+	(role abstract)
+	(multislot Permisos-Funcionalidad
+		(type INSTANCE)
+;+		(allowed-classes Permisos)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Seguimientos
+	(is-a Funcionalidad)
+	(role concrete))
+
+(defclass Gestion
+	(is-a Funcionalidad)
+	(role abstract))
+
+(defclass Nutricion
+	(is-a Gestion)
+	(role concrete))
+
+(defclass Ejercicios
+	(is-a Gestion)
+	(role concrete))
+
+(defclass Servicios
+	(is-a Gestion)
+	(role concrete))
+
+(defclass Visual
+	(is-a Gestion)
+	(role concrete))
+
+(defclass Contabilidad
+	(is-a Gestion)
+	(role abstract))
+
+(defclass Cobros
+	(is-a Contabilidad)
+	(role concrete))
+
+(defclass Pagos
+	(is-a Contabilidad)
+	(role concrete))
+
+(defclass Cuentas
+	(is-a Contabilidad)
+	(role concrete))
+
+(defclass Permisos
+	(is-a Gestion)
+	(role abstract))
+
+(defclass Rol_Usuario
+	(is-a Permisos)
+	(role concrete))
+
+(defclass Rol_Administracion
+	(is-a Permisos)
+	(role concrete))
+
+(defclass Rol_Entrenador
+	(is-a Permisos)
+	(role concrete))
+
+(defclass Objetivos
+	(is-a Funcionalidad)
+	(role concrete))
+
+(defclass Graficas
+	(is-a Funcionalidad)
+	(role concrete))
+
+(defclass Dietas
+	(is-a Funcionalidad)
+	(role concrete))
+
+(defclass Entrenamientos
+	(is-a Funcionalidad)
+	(role concrete))
+
+(defclass Base+de+Datos
+	(is-a USER)
+	(role concrete)
+	(multislot Tablas_BBDD
+		(type INSTANCE)
+;+		(allowed-classes Tabla)
+		(create-accessor read-write))
+	(single-slot TRN-BBDD
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Tabla
+	(is-a USER)
+	(role concrete)
+	(multislot Modulo-Funcional
+		(type INSTANCE)
+;+		(allowed-classes Funcionalidad)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot Nombre_Tabla
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Aplicaciones
+	(is-a USER)
+	(role abstract))
+
+(defclass Web
+	(is-a Aplicaciones)
+	(role abstract)
+	(single-slot Desc_Web
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot Funcionalidades-Web
+		(type INSTANCE)
+;+		(allowed-classes Funcionalidad)
+		(create-accessor read-write)))
+
+(defclass Front-Office
+	(is-a Web)
+	(role concrete)
+	(multislot Usuarios-Front
+		(type INSTANCE)
+;+		(allowed-classes Usuario)
+		(create-accessor read-write)))
+
+(defclass Back-Office
+	(is-a Web)
+	(role concrete)
+	(multislot Usuarios-Back
+		(type INSTANCE)
+;+		(allowed-classes Proveedor)
+		(create-accessor read-write)))
+
+(defclass Mobile
+	(is-a Aplicaciones)
+	(role abstract))
+
+(defclass TRN+Companion
+	(is-a Mobile)
+	(role concrete))

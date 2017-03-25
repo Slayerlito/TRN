@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE TOUCHGRAPH_LB [
+
+<!ELEMENT TOUCHGRAPH_LB (NODESET, EDGESET, PARAMETERS)>
+<!ELEMENT NODESET (NODE+)>
+<!ELEMENT EDGESET (EDGE*)>
+<!ELEMENT PARAMETERS (PARAM*)>
+
+<!ELEMENT NODE (NODE_LOCATION?, NODE_LABEL?, NODE_URL?, NODE_HINT?)>
+
+<!ELEMENT NODE_LABEL EMPTY>
+<!ELEMENT NODE_URL EMPTY>
+<!ELEMENT NODE_HINT EMPTY>
+
+<!ATTLIST TOUCHGRAPH_LB
+  version CDATA #REQUIRED >
+
+<!ATTLIST NODE
+  nodeID CDATA #REQUIRED >
+
+<!ATTLIST NODE_LOCATION
+  visible CDATA #IMPLIED
+  x CDATA #IMPLIED
+  y CDATA #IMPLIED >
+
+<!ATTLIST NODE_LABEL
+  label CDATA #REQUIRED 
+  shape CDATA #IMPLIED
+  backColor CDATA #IMPLIED 
+  textColor CDATA #IMPLIED
+  fontSize CDATA #IMPLIED >
+
+<!ATTLIST NODE_URL 
+  url CDATA #REQUIRED 
+  urlIsLocal CDATA #IMPLIED 
+  urlIsXML CDATA #IMPLIED >
+
+<!ATTLIST NODE_HINT 
+  hint CDATA #REQUIRED 
+  height CDATA #IMPLIED 
+  width CDATA #IMPLIED 
+  isHTML CDATA #IMPLIED >  
+
+<!ELEMENT EDGE EMPTY>
+
+<!ATTLIST EDGE
+  fromID CDATA #REQUIRED
+  toID CDATA #REQUIRED 
+  length CDATA #IMPLIED 
+  color CDATA #IMPLIED 
+  type CDATA #IMPLIED
+  visible CDATA #IMPLIED >
+
+<!ELEMENT PARAM EMPTY>
+
+<!ATTLIST PARAM
+  name CDATA #REQUIRED
+  value CDATA #REQUIRED >
+]>
+<TOUCHGRAPH_LB version="1.4">
+    <NODESET/>
+    <EDGESET/>
+    <PARAMETERS>
+        <PARAM name="SLOT:::Modulo-Funcional:::Changed" value="false"/>
+        <PARAM name="CLS:::Asistente:::Changed" value="false"/>
+        <PARAM name="CLS:::Aplicaciones:::Changed" value="false"/>
+        <PARAM name="SLOT:::Permisos-Funcionalidad:::Show" value="true"/>
+        <PARAM name="CLS:::Rol_Administracion:::Color" value="-1"/>
+        <PARAM name="CLS:::TRN:::Color" value="-1"/>
+        <PARAM name="clsBOLD" value="true"/>
+        <PARAM name="maxExpEdgIndex" value="3"/>
+        <PARAM name="CLS:::Mobile:::Color" value="-1"/>
+        <PARAM name="clsITLC" value="false"/>
+        <PARAM name="CLS:::Entrenador:::Changed" value="false"/>
+        <PARAM name="SLOT:::Aplicaciones-TRN:::Color" value="-16777040"/>
+        <PARAM name="SLOT:::Permisos-Funcionalidad:::Color" value="-16777040"/>
+        <PARAM name="CLS:::Seguimientos:::Changed" value="false"/>
+        <PARAM name="CLS:::Pagos:::Changed" value="false"/>
+        <PARAM name="CLS:::Seguimientos:::Color" value="-1"/>
+        <PARAM name="SLOT:::Usuarios-Front:::Changed" value="false"/>
+        <PARAM name="sys" value="false"/>
+        <PARAM name="speed" value="2"/>
+        <PARAM name="SLOT:::Permisos-Funcionalidad:::Changed" value="false"/>
+        <PARAM name="SLOT:::BBDD-TRN:::Changed" value="false"/>
+        <PARAM name="CLS:::Cliente:::Color" value="-1"/>
+        <PARAM name="CLS:::Mobile:::Changed" value="false"/>
+        <PARAM name="backlinks" value="true"/>
+        <PARAM name="SLOT:::Modulo-Funcional:::Color" value="-16777040"/>
+        <PARAM name="CLS:::Permisos:::Color" value="-1"/>
+        <PARAM name="radius" value="10"/>
+        <PARAM name="edgTXT" value="false"/>
+        <PARAM name="SLOT:::Usuarios-Back:::Changed" value="false"/>
+        <PARAM name="CLS:::Visual:::Color" value="-1"/>
+        <PARAM name="ins" value="false"/>
+        <PARAM name="CLS:::Funcionalidad:::Changed" value="false"/>
+        <PARAM name="CLS:::Entrenamientos:::Color" value="-1"/>
+        <PARAM name="CLS:::Rol_Usuario:::Changed" value="false"/>
+        <PARAM name="CLS:::TRN Companion:::Color" value="-1"/>
+        <PARAM name="SLOT:::BBDD-TRN:::Show" value="true"/>
+        <PARAM name="CLS:::Aplicaciones:::Color" value="-1"/>
+        <PARAM name="edgBC" value="-16777040"/>
+        <PARAM name="CLS:::Servicios:::Changed" value="false"/>
+        <PARAM name="CLS:::Contabilidad:::Changed" value="false"/>
+        <PARAM name="CLS:::Administrador:::Color" value="-1"/>
+        <PARAM name="rotateSB" value="0"/>
+        <PARAM name="CLS:::Tabla:::Changed" value="false"/>
+        <PARAM name="CLS:::Tabla:::Color" value="-1"/>
+        <PARAM name="CLS:::Servicios:::Color" value="-1"/>
+        <PARAM name="clsslt" value="false"/>
+        <PARAM name="insBOLD" value="true"/>
+        <PARAM name="edgTC" value="-16777040"/>
+        <PARAM name="CLS:::Estandar:::Color" value="-1"/>
+        <PARAM name="SLOT:::Funcionalidades-Web:::Show" value="true"/>
+        <PARAM name="insITLC" value="false"/>
+        <PARAM name="SLOT:::Usuarios-Back:::Color" value="-16777040"/>
+        <PARAM name="CLS:::Nutricion:::Changed" value="false"/>
+        <PARAM name="sysslt" value="false"/>
+        <PARAM name="CLS:::Base de Datos:::Color" value="-1"/>
+        <PARAM name="insBC" value="-1"/>
+        <PARAM name="SLOT:::Funcionalidades-Web:::Changed" value="false"/>
+        <PARAM name="CLS:::Estandar:::Changed" value="false"/>
+        <PARAM name="SLOT:::Tablas_BBDD:::Show" value="true"/>
+        <PARAM name="hyperSB" value="0"/>
+        <PARAM name="CLS:::Graficas:::Changed" value="false"/>
+        <PARAM name="CLS:::Usuario:::Changed" value="false"/>
+        <PARAM name="CLS:::Web:::Changed" value="false"/>
+        <PARAM name="insTC" value="-10092442"/>
+        <PARAM name="clsBC" value="-1"/>
+        <PARAM name="CLS:::Permisos:::Changed" value="false"/>
+        <PARAM name="CLS:::TRN Companion:::Changed" value="false"/>
+        <PARAM name="CLS:::Usuario:::Color" value="-1"/>
+        <PARAM name="CLS:::Cobros:::Color" value="-1"/>
+        <PARAM name="CLS:::Rol_Administracion:::Changed" value="false"/>
+        <PARAM name="edgFS" value="10"/>
+        <PARAM name="edgLW" value="20"/>
+        <PARAM name="CLS:::Proveedor:::Color" value="-1"/>
+        <PARAM name="CLS:::Objetivos:::Color" value="-1"/>
+        <PARAM name="CLS:::Rol_Entrenador:::Color" value="-1"/>
+        <PARAM name="clsTC" value="-10138103"/>
+        <PARAM name="CLS:::Dietas:::Changed" value="false"/>
+        <PARAM name="CLS:::Front-Office:::Color" value="-1"/>
+        <PARAM name="CLS:::Cliente:::Changed" value="false"/>
+        <PARAM name="CLS:::Funcionalidad:::Color" value="-1"/>
+        <PARAM name="CLS:::Front-Office:::Changed" value="false"/>
+        <PARAM name="CLS:::Web:::Color" value="-1"/>
+        <PARAM name="CLS:::Contabilidad:::Color" value="-1"/>
+        <PARAM name="CLS:::Entrenador:::Color" value="-1"/>
+        <PARAM name="CLS:::Ejercicios:::Changed" value="false"/>
+        <PARAM name="CLS:::Pagos:::Color" value="-1"/>
+        <PARAM name="SLOT:::BBDD-TRN:::Color" value="-16777040"/>
+        <PARAM name="edgBOLD" value="true"/>
+        <PARAM name="insFS" value="12"/>
+        <PARAM name="CLS:::Rol_Entrenador:::Changed" value="false"/>
+        <PARAM name="insLW" value="25"/>
+        <PARAM name="CLS:::Administrador:::Changed" value="false"/>
+        <PARAM name="SLOT:::Aplicaciones-TRN:::Changed" value="false"/>
+        <PARAM name="SLOT:::Tablas_BBDD:::Changed" value="false"/>
+        <PARAM name="edgITLC" value="false"/>
+        <PARAM name="CLS:::Proveedor:::Changed" value="false"/>
+        <PARAM name="CLS:::Entrenamientos:::Changed" value="false"/>
+        <PARAM name="SLOT:::Aplicaciones-TRN:::Show" value="true"/>
+        <PARAM name="CLS:::Base de Datos:::Changed" value="false"/>
+        <PARAM name="clsFS" value="12"/>
+        <PARAM name="cls" value="false"/>
+        <PARAM name="clsLW" value="25"/>
+        <PARAM name="CLS:::Visual:::Changed" value="false"/>
+        <PARAM name="SLOT:::Modulo-Funcional:::Show" value="true"/>
+        <PARAM name="zoomSB" value="-10"/>
+        <PARAM name="CLS:::TRN:::Changed" value="false"/>
+        <PARAM name="CLS:::Gestion:::Color" value="-1"/>
+        <PARAM name="sup" value="false"/>
+        <PARAM name="CLS:::Back-Office:::Changed" value="false"/>
+        <PARAM name="SlotsCheckBoxState" value="false"/>
+        <PARAM name="CLS:::Graficas:::Color" value="-1"/>
+        <PARAM name="sub" value="false"/>
+        <PARAM name="CLS:::Asistente:::Color" value="-1"/>
+        <PARAM name="CLS:::Ejercicios:::Color" value="-1"/>
+        <PARAM name="CLS:::Dietas:::Color" value="-1"/>
+        <PARAM name="CLS:::Cobros:::Changed" value="false"/>
+        <PARAM name="sysclt" value="false"/>
+        <PARAM name="CLS:::Nutricion:::Color" value="-1"/>
+        <PARAM name="CLS:::Objetivos:::Changed" value="false"/>
+        <PARAM name="CLS:::Gestion:::Changed" value="false"/>
+        <PARAM name="CLS:::Back-Office:::Color" value="-1"/>
+        <PARAM name="SLOT:::Tablas_BBDD:::Color" value="-16777040"/>
+        <PARAM name="CLS:::Cuentas:::Changed" value="false"/>
+        <PARAM name="SLOT:::Usuarios-Front:::Color" value="-16777040"/>
+        <PARAM name="CLS:::Rol_Usuario:::Color" value="-1"/>
+        <PARAM name="CLS:::Cuentas:::Color" value="-1"/>
+        <PARAM name="SLOT:::Usuarios-Back:::Show" value="true"/>
+        <PARAM name="maxEdgIndex" value="3"/>
+        <PARAM name="SLOT:::Funcionalidades-Web:::Color" value="-16777040"/>
+        <PARAM name="SLOT:::Usuarios-Front:::Show" value="true"/>
+    </PARAMETERS>
+</TOUCHGRAPH_LB>
