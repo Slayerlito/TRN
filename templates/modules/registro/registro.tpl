@@ -26,7 +26,6 @@
 					<div class="form-group">
 						<button class="form-control btn" type="submit" name="registro">Registrarse</button>
 					</div>
-					
 				</form>
 			</li>
 		</ul>
@@ -35,8 +34,8 @@
 {ELSE}
 <!-- DESCONECTAR -->
 <ul class="nav navbar-nav navbar-right">
-	<li>
-		<a class="alert-danger" href="logout.php" id="desconectar"><span class="glyphicon glyphicon-off"></span></a>
+	<li class="desconectar">
+		<a href="logout.php" id="desconectar"><span class="glyphicon glyphicon-off"></span></a>
 	</li>
 </ul>
 <!-- /DESCONECTAR -->

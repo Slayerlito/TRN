@@ -1,18 +1,22 @@
 <!DOCTYPE HTML>
 <html lang="es">
 <head>
-	<!-- Información -->
-	<meta charset="UTF-8"> <!-- Codificación de caracteres -->
-	<meta name="description" content="Página web de dietas y entrenamientos personalizados"> <!-- Breve descripción de la página -->
-	<meta name="keywords" content="dieta,entrenamiento,entrenamiento personalizado,dieta personalizada,gimnasio,deporte,ejercicios,pesas,comida,rutinas,rutina de entrenamiento"> <!-- Palabras clave -->
-	<meta name="author" content="TRN"> <!-- Autor -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> <!-- Bootstrap para móviles y sin zoom-->
+	<!-- Codificación de caracteres -->
+	<meta charset="UTF-8">
+	<!-- Breve descripción de la página -->
+	<meta name="description" content="Página web de dietas y entrenamientos personalizados">
+	<!-- Palabras clave -->
+	<meta name="keywords" content="dieta,entrenamiento,entrenamiento personalizado,dieta personalizada,gimnasio,deporte,ejercicios,pesas,comida,rutinas,rutina de entrenamiento,seguimiento, seguimiento de entrenamiento">
+	<!-- Autor -->
+	<meta name="author" content="TRN">
+	<!-- Bootstrap para móviles y sin zoom-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	
 	<!-- favicon -->
 	<link rel="icon" type="image/ico" href="favicon.ico">
-     <!-- CSS de Bootstrap -->
+    <!-- CSS de Bootstrap -->
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-	  <!-- Tema Bootstrap -->
+	<!-- Tema Bootstrap -->
 	<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
 	<!-- CSS Font Awesome -->
 	<link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
@@ -33,7 +37,6 @@
 	<!-- Título de la Web -->
 	<title>TRN</title>
 
-
 	<!-- JQuery -->
 	<script src="js/jquery-3.1.0.min.js"></script>
 	<!-- JS charts/graficos cahrt.js-->
@@ -52,14 +55,13 @@
 </head>
 <body id="inicio">
 <header>
-	 <!-- NAV  -->
+	<!-- NAV  -->
     <nav id="nav-top" class="navbar navbar-fixed-top" role="navigation">
 		<!-- NAVBAR HEADER -->
 		<div class="navbar-header">
 			<!-- BOTONES COLLAPSE -->
 			<button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target=".my-navbar-collapse-menu"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
 			<button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target=".my-navbar-collapse-login-registro"><span class="glyphicon glyphicon-user"></span> / <span class="glyphicon glyphicon-log-in"></span></button>
-
 			<!-- /BOTONES COLLAPSE -->
 			
 			<!-- NAVBAR BRAND -->
@@ -83,6 +85,7 @@
 			
 		</div>
 		<!-- /COLLAPSE LOGIN/REGISTRO -->
+		
 		<!-- MENU -->
 		{include file='modules/menu/menu.tpl'}
 		<!-- /MENU -->

@@ -1,0 +1,12 @@
+/* ********** CSS REGISTRO ********** */
+#desconectar{
+	background: transparent;
+	color: red;
+}
+
+#desconectar span:hover {
+	color: red;
+	text-shadow: 0 0 10px #FFF;
+}
+
+/* ********** CSS REGISTRO ********** */

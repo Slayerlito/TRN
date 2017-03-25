@@ -25,22 +25,22 @@
 	
 }
 
-#desconectar {
-	background: transparent;
-}
-
-#desconectar span:hover {
-	background: red !important;
-	border-radius: 2px;
-	
-}
-
 .mensaje {
 	margin-top:50px;
 	position:absolute;
 	width:230px;
 	overflow:auto;
 }
+
+/* ********** CSS MENU ********** */ 
+
+
+
+
+/* ********** CSS LOGIN ********** */ 
+
+/* ********** CSS LOGIN ********** */ 
+
 
 /* DROPDOWN */
 /* General sizing */
@@ -63,4 +63,3 @@ ul.dropdown-lr {
 }
 
 /* DROPDOWN */
-/* ********** CSS MENU ********** */ 
