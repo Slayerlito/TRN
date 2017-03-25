@@ -7,7 +7,7 @@
             <h2>MENU</h2>
         </li> 
         <li class="has-sub">
-            <a href="clientes.php">Clientes</a>
+            <a href="usuarios.php">Usuarios</a>
         </li>
         <li class="has-sub">
             <a href="slider.php">Slider</a>
@@ -17,9 +17,6 @@
         </li>
         <li class="has-sub">
             <a href="planes.php">Planes</a>
-        </li>
-        <li class="has-sub">
-            <a href="equipo.php">Equipo</a>
         </li>
         <li class="has-sub">
             <a href="">DataBase</a>
@@ -33,7 +30,7 @@
             <a href="entrenamiento.php">Entrenamiento</a>
             <ul>
                 <li class="has-sub">
-                    <a href="">Ejercicios</a>
+                    <a href="ejercicios.php">Ejercicios</a>
                 </li>
                 <li class="has-sub">
                     <a href="">Planes de Entrenamiento</a>

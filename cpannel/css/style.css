@@ -12,6 +12,14 @@ h2{
     font-weight: bold;
 }
 
+table{
+    margin: auto;
+}
+
+th , td{
+    text-align: center;
+}
+
 body{
     background:  #1b6d85;
     padding: 0;
@@ -149,6 +157,38 @@ main #options .preview img{
     border:1px solid black;
 }
 
+main #options .preview .miniatura {
+    width: 75px;
+    float: left;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    border-radius: 5px;
+    border:1px solid black;
+}
+
+main #options .preview .min_botton {
+    width: 20px;
+    height: 20px;
+    float: left;
+    border-radius: 0px;
+    border:0px;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+}
+
+main #options .preview .min_botton img{
+    width: 20px;
+    height: 20px;
+    float: left;
+    border-radius: 0px;
+    border:0px;
+    margin: 0;
+}
+
+main #options .preview .min_botton:hover {
+    background: silver;
+}
 
 main #options .preview_in {
     width:15%;
@@ -192,6 +232,53 @@ main #options .preview_name{
     float: left;
     width: 100%;
     text-align: center;
+}
+
+main #options .preview_name a{
+    display: block;
+    width: 25px;
+    float: right;
+}
+
+
+main #options .preview_in_disabled {
+    width:15%;
+    border: 1px solid silver;
+    overflow: auto;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    float: left;
+    background: grey;
+    position: relative;
+    
+}
+
+main #options .preview .preview_in_disabled img{
+    width: 100%;
+    float: left;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    border-radius: 5px;
+    border:1px solid black;
+}
+
+main #options .preview .preview_in_disabled a img{
+    border: 0;
+    width:90%;
+    margin: 0;
+}
+
+main #options .preview .preview_in_disabled a {
+    padding: 0;
+    margin: auto;
+}
+
+main #options .preview .preview_in_disabled a:hover {
+    padding: 0;
+    margin: auto;
 }
 
 
@@ -313,6 +400,21 @@ main #options .listado .impar:hover{
     background: cornsilk;
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .login {
 	margin:auto;

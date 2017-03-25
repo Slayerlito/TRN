@@ -19,7 +19,7 @@ $smarty = new Smarty_setup();
 require_once('header.php');
 
 
-$smarty->display('clientes.tpl');
+$smarty->display('ejercicios.tpl');
 
 //Include del footer
 
