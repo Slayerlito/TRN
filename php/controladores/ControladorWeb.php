@@ -110,14 +110,14 @@ class ControladorWeb{
 	public static function getJerarquiaAlimentos(){
 		if (ControladorWeb::$jerarquiaAlimentos == null){
 			$jerarquiaAlimentos=JerarquiaAlimentos::getInstancia();
-			$query=ControladorSQL::getControlador()->ejecutarSQL("SELECT * FROM TRN_LKP_TIPO_ALIMENTOS");
+			$query=ControladorSQL::getControlador()->ejecutarSQL("SELECT * FROM TRN_LKP_TIPO_ALIMENTOS WHERE ID_TIPO_ALIMENTO !=0 ORDER BY CONVERT(NIVEL_JERARQUIA,UNSIGNED INTEGER) ASC");
 			$row_cnt = $query->num_rows;
 				
 			while($resultado = $query->fetch_array(MYSQLI_ASSOC)){
 				$nodo=$jerarquiaAlimentos->getNodo($resultado['ID_PADRE']);
 				//if($nodo=-1) El nodo padre no existe
-				if($jerarquiaAlimentos->getNodo($resultado['ID_TIPO_ALIMENTO'])){
-					$nodo->setHijo($resultado['ID_TIPO_ALIMENTO'],$resultado['DESC_TIPO_ALIMENTO'],$resultado['BOL_ABSTRACTA']); 
+				if($nodo->getID()==$resultado['ID_PADRE']){
+					$nodo->setHijo($resultado['ID_TIPO_ALIMENTO'],$resultado['DESC_TIPO_ALIMENTO'],$resultado['BOL_ABSTRACTA'],$resultado['ID_PADRE']); 
 				}
 			}
 		}

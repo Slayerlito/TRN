@@ -17,7 +17,9 @@ class JerarquiaAlimentos extends JerarquiaObjetos {
 	private $bool_abstracta;
 	private $listaHijos;
 	protected function __construct(){
-		$this->desc="0";
+		$this->desc="RAIZ";
+		$this->id=0;
+		$this->bool_abstracta=1;
 	}
 	public static function getInstancia(){
 			JerarquiaAlimentos::$jerarquiaAlimentos = new JerarquiaAlimentos();
@@ -33,30 +35,32 @@ class JerarquiaAlimentos extends JerarquiaObjetos {
 		
 	}
 	/*public function setHijos($listaHijos);*/
-	public function setHijo($id,$desc,$bool_abstracta){
+	public function setHijo($id,$desc,$bool_abstracta,$padre){
 		if($this->listaHijos==null){
 			$this->listaHijos=array();
 		}
-		$nodo=new JerarquiaAlimentos();
-		$nodo->id=$id;
-		$nodo->desc=$desc;
-		$nodo->bool_abstracta=$bool_abstracta;
-		$nodo->padre=$this->id;
-		array_push($this->listaHijos,$nodo);
+		$nodo2=new JerarquiaAlimentos();
+		$nodo2->id=$id;
+		$nodo2->desc=$desc;
+		$nodo2->bool_abstracta=$bool_abstracta;
+		$nodo2->padre=$padre;
+		array_push($this->listaHijos,$nodo2);
 	}
 	/*public function getHijosDe($desc);
 	public function getHijos();*/
 	public function getNodo($id){
-		if($id==null)return $this;
-		if($this->id=$id)
-			return $this;
-		foreach ($hijo as $this->listaHijos){
-			if($hijo->id=$id){
-				return $hijo;
-			}else{
-				return $hijo->getNodo($id);
+		if($this->id==$id)return $this;
+		if($this->listaHijos!=null){
+			foreach ($this->listaHijos as $hijo){
+				if($hijo->id==$id){
+					return $hijo;
+				}else{
+					$aux = $hijo->getNodo($id);
+					if($aux)return $aux;
+				}
 			}
 		}
+		return false;
 		
 	}
 	/*
@@ -70,6 +74,9 @@ class JerarquiaAlimentos extends JerarquiaObjetos {
 	}
 	public function setNoAbstracta(){
 		$this->bool_abstracta=false;
+	}
+	public function getID(){
+		return $this->id;
 	}
 }
 ?>
