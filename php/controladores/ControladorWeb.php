@@ -3,11 +3,21 @@ require_once('php/modelo/Usuario.php');
 require_once('php/controladores/ControladorSQL.php');
 require_once('php/modelo/ListaPlanes.php');
 require_once('php/modelo/ListaObjetivos.php');
+require_once('php/modelo/JerarquiaAlimentos.php');
 
 /**
  *  
  */
-abstract class ControladorWeb{
+class ControladorWeb{
+	private static $jerarquiaAlimentos = null;
+	
+	/**********************************************************************************************
+	 *  																						  *
+	 *  										USUARIOS										  *
+	 *  																						  *
+	 **********************************************************************************************/
+	
+	
 	/**
 	 *  Función responsable de loguear a un Usuario en el sistema a partir del email y la password.
 	 *  @param $email Email del usuario.
@@ -37,6 +47,13 @@ abstract class ControladorWeb{
 		return $usuario;
 		
 	}	
+	
+	/**********************************************************************************************
+	 *  																						  *
+	 *  										PORTADA 										  *
+	 *  																						  *
+	 **********************************************************************************************/
+	 
 	/**
 	 *  
 	 */
@@ -63,6 +80,13 @@ abstract class ControladorWeb{
 		}
 		return $listaRet;
 	}
+	
+	/**********************************************************************************************
+	 *  																						  *
+	 *  										MY TRN  										  *
+	 *  																						  *
+	 **********************************************************************************************/	
+	
 	/**
 	 *  
 	 */
@@ -75,7 +99,33 @@ abstract class ControladorWeb{
 	public static function registrarAcceso(){
 		
 	}
-
+	/**********************************************************************************************
+	 * 																							  * 
+	 *  								JERARQUIA ALIMENTOS										  *
+	 *  																						  *
+	 **********************************************************************************************/
+	/**
+	 *  
+	 */
+	public static function getJerarquiaAlimentos(){
+		if (ControladorWeb::$jerarquiaAlimentos == null){
+			$jerarquiaAlimentos=JerarquiaAlimentos::getInstancia();
+			$query=ControladorSQL::getControlador()->ejecutarSQL("SELECT * FROM TRN_LKP_TIPO_ALIMENTOS");
+			$row_cnt = $query->num_rows;
+				
+			while($resultado = $query->fetch_array(MYSQLI_ASSOC)){
+				$nodo=$jerarquiaAlimentos->getNodo($resultado['ID_PADRE']);
+				//if($nodo=-1) El nodo padre no existe
+				if($jerarquiaAlimentos->getNodo($resultado['ID_TIPO_ALIMENTO'])){
+					$nodo->setHijo($resultado['ID_TIPO_ALIMENTO'],$resultado['DESC_TIPO_ALIMENTO'],$resultado['BOL_ABSTRACTA']); 
+				}
+			}
+		}
+		return $jerarquiaAlimentos;
+	}
+	public static function actualizarPadre($nodo,$padre){
+		
+	}
 	
 }
 

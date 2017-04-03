@@ -22,6 +22,7 @@ require_once 'modules/slider/slider.php';
 $smarty->assign('planesFilaCompleta', ControladorWeb::getPlanesFilaCompleta());
 $smarty->assign('planesUltimaFila', ControladorWeb::getPlanesUltimaFila());
 $smarty->assign('modulo', count(ControladorWeb::getPlanesUltimaFila()));
+$smarty->assign('jerarquiaAlimentos', ControladorWeb::getJerarquiaAlimentos());
 
 $smarty->display('index.tpl');
 
