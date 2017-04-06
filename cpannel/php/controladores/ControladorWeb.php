@@ -123,6 +123,7 @@ class ControladorWeb{
 		}
 		return $jerarquiaAlimentos;
 	}
+	
 	public static function actualizarPadre($nodo,$padre){
 		
 	}
