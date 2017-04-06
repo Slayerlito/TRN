@@ -1,7 +1,4 @@
 <main>
-<pre>
-{$jerarquiaAlimentos|print_r}
-</pre>
 <!-- Slider-->
 	{include file='modules/slider/slider.tpl'}
 <!-- /Slider-->	

@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-04-06 08:08:23
+  from "C:\wamp\www\TRN\cpannel\templates\menu.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_58e5f777d7ace5_49131163',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'befe7e39442fc8ff823376368727b21154c8ef67' => 
+    array (
+      0 => 'C:\\wamp\\www\\TRN\\cpannel\\templates\\menu.tpl',
+      1 => 1491466059,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_58e5f777d7ace5_49131163 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 
 
 <div id="menu">
@@ -51,4 +75,5 @@
             </ul>
         </li>
     </ul>
-</div> 
+</div> <?php }
+}
