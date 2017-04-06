@@ -46,8 +46,10 @@ class JerarquiaAlimentos extends JerarquiaObjetos {
 		$nodo2->padre=$padre;
 		array_push($this->listaHijos,$nodo2);
 	}
-	/*public function getHijosDe($desc);
-	public function getHijos();*/
+	/*public function getHijosDe($desc);*/
+	public function getHijos(){
+		return $this->listaHijos;
+	}
 	public function getNodo($id){
 		if($this->id==$id)return $this;
 		if($this->listaHijos!=null){

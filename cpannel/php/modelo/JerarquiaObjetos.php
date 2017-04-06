@@ -13,8 +13,8 @@ abstract class JerarquiaObjetos {
 	abstract public function getPadreDe($desc);
 	/*abstract public function setHijos($desc);*/
 	abstract public function setHijo($id,$desc,$bool_abstracta,$padre);
-	/*abstract public function getHijos();
-	abstract public function getHijosDe($desc);*/
+	abstract public function getHijos();
+	/*abstract public function getHijosDe($desc);*/
 	abstract public function getNodo($desc);
 	/*abstract public function insertNodo($desc,$padre);
 	abstract public function setPadre($padre);*/
