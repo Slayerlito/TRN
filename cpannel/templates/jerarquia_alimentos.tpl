@@ -20,7 +20,7 @@
 						{if $item->getDesc() ne $data2}
 
 							{if $item->getHijos() ne null}
-								<button onclick="openclose({$item->getID()});">+</button><li style="color:red;">{$item->getDesc()}</li>	
+								<li style="color:red;"><button onclick="openclose({$item->getID()});">+</button>{$item->getDesc()}</li>	
 								{print_jerarquia data1=$item->getHijos() data2=$data2}
 							{else}
 								<li class="{$item->getPadre()}">{$item->getDesc()}</li>
