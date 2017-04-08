@@ -35,7 +35,7 @@ class JerarquiaAlimentos extends JerarquiaObjetos {
 		
 	}
 	/*public function setHijos($listaHijos);*/
-	public function setHijo($id,$desc,$bool_abstracta,$padre){
+	public function setHijo($id,$desc,$bool_abstracta,$padre,$nivel){
 		if($this->listaHijos==null){
 			$this->listaHijos=array();
 		}
@@ -44,6 +44,7 @@ class JerarquiaAlimentos extends JerarquiaObjetos {
 		$nodo2->desc=$desc;
 		$nodo2->bool_abstracta=$bool_abstracta;
 		$nodo2->padre=$padre;
+		$nodo2->nivel=$nivel;
 		array_push($this->listaHijos,$nodo2);
 	}
 	/*public function getHijosDe($desc);*/
@@ -78,6 +79,9 @@ class JerarquiaAlimentos extends JerarquiaObjetos {
 	}
 	public function getID(){
 		return $this->id;
+	}
+	public function getNivel(){
+		return $this->nivel;
 	}
 }
 ?>

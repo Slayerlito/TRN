@@ -117,7 +117,7 @@ class ControladorWeb{
 				$nodo=$jerarquiaAlimentos->getNodo($resultado['ID_PADRE']);
 				//if($nodo=-1) El nodo padre no existe
 				if($nodo->getID()==$resultado['ID_PADRE']){
-					$nodo->setHijo($resultado['ID_TIPO_ALIMENTO'],$resultado['DESC_TIPO_ALIMENTO'],$resultado['BOL_ABSTRACTA'],$resultado['ID_PADRE']); 
+					$nodo->setHijo($resultado['ID_TIPO_ALIMENTO'],$resultado['DESC_TIPO_ALIMENTO'],$resultado['BOL_ABSTRACTA'],$resultado['ID_PADRE'],$resultado['NIVEL_JERARQUIA']); 
 				}
 			}
 		}
