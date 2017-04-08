@@ -86,12 +86,12 @@ class JerarquiaAlimentos extends JerarquiaObjetos {
 				if($hijo->desc!=$desc){
 					if ($hijo->getHijos() == null && $hijo->getPadre()==0){
 						$aux2 = array();
-						array_unshift($aux2,$hijo->getDesc());
+						array_push($aux2,$hijo->getDesc());
 						$desplegable = array_merge($desplegable,$aux2);
 					}else{						
 						$aux = array();
 						$aux = $this->getDesplegable($hijo->getHijos(),$desc);
-						array_unshift($aux,array("id"=>$hijo->getID(),"desc"=>$hijo->getDesc(),"padre"=>$hijo->getPadre()));
+						array_push($aux,array("id"=>$hijo->getID(),"desc"=>$hijo->getDesc(),"padre"=>$hijo->getPadre()));
 						$desplegable = array_merge($desplegable,$aux);
 					}
 				}

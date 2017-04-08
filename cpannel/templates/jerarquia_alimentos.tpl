@@ -2,9 +2,11 @@
 				<ol>
 					{foreach from=$data1 item=item}
 						{if $item->getDesc() ne $data2}
-							<li>{$item->getDesc()}</li>
 							{if $item->getHijos() ne null}
+								//LI con expandible
 								{print_jerarquia data1=$item->getHijos() data2=$data2}
+							{else}
+								<li>{$item->getDesc()}</li>
 							{/if}
 						{/if}
 					{/foreach}
