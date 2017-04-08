@@ -110,7 +110,7 @@ class ControladorWeb{
 	public static function getJerarquiaAlimentos(){
 		if (ControladorWeb::$jerarquiaAlimentos == null){
 			$jerarquiaAlimentos=JerarquiaAlimentos::getInstancia();
-			$query=ControladorSQL::getControlador()->ejecutarSQL("SELECT * FROM TRN_LKP_TIPO_ALIMENTOS WHERE ID_TIPO_ALIMENTO !=0 ORDER BY CONVERT(NIVEL_JERARQUIA,UNSIGNED INTEGER) ASC");
+			$query=ControladorSQL::getControlador()->ejecutarSQL("SELECT * FROM TRN_LKP_TIPO_ALIMENTOS WHERE ID_TIPO_ALIMENTO !=0 ORDER BY CONVERT(NIVEL_JERARQUIA,UNSIGNED INTEGER),ID_TIPO_ALIMENTO ASC");
 			$row_cnt = $query->num_rows;
 				
 			while($resultado = $query->fetch_array(MYSQLI_ASSOC)){
